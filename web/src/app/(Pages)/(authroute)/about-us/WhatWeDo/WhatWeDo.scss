@@ -1,0 +1,61 @@
+@import '../../../../style/variables.scss';
+
+.what-we-do{
+    .title{
+        color: $tertiary;
+    }
+    .content-wrapper{
+        border: 1px solid $mainBorder;
+        border-bottom: none;
+        padding: 20px;
+        @media only screen and (min-width: 640px) {
+            padding: 24px;
+        }
+        @media only screen and (min-width: 1024px) {
+            padding: 30px;
+            border-right: none;
+            border-bottom: 1px solid $mainBorder;
+        }
+        @media only screen and (min-width: 1200px) {
+            padding: 50px 20px 50px 50px;
+        }
+        @media only screen and (min-width: 1440px) {
+            padding: 80px 32px 80px 80px;
+        }
+        @media only screen and (min-width: 1600px) {
+            padding: 100px 32px 100px 100px;
+        }
+        .ck-data{
+            margin-bottom: 14px;
+            &:last-child{
+                margin: 0;
+            }
+            @media only screen and (min-width: 1024px) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .image-wrapper{
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            max-height: 300px;
+            @media only screen and (min-width: 640px){
+                max-height: 600px;
+            }
+            @media only screen and (min-width: 1200px){
+                max-height: inherit;
+            }
+        }
+    }
+    .what-we-card{
+        @media only screen and (min-width: 1024px){
+            height: 600px;
+        }
+        @media only screen and (min-width: 1440px){
+            height: 700px;
+        }
+    }
+}

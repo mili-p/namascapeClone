@@ -1,0 +1,12 @@
+@import '../../../../../style/variables.scss';
+
+.my-account-attended-events{
+    .event-card-web {
+        .event-image-box {
+            .badge{
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+}

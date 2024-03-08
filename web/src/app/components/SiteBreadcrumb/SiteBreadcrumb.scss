@@ -1,0 +1,62 @@
+@import '../../style/variables.scss';
+
+.site-breadcrumb{
+    margin: 0;
+    li{
+        position: relative;
+        padding-right: 14px;
+        margin-right: 4px;
+        margin-bottom: 10px;
+        color: $white;
+        font-weight: 400;
+        &::before{
+            content: '/';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            color: $white;
+            opacity: 0.5;
+        }
+        &:last-child{
+            padding-right: 0;
+            margin-right: 0;
+            &::before{
+                display: none;
+            }
+        }
+        a{
+            color: $white;
+            opacity: 0.5;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    &.protected-breadcrumb{
+     li{
+        color: $primary;
+        font-size: 14px;
+        line-height: 16px;
+        padding-right: 8px;
+        margin-right: 3px;
+        margin-bottom: 20px;
+        &:last-child{
+            padding-right: 0;
+            margin-right: 0;
+        }
+        a{
+            opacity: 1;
+            color: $btnText;
+            &:hover{
+                color: $tertiary;
+            }
+        }
+        &::before{
+            color: $btnText;
+            opacity: 1;
+        }
+       }
+    }
+}

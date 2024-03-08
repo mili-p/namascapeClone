@@ -1,0 +1,38 @@
+@import "../../../../../../style/variables.scss";
+
+.related-events-section {
+    .event-card-web {
+        @media only screen and (min-width: 1024px) {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            height: 260px;
+        }
+        @media only screen and (min-width: 1441px) {
+            height: 310px;
+        }
+        .event-image-box {
+            @media only screen and (min-width: 1024px) {
+                width: 45%;
+                height: auto;
+            }
+            .badge {
+                right: 0;
+                left: unset;
+            }
+        }
+        .event-card-content {
+            @media only screen and (min-width: 1024px) {
+                width: 55%;
+            }
+        }
+    }
+    .swiper-wrapper{
+        align-items: stretch;
+        .swiper-slide{
+            display: flex;
+            align-items: stretch;
+            height: auto;
+        }
+    }
+}

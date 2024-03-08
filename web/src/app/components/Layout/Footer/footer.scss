@@ -1,0 +1,277 @@
+@import '../../../style/variables.scss';
+
+@mixin flex-top {
+    display: flex;
+    align-items: flex-start;
+}
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+.site-footer {
+    background: $LightCream;
+    .top-footer {
+        padding: 40px 0;
+        @media only screen and (min-width: 1024px) {
+            padding: 60px 0;
+        }
+        @media only screen and (min-width: 1200px) {
+            padding: 80px 0;
+        }
+        @media only screen and (min-width: 1440px) {
+            padding: 100px 0;
+        }
+        .footer-logo-box{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            @media only screen and (min-width: 640px) {
+                width: auto;
+            }
+            @media only screen and (min-width: 1200px) {
+                width: 33.3333%;
+            }
+            img {
+                width: auto;
+                height: 66px;
+                @media only screen and (min-width: 640px) {
+                    height: 75px;
+                }
+                @media only screen and (min-width: 1440px) {
+                    height: 90px;
+                }
+                @media only screen and (min-width: 1600px) {
+                    height: 104px;
+                }
+            }
+        }
+        .inner {
+            @include flex-top();
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            @media only screen and (min-width: 1200px) {
+                flex-wrap: nowrap;
+            }
+            @media only screen and (min-width: 1600px) {
+                gap: 32px;
+            }
+            .logo-group {
+                width: 100%;
+                @media only screen and (min-width: 640px) {
+                    width: auto;
+                    // margin: auto;
+                }
+                @media only screen and (min-width: 1200px) {
+                    width: 33.3333%;
+                }
+
+                .logo-content-wrapper {
+                    @include flex-center();
+                    flex-direction: column;
+                    gap: 10px;
+                    text-align: center;
+                    .logo {
+                        flex-shrink: 0;
+                    }
+                    @media only screen and (min-width: 640px) {
+                        gap: 16px;
+                        text-align: center;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    // @media only screen and (min-width: 1024px) {
+                    //     flex-direction: row;
+                    // }
+                    @media only screen and (min-width: 1600px) {
+                        gap: 20px;
+                    }
+                }
+                p {
+                    font-size: 14px;
+                    margin: 0;
+                    @media only screen and (min-width: 640px) {
+                        font-size: 16px;
+                    }
+                    @media only screen and (min-width: 1441px) {
+                        font-size: 18px;
+                    }
+                }
+                img {
+                    width: auto;
+                    height: 66px;
+                    @media only screen and (min-width: 640px) {
+                        height: 75px;
+                    }
+                    @media only screen and (min-width: 1440px) {
+                        height: 90px;
+                    }
+                    @media only screen and (min-width: 1600px) {
+                        height: 104px;
+                    }
+                }
+            }
+            .download-group {
+                @include flex-top();
+                align-items: stretch;
+                gap: 16px;
+                width: 100%;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                @media only screen and (min-width: 640px) {
+                    flex-wrap: nowrap;
+                }
+                @media only screen and (min-width: 1200px) {
+                    width: 66.6666%;
+                }
+                @media only screen and (min-width: 1600px) {
+                    gap: 32px;
+                }
+                .item {
+                    border: 1px solid rgba(230, 216, 197, 0.3);
+                    padding: 20px;
+                    width: 100%;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    @media only screen and (min-width: 640px) {
+                        width: 50%;
+                    }
+                    @media only screen and (min-width: 1200px) {
+                        width: 50%;
+                        text-align: start;
+                        align-items: flex-start;
+                    }
+                    @media only screen and (min-width: 1440px) {
+                        padding: 30px;
+                    }
+                    h2 {
+                        font-size: 20px;
+                        line-height: 1.5;
+                        font-weight: 400;
+                        margin-bottom: 16px;
+                        text-transform: none;
+                        @media only screen and (min-width: 768px) {
+                            font-size: 24px;
+                        }
+                        @media only screen and (min-width: 1440px) {
+                            font-size: 28px;
+                            margin-bottom: 20px;
+                        }
+                        @media only screen and (min-width: 1600px) {
+                            font-size: 32px;
+                            margin-bottom: 30px;
+                        }
+                    }
+                    .download-links {
+                        @include flex-center();
+                        gap: 10px;
+                        justify-content: center;
+                        @media only screen and (min-width: 1200px) {
+                            justify-content: flex-start;
+                        }
+                        @media only screen and (min-width: 1440px) {
+                            gap: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottom-fotter {
+        border-top: 1px solid rgb(45 45 45 / 30%);
+        padding: 10px 0;
+        @media only screen and (min-width: 768px) {
+            padding: 16px 0;
+        }
+        @media only screen and (min-width: 1200px) {
+            padding: 30px 0;
+        }
+        p {
+            font-size: 14px;
+            color: $btnText;
+            margin: 0;
+            @media only screen and (min-width: 640px) {
+                font-size: 16px;
+            }
+            @media only screen and (min-width: 1441px) {
+                font-size: 18px;
+            }
+        }
+        .inner {
+            @include flex-center();
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            flex-direction: column;
+            @media only screen and (min-width: 640px) {
+                flex-direction: row;
+            }
+            .privacy-links {
+                @include flex-center();
+                gap: 14px;
+                margin: 0;
+                @media only screen and (min-width: 768px) {
+                    gap: 30px;
+                }
+                a {
+                    font-size: 14px;
+                    color: $btnText;
+                    &:hover,
+                    &.active {
+                        color: $tertiary;
+                    }
+                    @media only screen and (min-width: 640px) {
+                        font-size: 16px;
+                    }
+                    @media only screen and (min-width: 1200px) {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    .footer-menu {
+        @include flex-center();
+        justify-content: center;
+        gap: 12px;
+        margin: 0;
+        flex-wrap: wrap;
+        margin-top: 16px;
+        @media only screen and (min-width: 640px) {
+            gap: 20px;
+            // justify-content: flex-start;
+        }
+        @media only screen and (min-width: 1200px) {
+            gap: 12px;
+            justify-content: space-evenly;
+        }
+        @media only screen and (min-width: 1440px) {
+            margin-top: 20px;
+            gap: 20px;
+        }
+        @media only screen and (min-width: 1600px) {
+            gap: 32px;
+        }
+        .menu-link {
+            font-size: 14px;
+            line-height: 22px;
+            color: $btnText;
+            text-transform: lowercase;
+            &:hover,
+            &.active {
+                color: $tertiary;
+            }
+            @media only screen and (min-width: 640px) {
+                font-size: 14px;
+            }
+            @media only screen and (min-width: 1600px) {
+                font-size: 18px;
+            }
+        }
+    }
+}

@@ -1,0 +1,164 @@
+@import "../../assets/style/variables.scss";
+
+.view-organizer-profile{
+    .organizer-profile-content{
+        .user-info {
+            padding: 20px;
+            column-gap: 20px;
+            position: relative;
+            @media only screen and (min-width: 1441px) {
+                column-gap: 32px;
+            }
+
+            .users-content {
+                max-width: 550px;
+                @media only screen and (min-width: 1441px) {
+                    max-width: 660px;
+                }
+                h3 {
+                    font-size: 22px;
+                    margin-bottom: 12px;
+                    @media only screen and (min-width: 768px) {
+                        font-size: 24px;
+                    }
+                    @media only screen and (min-width: 1600px) {
+                        margin-bottom: 16px;
+                    }
+                }
+                .email,
+                p,
+                span {
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: $darkGrey;
+                    margin-bottom: 12px;
+                    @media only screen and (min-width: 768px) {
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+                    @media only screen and (min-width: 1600px) {
+                        font-size: 22px;
+                        line-height: 26px;
+                        margin-bottom: 16px;
+                    }
+                }
+                .birthdate {
+                    margin-bottom: 12px;
+                    @media only screen and (min-width: 1600px) {
+                        margin-bottom: 16px;
+                    }
+                    i {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        color: $primary;
+                        font-size: 24px;
+                    }
+                    span {
+                        margin-bottom: 0;
+                        margin-left: 10px;
+                    }
+                }
+                .social-links {
+                    gap: 16px;
+                    li {
+                        a{
+                            column-gap: 5px;
+                            &:hover{
+                                span{
+                                    color: $tertiary;
+                                }
+                            }
+                        }
+                        span {
+                            margin-bottom: 0;
+                            line-height: initial;
+                            transition: 0.4s all;
+                        }
+                        i {
+                            color: $primary;
+                            font-size: 22px;
+                            @media only screen and (min-width: 1200px) {
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+            .account-edit-btn {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+        }
+        .account-edit-btn {
+            padding: 8px 10px;
+            color: $primary;
+            display: flex;
+            align-items: center;
+            border-color: $primary;
+            column-gap: 10px;
+            font-size: 16px;
+            position: relative;
+            @media only screen and (min-width: 640px) {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+            @media only screen and (min-width: 1441px) {
+                padding: 13px 10px;
+                font-size: 18px;
+            }
+            @media only screen and (min-width: 1600px) {
+                font-size: 22px;
+            }
+            i {
+                font-size: 16px;
+                @media only screen and (min-width: 1200px) {
+                    font-size: 18px;
+                }
+                @media only screen and (min-width: 1600px) {
+                    font-size: 20px;
+                }
+            }
+            &:hover {
+                color: $white;
+                background-color: $primary;
+                border-color: $primary;
+                i {
+                    &::before {
+                        color: white;
+                        transition: all 0.4s;
+                    }
+                }
+            }
+        }
+        .common-content{
+            padding: 20px;
+            position: relative;
+        }
+        .wrap-title {
+            margin-bottom: 20px;
+        }
+        .content-title {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+
+}
+.add-edit-organizer-profile{
+    .users-image{
+        .error-msg{
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+
+// .custom-table table tbody tr:nth-child(n + 7) .cursor-pointer .dropdown-body {
+//     top: auto;
+//     bottom: 100%;
+// }

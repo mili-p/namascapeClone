@@ -1,0 +1,11 @@
+@import '../../../../style/variables.scss';
+
+.payment-success{
+    text-align: center;
+    img{
+        margin: 0 auto 20px;
+    }
+    .title{
+        color: $primary;
+    }
+}

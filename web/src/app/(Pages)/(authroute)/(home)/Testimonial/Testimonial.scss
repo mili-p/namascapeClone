@@ -1,0 +1,121 @@
+@import "../../../../style/variables.scss";
+
+.testimonial-section{
+    .title{
+        color: $tertiary;
+    }
+    .testimonial-card{
+        background-color: $LightCream;
+        .image-wrapper {
+            position: relative;
+            &::before{
+                content: "";
+                width: 100%;
+                height: 50%;
+                background-color: $white;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+            .user-img{
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin: 0 auto;
+                border: 10px solid $white;
+                @media only screen and (min-width: 1200px){
+                    width: 145px;
+                    height: 145px;
+                }
+                @media only screen and (min-width: 1600px){
+                    width: 180px;
+                    height: 180px;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+    
+        }
+        .users-reviews{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 15px;
+            text-align: center;
+            height: 100%;
+            @media only screen and (min-width: 768px){
+                padding: 20px;
+            }
+            @media only screen and (min-width: 1200px){
+                padding: 30px;
+            }
+            h3{
+                margin-bottom: 0;
+                text-transform: capitalize;
+                color: $primary;
+                font-size: 18px;
+                @media only screen and (min-width: 768px){
+                    font-size: 20px;
+                }
+                @media only screen and (min-width: 1600px){
+                    font-size: 24px;
+                }
+                .user-posting{
+                    font-size: 14px;
+                    color: $darkGrey;
+                    font-weight: 400;
+                    margin-left: 5px;
+                    @media only screen and (min-width: 768px){
+                        font-size: 16px;
+                    }
+                    @media only screen and (min-width: 1600px){
+                        font-size: 18px;
+                    }
+                }
+            }
+            p{
+                i{
+                    font-size: 9px;
+                    color: $primary;
+                    @media only screen and (min-width: 640px){
+                        font-size: 12px;
+                    }
+                    @media only screen and (min-width: 1600px){
+                        font-size: 15px;
+                    }
+                }
+                .icon-quote1{
+                    margin-right: 2px;
+                    @media only screen and (min-width: 1600px){
+                        margin-right: 5px;
+                    }
+                }
+                .icon-quote-2{
+                    margin-left: 5px;
+                    @media only screen and (min-width: 1600px){
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+    .testimonial-content{
+        .swiper-wrapper{
+            display: flex;
+            .swiper-slide{
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                @media only screen and (min-width: 640px){
+                    height: auto;
+                }
+            }
+        }
+    }
+}

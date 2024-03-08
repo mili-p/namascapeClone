@@ -1,0 +1,33 @@
+@import "../../assets/style/variables.scss";
+
+.discount-code-details{
+    .user-content-list{
+        max-width: 100%;
+        @media only screen and (min-width: 1200px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    .description-name{
+        color: $primary;
+        margin-bottom: 5px;
+        @media only screen and (min-width: 768px){
+            margin-bottom: 10px;
+        }
+        @media only screen and (min-width: 1200px){
+            margin-bottom: 16px;
+        }
+    }
+}
+.add-edit-discount-code-wrapper{
+    .add-edit-common-details{
+        @media only screen and (min-width: 1200px){
+            max-width: 615px;
+        }
+        @media only screen and (min-width: 1441px){
+            max-width: 640px;
+        }
+        @media only screen and (min-width: 1600px){
+            max-width: 800px;
+        }
+    }
+}

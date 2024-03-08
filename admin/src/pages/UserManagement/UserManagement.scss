@@ -1,0 +1,369 @@
+@import "../../assets/style/variables.scss";
+
+.user-details {
+    .user-info {
+        padding: 20px;
+        column-gap: 20px;
+        position: relative;
+        @media only screen and (min-width: 1441px) {
+            column-gap: 32px;
+        }
+
+        .users-content {
+            max-width: 550px;
+            @media only screen and (min-width: 1441px) {
+                max-width: 660px;
+            }
+            .user-id {
+                color: $tertiary;
+            }
+            h3 {
+                font-size: 22px;
+                margin-bottom: 12px;
+                @media only screen and (min-width: 768px) {
+                    font-size: 24px;
+                }
+                @media only screen and (min-width: 1600px) {
+                    margin-bottom: 16px;
+                }
+            }
+            .email,
+            p,
+            span {
+                font-size: 18px;
+                line-height: 22px;
+                color: $darkGrey;
+                margin-bottom: 12px;
+                @media only screen and (min-width: 768px) {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                @media only screen and (min-width: 1600px) {
+                    font-size: 22px;
+                    line-height: 26px;
+                    margin-bottom: 16px;
+                }
+            }
+            .users-details-list {
+                gap: 10px 12px;
+                @media only screen and (min-width: 768px) {
+                    gap: 20px;
+                }
+                li {
+                    column-gap: 5px;
+                    padding-right: 12px;
+                    border-right: 1px solid $mainBorder;
+                    @media only screen and (min-width: 768px) {
+                        padding-right: 20px;
+                    }
+                    &:last-child {
+                        border: none;
+                    }
+                    a {
+                        column-gap: 5px;
+                    }
+                    span {
+                        margin-bottom: 0;
+                        line-height: initial;
+                        transition: 0.4s all;
+                    }
+                    i {
+                        font-size: 22px;
+                        @media only screen and (min-width: 1200px) {
+                            font-size: 24px;
+                        }
+                    }
+                    &.location {
+                        i {
+                            color: $primary;
+                        }
+                    }
+                    &.instagram {
+                        a {
+                            &:hover {
+                                color: $primary;
+                            }
+                        }
+                    }
+                    &.birthdate {
+                        i {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+                            color: $primary;
+                            font-size: 24px;
+                        }
+                        span {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .account-edit-btn {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+    }
+    .account-edit-btn {
+        padding: 8px 10px;
+        color: $primary;
+        display: flex;
+        align-items: center;
+        border-color: $primary;
+        column-gap: 10px;
+        font-size: 16px;
+        position: relative;
+        @media only screen and (min-width: 640px) {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        @media only screen and (min-width: 1441px) {
+            padding: 13px 10px;
+            font-size: 18px;
+        }
+        @media only screen and (min-width: 1600px) {
+            font-size: 22px;
+        }
+        i {
+            font-size: 16px;
+            @media only screen and (min-width: 1200px) {
+                font-size: 18px;
+            }
+            @media only screen and (min-width: 1600px) {
+                font-size: 20px;
+            }
+        }
+        &:hover {
+            color: $white;
+            background-color: $primary;
+            border-color: $primary;
+            i {
+                &::before {
+                    color: white;
+                    transition: all 0.4s;
+                }
+            }
+        }
+    }
+}
+.content-events-wrap {
+    .event-title {
+        h3 {
+            font-size: 18px;
+            line-height: 22px;
+            color: $btnText;
+            @media only screen and (min-width: 768px){
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+    }
+    .event-history-box {
+        .event-title {
+            padding: 20px;
+            border-bottom: 1px solid $mainBorder;
+        }
+        .event-history-box-content {
+            padding: 20px;
+            max-height: 420px;
+            overflow-y: auto;
+            scrollbar-color: rgba(253, 158, 85, 0.5) $dust;
+            scrollbar-width: thin;
+            &::-webkit-scrollbar {
+                width: 4px;
+                height: 4px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(253, 158, 85, 0.5);
+            }
+            &::-webkit-scrollbar-track {
+                background-color: $dust;
+            }
+            @media only screen and (min-width: 1200px){
+                max-height: 560px;
+            }
+            @media only screen and (min-width: 1441px){
+                max-height: 575px;
+            }
+            ul {
+
+                .event-history-list {
+                    border: 1px solid $mainBorder;
+                    padding: 20px 12px;
+                    margin-bottom: 20px;
+                    cursor: pointer;
+                    transition: 0.3s ease-in-out;
+                    @media only screen and (min-width: 1600px){
+                        padding: 20px;
+                    }
+                    @media only screen and (max-width: 420px){
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 12px;
+                        gap: 10px;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    .label-name {
+                        font-size: 14px;
+                        line-height: 16px;
+                        margin-bottom: 4px;
+                        color: $lightGrey;
+                    }
+                    h4 {
+                        font-size: 14px;
+                        line-height: 18px;
+                        font-weight: 400;
+                        color: $btnText;
+                        @media only screen and (min-width: 640px){
+                            font-size: 16px;
+                            line-height: 20px;
+                        }
+                        @media only screen and (min-width: 1441px){
+                            font-size: 18px;
+                            line-height: 22px;
+                        }
+                        @media only screen and (min-width: 1600px){
+                            font-size: 20px;
+                            line-height: 24px;
+                        }
+                    }
+                    &:hover , &.active{
+                        background-color: $LightCream;
+                        border-color: $tertiary;
+                    }
+                }
+            }
+        }
+    }
+    .event-detail-box{
+        padding: 20px;
+        .event-title{
+            margin-bottom: 20px;
+        }
+        .event-image-box{
+            width: 140px;
+            min-width: 140px;
+            height: 125px;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .evnts-content{
+            .offline-btn{
+                font-size: 16px;
+                line-height: 20px;
+                padding: 6px 10px;
+                // transition: 0.3s ease-in-out;
+                // &:hover{
+                //     background-color: $primary;
+                //     color: $white;
+                //     border-color: $primary;
+                // }
+            }
+            h3{
+                font-size: 18px;
+                line-height: 22px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                @media only screen and (min-width: 768px){
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+        }
+        .box-evnts{
+            margin-bottom: 20px;
+        }
+        .event-list-wrapper{
+            li{
+                .icon{
+                    width: 35px;
+                    min-width: 35px;
+                    height: 35px;
+                    @media only screen and (min-width: 768px){
+                        width: 40px;
+                        min-width: 40px;
+                        height: 40px;
+                    }
+                    @media only screen and (min-width: 1200px){
+                        width: 45px;
+                        min-width: 45px;
+                        height: 45px;
+                    }
+                    @media only screen and (min-width: 1600px){
+                        width: 56px;
+                        min-width: 56px;
+                        height: 56px;
+                    }
+                    i{
+                        font-size: 16px;
+                        @media only screen and (min-width: 640px){
+                            font-size: 20px;
+                        }
+                        @media only screen and (min-width: 1024px){
+                            font-size: 22px;
+                        }
+                        @media only screen and (min-width: 1600px){
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+            .label-name{
+                color: $lightGrey;
+                font-size: 14px;
+                line-height: 16px;
+                margin-bottom: 4px;
+            }
+            h4{
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 400;
+                @media only screen and (min-width: 1441px){
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+                @media only screen and (min-width: 1600px){
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+        }
+        .payment-details{
+            .user-content-list{
+                max-width: 100%;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                padding-top: 0;
+                @media only screen and (min-width: 1200px) {
+                    gap: 20px 30px;
+                }
+                @media only screen and (min-width: 1441px) {
+                    gap: 32px 40px;
+                }
+                @media only screen and (max-width: 480px){
+                    grid-template-columns: repeat(1, 1fr);
+                    gap: 12px;
+                }
+            }
+            .event-qr-code{
+                max-width: 120px;
+                @media only screen and (min-width: 1200px){
+                    max-width: 220px;
+                }
+            }
+        }
+    }
+}

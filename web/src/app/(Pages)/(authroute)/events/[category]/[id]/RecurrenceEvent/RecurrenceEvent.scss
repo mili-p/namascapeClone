@@ -1,0 +1,54 @@
+@import "../../../../../../style/variables.scss";
+@import "../../../../../../style/global.scss";
+
+.recurrence-slider-box{
+    background-color: $LightCream;
+    padding: 20px;
+    border-radius: 10px;
+
+    .date-title{
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .timing{
+        font-size: 18px;
+        line-height: 22px;
+        display: block;
+    }
+    .qty-group-wrapper{
+        margin-top: 20px;
+        gap: 20px;
+        .qty-text{
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+    .recurrence-slide-btn{
+        padding: 10px 30px;
+        margin-top: 30px;
+    }
+}
+.recurrence-inner-slider{
+    position: relative;
+    .swiper{
+        position: static;
+    }
+    .swiper-button-prev{
+        left: -8px;
+        @media only screen and (min-width: 640px) {
+            left: -15px;
+        }
+        @media only screen and (min-width: 1200px) {
+            left: -40px;
+        }
+    }
+    .swiper-button-next{
+        right: -8px;
+        @media only screen and (min-width: 640px) {
+            right: -15px;
+        }
+        @media only screen and (min-width: 1200px) {
+            right: -40px;
+        }
+    }
+}

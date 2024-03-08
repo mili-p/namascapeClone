@@ -1,0 +1,184 @@
+@import '../../assets/style/variables.scss';
+
+.protected-dashboard{
+    .statistics-count{
+        .protected-counter {
+            .link{
+                background: $LightCream;
+                border: 1px dashed $mainBorder;
+                &:hover{
+                    background: $LightCream;
+                }
+                h3{
+                    font-size: 16px;
+                    @media only screen and (min-width: 640px){
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                    }
+                    @media only screen and (min-width: 1441px){
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+    .protected-counter{
+        margin: 0 -10px;
+        grid-row-gap: 24px;
+        @media only screen and (min-width: 768px){
+            margin: 0 -12px;
+        }
+        @media only screen and (min-width: 1600px){
+            margin: 0 -16px;
+        }
+        li{
+            padding: 0 10px;
+            @media only screen and (min-width: 768px){
+                padding: 0 12px;
+            }
+            @media only screen and (min-width: 1600px){
+                padding: 0 16px;
+            }
+            @media only screen and (max-width: 639px){
+                width: 50%;
+            }
+            @media only screen and (max-width: 480px){
+                text-align: center;
+            }
+        }
+        .link{
+            background: $white;
+            width: 100%;
+            height: 100%;
+            padding: 16px;
+            @media only screen and (min-width: 1441px){
+                padding: 20px;
+            }
+            &:hover{
+                background: $dust;
+            }
+            h3{
+                line-height: 1;
+                color: $btnText;
+                margin-bottom: 10px;
+                @media only screen and (min-width: 1441px){
+                    font-size: 36px;
+                    margin-bottom: 20px;
+                }
+            }
+            p{
+                font-size: 14px;
+                @media only screen and (min-width: 1441px){
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .events-card-wrapper{
+        gap: 24px;
+        @media only screen and (min-width: 1441px){
+            gap: 32px;
+        }
+    }
+    .events-card{
+        padding: 16px;
+        @media only screen and (min-width: 640px){
+            padding: 20px;
+        }
+        .head{
+            margin-bottom: 16px;
+            @media only screen and (min-width: 640px){
+                margin-bottom: 20px;
+            }
+            h2{
+                font-size: 18px;
+                line-height: 24px;
+                margin: 0;
+                @media only screen and (min-width: 640px){
+                    font-size: 20px;
+                }
+            }
+            a{
+                font-size: 18px;
+                color: $tertiary;
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+        .events-list{
+            .protected-event-card{
+                margin-bottom: 20px;
+                &:last-child{
+                    margin: 0;
+                }
+                img{
+                    @media only screen and (max-width: 639px){
+                        height: 250px;
+                    }
+                }
+                @media only screen and (min-width: 640px){
+                    height: 250px;
+                }
+                @media only screen and (min-width: 1024px){
+                    height: 300px;
+                }
+            }
+        }
+    }
+    .table-group{
+        .events-card{
+            padding: 0;
+            .head{
+                padding: 20px;
+                margin: 0;
+                border-bottom: 1px solid $mainBorder;
+
+
+            }
+            tbody{
+                tr{
+                    &:nth-child(n + 3){
+                        td {
+                            .dropdown-body{
+                                top: auto;
+                                bottom: 100%;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        .custom-table{
+            min-height: 400px;
+        }
+    }
+    .custom-pgntion {
+        > p{
+            font-size: 14px;
+            @media only screen and (min-width: 1441px){
+                font-size: 18px;
+            }
+        }
+    }
+    .custom-pgntion {
+        .pagination-wrap{
+            column-gap: 8px;
+            li{
+                a{
+                    font-size: 14px;
+                    min-width: 26px;
+                    height: 26px;
+                    display: flex;
+                    @media only screen and (min-width: 1441px){
+                        font-size: 16px;
+                        min-width: 30px;
+                        height: 30px;
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}

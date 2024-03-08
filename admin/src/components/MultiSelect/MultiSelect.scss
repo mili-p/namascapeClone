@@ -1,0 +1,119 @@
+@import "../../assets/style/variables.scss";
+
+.basic-multi-select{
+    min-height: 40px;
+    @media only screen and (min-width: 1441px){
+        min-height: 52px;
+    }
+    .css-13cymwt-control{
+        background: $LightCream !important;
+        border: 1px solid $mainBorder !important;
+        box-shadow: none !important;
+        border-radius: 0;
+        cursor: pointer !important;
+        height: 100%;
+    }
+    .css-t3ipsp-control{
+        border-color: $mainBorder !important;
+        background: $LightCream !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        cursor: pointer !important;
+        height: 100%;
+        &:hover , &:focus{
+            border-color: $mainBorder !important;
+            background: $LightCream !important;
+        }
+    }
+    .multiselect__input{
+        // height: 32px;
+        height: auto !important;
+        // @media only screen and (min-width: 640px){
+        //     height: 38px;
+        // }
+        // @media only screen and (min-width: 1200px){
+        //     height: 43px;
+        // }
+    }
+    .css-art2ul-ValueContainer2{
+        padding: 2px 10px;
+        @media only screen and (min-width: 640px){
+            padding: 2px 16px;
+        }
+        @media only screen and (min-width: 1441px){
+            padding: 2px 20px;
+        }
+    }
+    .css-w9q2zk-Input2{
+        margin: 0 !important;
+    }
+    .css-1i837h3-ValueContainer2{
+        padding: 1px 10px !important;
+        gap: 3px !important;
+        @media only screen and (min-width: 1441px){
+            padding: 1px 15px !important;
+        }
+    }
+    .multiselect__multi-value__label {
+        font-size: 12px !important;
+        color: $primary !important;
+        @media only screen and (min-width: 640px){
+            font-size: 14px !important;
+        }
+        @media only screen and (min-width: 1440px){
+            font-size: 15px !important;
+        }
+    }
+    .multiselect__placeholder{
+        font-size: 14px !important;
+        color: $darkGrey;
+        @media only screen and (min-width: 640px){
+            font-size: 16px !important;
+        }
+        @media only screen and (min-width: 1440px){
+            font-size: 22px !important;
+        }
+    }
+    .css-tlp4ob-option , .css-kp4agl-option{
+        font-size: 14px !important;
+        padding: 4px 10px;
+        @media only screen and (min-width: 640px){
+            padding: 6px 16px;
+            font-size: 16px !important;
+        }
+        @media only screen and (min-width: 1441px){
+            font-size: 22px !important;
+            padding: 8px 20px;
+        }
+    }
+    .css-1p3m7a8-multiValue{
+        background-color: $white !important;
+        border: 1px solid $mainBorder;
+    }
+    .css-12a83d4-MultiValueRemove{
+        color: $primary !important;
+    }
+    .multiselect__menu {
+        background-color: $white !important;
+        box-shadow: 0px 15px 30px 0px #00000014 !important;
+        .multiselect__menu-list{
+            max-height: 200px;
+            scrollbar-color: rgba(253, 158, 85, 0.5) $dust;
+            scrollbar-width: thin;
+            &::-webkit-scrollbar {
+                width: 5px;
+                height: 5px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(253, 158, 85, 0.5);
+            }
+            &::-webkit-scrollbar-track {
+                background-color: $dust;
+            }
+        }
+    }
+    .multiselect__indicator{
+        cursor: pointer;
+        color: $primary !important;
+    }
+}

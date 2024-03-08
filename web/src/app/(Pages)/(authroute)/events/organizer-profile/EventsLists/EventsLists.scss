@@ -1,0 +1,12 @@
+@import "../../../../../style/variables.scss";
+
+.organizer-events-wrap {
+    .event-card-web {
+        .event-image-box {
+            .badge {
+                right: 0;
+                left: unset;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@import '../../../style/variables.scss';
+
+.terms-conditions-wrapper{
+    .terms-conditions-inner{
+        background-color: $white;
+        padding: 16px;
+        @media only screen and (min-width: 1200px){
+            .terms-conditions-content{
+                max-width: 75%;
+            }
+        }
+        @media only screen and (min-width: 1441px){
+            padding: 20px;
+        }
+        .input-group{
+            margin-bottom: 20px;
+            @media only screen and (min-width: 640px){
+                margin-bottom: 30px;
+            }
+            @media only screen and (min-width: 1200px){
+                margin-bottom: 40px;
+            }
+            > label{
+                display: block;
+                color: $primary;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@import '../../../../../style/variables.scss';
+
+.attende-users-wrapper {
+    .title{
+        color: $tertiary;
+    }
+    h2 {
+        span {
+            color: $primary;
+            font-weight: 400;
+        }
+    }
+}

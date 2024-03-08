@@ -1,0 +1,160 @@
+@import '../../../../style/variables.scss';
+
+.banner{
+    background: $LightCream;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    @media  screen and (min-width: 1200px) and (max-width: 1439px) {
+        height: calc(100vh - 90px);
+    }
+    @media only screen and (min-width: 640px){
+        position: static;
+    }
+    .banner-content{
+        padding: 110px 0;
+        width: 100%;
+        .banner-btn{
+            @media only screen and (min-width: 1200px){
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+            @media only screen and (min-width: 1441px){
+                padding-left: 64px;
+                padding-right: 64px;
+            }
+        }
+        @media only screen and (max-width: 639px){
+            text-align: center;
+            .title{
+                margin-left: auto;
+                margin-right: auto;
+            }
+            p{
+                color: $white;
+            }
+            .banner-btn{
+                border-color: transparent;
+            }
+        }
+        @media only screen and (max-width: 480px){
+            padding: 50px 0;
+        }
+        @media only screen and (min-width: 640px){
+            width: 50%;
+            padding: 20px 0;
+        }
+        @media only screen and (min-width: 1200px){
+            padding: 100px 0;
+        }
+        .title{
+            color: $tertiary;
+            @media only screen and (max-width: 639px){
+                max-width: 450px;
+            }
+        }
+        p{
+            margin-bottom: 20px;
+            @media only screen and (min-width: 1200px){
+                margin-bottom: 50px;
+            }
+            &:last-child{
+                margin: 0;
+            }
+        }
+    }
+    .banner-image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0.6;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        @media only screen and (min-width: 640px){
+            padding: 60px 0;
+            position: relative;
+            top: auto;
+            left: auto;
+            width: 50%;
+            height: auto;
+            z-index: 1;
+            overflow: visible;
+            &::after{
+                display: none;
+            }
+        }
+        @media only screen and (min-width: 1024px){
+            padding: 80px 0;
+        }
+        @media  screen and (min-width: 1200px) and (max-width: 1439px) {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 40px 0;
+        }
+        @media only screen and (min-width: 1440px){
+            padding: 100px 0;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 150px;
+            height: 100%;
+            width: 10000px;
+            background: $primary;
+            z-index: -1;
+            display: none;
+            @media only screen and (min-width: 640px){
+              display: block;
+            }
+            @media only screen and (min-width: 768px){
+                left: 220px;
+            }
+            @media only screen and (min-width: 1440px){
+                left: 270px;
+            }
+        }
+        &::before{
+            background: $primary;
+        }
+        .image-wrapper{
+            width: 100%;
+            height: 100%;
+            @media only screen and (min-width: 640px){
+                padding: 16px 16px 16px 10px;
+                border: 3px solid $LightCream;
+            }
+            @media only screen and (min-width: 768px){
+                padding: 24px;
+            }
+            @media  screen and (min-width: 1200px) and (max-width: 1439px) {
+                max-height: 500px;
+            }
+            @media only screen and (min-width: 1440px){
+                padding: 35px;
+                padding-left: 24px;
+                img{
+                    max-height: 600px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+@import '../../assets/style/variables.scss';
+
+.custom-pgntion {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: $white;
+    padding: 16px 20px;
+    border-top: 1px solid $mainBorder;
+    @media only screen and (min-width: 1441px) {
+        padding: 20px;
+    }
+    & > p {
+        font-size: 14px;
+        line-height: 1.3;   
+        margin: 0;
+        color: $tertiary;
+        @media only screen and (min-width: 1441px) {
+            font-size: 20px;
+        }
+    }
+    .pagination-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        column-gap: 8px;
+        @media only screen and (min-width: 1441px) {
+            column-gap: 15px;
+        }
+        li {
+            a,.link {
+                font-size: 14px;
+                line-height: 1;
+                font-weight: 500;
+                padding: 0 5px;
+                min-width: 30px;
+                height: 30px;
+                border: 1px solid $mainBorder;
+                color: #BCBCBC;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0;
+                &.skeleton-link{
+                    padding: 0;
+                }
+                cursor: pointer;
+                transition: 0.3s all ease-in-out;
+                &.notPointer {
+                    cursor: initial;
+                    pointer-events: none;
+                }
+                @media only screen and (min-width: 1441px) {
+                    font-size: 16px;
+                    min-width: 40px;
+                    height: 40px;
+                }
+            }
+            &.previous,&.next{
+                a{
+                    color: $primary;
+                }
+            }
+            &.next{
+                a{
+                    transform: rotate(180deg);
+                }
+            }
+            &.selected,
+            &:hover {
+                a {
+                    background-color: $primary;
+                    border-color: $primary;
+                    color: $white;
+                }
+            }
+            &.disable {
+                a {
+                    cursor: initial;
+                    border: 1px solid $mainBorder;
+                    &:hover{
+                        background: transparent;
+                        border: 1px solid $mainBorder;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}

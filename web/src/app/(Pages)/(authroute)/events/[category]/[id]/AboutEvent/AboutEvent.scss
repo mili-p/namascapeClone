@@ -1,0 +1,80 @@
+@import "../../../../../../style/variables.scss";
+
+.event-organizer-box {
+    border: 1px solid $mainBorder;
+    padding: 20px;
+    position: relative;
+    .link{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    @media only screen and (min-width: 1200px) {
+        padding: 30px;
+    }
+    .organizer-title {
+        margin-bottom: 10px;
+        @media only screen and (min-width: 767px) {
+            margin-bottom: 20px;
+        }
+        &:last-child{
+            margin: 0;
+        }
+        h3 {
+            margin-bottom: 0;
+            font-size: 18px;
+            line-height: 20px;
+            @media only screen and (min-width: 767px) {
+                font-size: 20px;
+                line-height: 22px;
+            }
+            @media only screen and (min-width: 1440px) {
+                font-size: 26px;
+                line-height: 30px;
+            }
+        }
+        p {
+            color: $tertiary;
+            margin-top: 5px;
+            line-height: normal;
+        }
+        .usersicon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            @media only screen and (min-width: 767px) {
+                width: 64px;
+                height: 64px;
+            }
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+.about-event-section{
+    .description{
+        font-size: 14px;
+        line-height: 1.5;
+        color: $darkGrey;
+        font-family: '__Forum_26cbd8', '__Forum_Fallback_26cbd8';
+        font-weight: 400;
+        font-style: normal;
+        white-space: break-spaces;
+        @media only screen and (min-width: 640px) {
+            font-size: 16px;
+        }
+        @media only screen and (min-width: 768px) {
+            font-size: 18px;
+        }
+        @media only screen and (min-width: 1600px) {
+            font-size: 22px;
+        }
+    }
+}

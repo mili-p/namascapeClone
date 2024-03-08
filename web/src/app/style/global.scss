@@ -1,0 +1,3290 @@
+@import './variables.scss';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+// === Common CSS
+:focus-visible{
+    outline: none;
+}
+*, ::before, ::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+::selection{
+    background: $secondary;
+    color: $white;
+}
+html{
+    @media only screen and (min-width: 640px) {
+        scrollbar-color: rgba(253, 158, 85, 0.5) $dust;
+        scrollbar-width: thin;
+    }
+}
+body{
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: $mainText;
+    @media only screen and (min-width: 640px) {
+        font-size: 16px;
+        scrollbar-color: rgba(253, 158, 85, 0.5) $dust;
+        scrollbar-width: thin;
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(253, 158, 85, 0.5);
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $dust;
+        }
+    }
+    &.open-menu{
+        overflow: hidden;
+        transition: all 0.4s;
+        @media only screen and (min-width: 768px){
+            overflow: auto;
+        }
+    }
+    // &.open-modal{
+    //     overflow: hidden;
+    // }
+}
+.hideTable .fc-view-harness {
+    display: none;
+}
+article, aside, details, figcaption, figure, footer, header, nav, section, summary {
+    display: block;
+}
+audio, canvas, video {
+    display: inline-block;
+}
+.site-content{
+    // padding-top: 57px;
+    // @media only screen and (min-width: 768px){
+    //     padding-top: 67px;
+    // }
+    // @media only screen and (min-width: 991px){
+    //     padding-top: 91px;
+    // }
+    // &.user-login{
+    //     padding-top: 57px;
+    //     @media only screen and (min-width: 640px){
+    //         padding-top: 67px;
+    //     }
+    //     @media only screen and (min-width: 768px){
+    //         padding-top: 77px;
+    //     }
+    //     @media only screen and (min-width: 991px){
+    //         padding-top: 91px;
+    //     }
+    // }
+}
+.data-not-found{
+    font-size: 20px;
+    line-height: 1.5;
+    text-transform: inherit;
+    text-align: center;
+    border: 1px dashed $mainBorder;
+    background: $LightCream;
+    width: 100%;
+    padding: 20px 16px;
+    i{
+        font-size: 20px;
+        margin-bottom: 8px;
+        @media only screen and (min-width: 1441px){
+            font-size: 30px;
+        }
+    }
+    @media only screen and (min-width: 1441px){
+        font-size: 24px;
+        padding: 30px 16px;
+    }
+}
+.container{
+    @media  screen and (min-width: 1200px) and (max-width: 1439px) {
+        max-width: 1140px;
+    }
+    @media only screen and (min-width: 1440px) {
+        max-width: 1340px;
+    }
+    @media only screen and (min-width: 1600px) {
+        max-width: 1600px;
+    }
+}
+.qty-group{
+    display: inline-flex;
+    align-items: stretch;
+    border: 1px solid $mainBorder;
+    border-radius: 5px;
+    width: 80px;
+    height: 35px;
+    padding: 10px;
+    padding-right: 30px !important;
+    background: $white;
+    position: relative;
+    @media only screen and (min-width: 640px) {
+        padding: 10px 16px;
+    }
+    @media only screen and (min-width: 768px) {
+        height: 40px;
+    }
+    .qty-btn{
+        position: absolute;
+        right: 8px;
+        font-size: 10px;
+        width: 15px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transform: rotate(90deg);
+        transition: all 0.4s;
+        &.min{
+            bottom: 4px;
+            transform: rotate(-90deg);
+        }
+        &.max{
+            top: 4px;
+        }
+    }
+    .count{
+        display: flex;
+        align-items: center;
+        text-align: start;
+        font-size: 14px;
+        font-weight: 600;
+        width: 100%;
+        user-select: none;
+        @media only screen and (min-width: 1441px) {
+            font-size: 16px;
+        }
+    }
+}
+.user-bread-crumb-wrapper{
+    padding: 16px 0;
+    background: $LightCream;
+    @media only screen and (min-width: 640px) {
+        padding: 20px 0;
+    }
+    @media only screen and (min-width: 1024px) {
+        padding: 30px 0;
+    }
+}
+// === End Common CSS
+
+// === Typography
+h1,.h1{
+    font-size: 28px;
+    line-height: 1.3;
+    text-transform: lowercase;
+    @media only screen and (min-width: 640px) {
+        font-size: 30px;
+    }
+    @media only screen and (min-width: 768px) {
+        font-size: 32px;
+    }
+    @media screen and (min-width: 1200px) and (max-width: 1439px),(min-width: 1440px) {
+        font-size: 36px;
+        line-height: 50px;
+    }
+    @media only screen and (min-width: 1600px) {
+        font-size: 60px;
+        line-height: 70px;
+    }
+}
+h2,.h2{
+    font-size: 22px;
+    line-height: 1.2;
+    text-transform: lowercase;
+    @media only screen and (min-width: 640px) {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    @media only screen and (min-width: 768px) {
+        font-size: 26px;
+    }
+    @media screen and (min-width: 1200px) and (max-width: 1439px),(min-width: 1440px) {
+        font-size: 30px;
+        line-height: 42px;
+    }
+    @media only screen and (min-width: 1600px) {
+        font-size: 44px;
+        line-height: 48px;
+    }
+}
+h3,.h3{
+    font-size: 20px;
+    line-height: 1.2;
+    @media only screen and (min-width: 640px) {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+    @media only screen and (min-width: 768px) {
+        font-size: 24px;
+    }
+    @media screen and (min-width: 1200px) and (max-width: 1439px),(min-width: 1440px) {
+        font-size: 26px;
+    }
+    @media only screen and (min-width: 1600px) {
+        font-size: 34px;
+        line-height: 38px;
+    }
+}
+h4,.h4{
+    font-size: 18px;
+    line-height: 1.2;
+    @media screen and (min-width: 1200px) and (max-width: 1439px),(min-width: 1440px) {
+        font-size: 20px;
+    }
+    @media only screen and (min-width: 1600px) {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+}
+h5,.h5{
+    font-size: 16px;
+    line-height: 1.3;
+    @media only screen and (min-width: 1200px) {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+.h-50{
+    font-size: 22px;
+    line-height: 1.2;
+    text-transform: lowercase;
+    @media only screen and (min-width: 640px) {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    @media only screen and (min-width: 768px) {
+        font-size: 26px;
+    }
+    @media screen and (min-width: 1200px) and (max-width: 1439px),(min-width: 1440px) {
+        font-size: 28px;
+        line-height: 50px;
+    }
+    @media only screen and (min-width: 1600px) {
+        font-size: 46px;
+        line-height: 54px;
+    }
+}
+p,li{
+    font-size: 14px;
+    line-height: 1.3;
+    color: $darkGrey;
+    @media only screen and (min-width: 640px) {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    @media only screen and (min-width: 768px) {
+        font-size: 18px;
+    }
+    @media only screen and (min-width: 1600px) {
+        font-size: 22px;
+    }
+}
+h1,.h1,h2,.h2,h3,.h3{
+    font-weight: 700;
+}
+h1, h2, h3, h4, h5, h6,p,ul,ol{
+    margin-bottom: 14px;
+    &:last-child{
+        margin: 0;
+    }
+    @media only screen and (min-width: 1024px) {
+        margin-bottom: 20px;
+    }
+}
+a {
+    color: $primary;
+    text-decoration:none;
+    transition: all 0.4s;
+    &:hover,&:active{
+        color: $tertiary;
+    }
+}
+a,button{
+    transition: all 0.4s;
+    &:hover{
+        transition: all 0.4s;
+    }
+}
+a,span{
+    display: inline-block;
+}
+svg:not(:root) {
+    overflow:hidden;
+}
+ol, ul {
+    padding: 0;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0;
+}
+.title-wrapper{
+    margin-bottom: 24px;
+    &:last-child{
+        margin: 0;
+    }
+    @media only screen and (min-width: 1024px) {
+        margin-bottom: 34px;
+    }
+    @media only screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
+}
+// === End Typography
+
+// === Site Spacing
+.pt-120{
+    padding-top: 40px;
+    @media only screen and (min-width: 640px) {
+        padding-top: 60px;
+    }
+    @media only screen and (min-width: 1024px) {
+        padding-top: 80px;
+    }
+    @media only screen and (min-width: 1200px) {
+        padding-top: 100px;
+    }
+    @media only screen and (min-width: 1600px) {
+        padding-top: 120px;
+    }
+}
+.pb-120{
+    padding-bottom: 40px;
+    @media only screen and (min-width: 640px) {
+        padding-bottom: 60px;
+    }
+    @media only screen and (min-width: 1024px) {
+        padding-bottom: 80px;
+    }
+    @media only screen and (min-width: 1200px) {
+        padding-bottom: 100px;
+    }
+    @media only screen and (min-width: 1600px) {
+        padding-bottom: 120px;
+    }
+}
+.mt-120{
+    margin-top: 40px;
+    @media only screen and (min-width: 640px) {
+        margin-top: 60px;
+    }
+    @media only screen and (min-width: 1024px) {
+        margin-top: 80px;
+    }
+    @media only screen and (min-width: 1200px) {
+        margin-top: 100px;
+    }
+    @media only screen and (min-width: 1600px) {
+        margin-top: 120px;
+    }
+}
+.mb-120{
+    margin-bottom: 40px;
+    @media only screen and (min-width: 640px) {
+        margin-bottom: 60px;
+    }
+    @media only screen and (min-width: 1024px) {
+        margin-bottom: 80px;
+    }
+    @media only screen and (min-width: 1200px) {
+        margin-bottom: 100px;
+    }
+    @media only screen and (min-width: 1600px) {
+        margin-bottom: 120px;
+    }
+}
+.pt-100{
+    padding-top: 40px;
+    @media only screen and (min-width: 640px) {
+        padding-top: 60px;
+    }
+    @media only screen and (min-width: 1024px) {
+        padding-top: 80px;
+    }
+    @media only screen and (min-width: 1200px) {
+        padding-top: 100px;
+    }
+}
+.pt-50{
+    padding-top: 24px;
+    @media only screen and (min-width: 768px) {
+        padding-top: 34px;
+    }
+    @media only screen and (min-width: 1200px) {
+        padding-top: 50px;
+    }
+}
+.pb-50{
+    padding-bottom: 24px;
+    @media only screen and (min-width: 768px) {
+        padding-bottom: 34px;
+    }
+    @media only screen and (min-width: 1200px) {
+        padding-bottom: 50px;
+    }
+}
+.mt-50{
+    margin-top: 24px;
+    @media only screen and (min-width: 768px) {
+        margin-top: 34px;
+    }
+    @media only screen and (min-width: 1200px) {
+        margin-top: 50px;
+    }
+}
+.mb-50{
+    margin-bottom: 24px;
+    @media only screen and (min-width: 768px) {
+        margin-bottom: 34px;
+    }
+    @media only screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
+}
+.mb-32{
+    margin-bottom: 24px;
+    @media only screen and (min-width: 1200px){
+        margin-bottom: 32px;
+    }
+}
+.mt-32{
+    margin-top: 24px;
+    @media only screen and (min-width: 1200px){
+        margin-top: 32px;
+    }
+}
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+.m-0 {
+    margin: 0 !important;
+}
+.page-load{
+    .loader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .loader-circle {
+        width: 40px;
+        height: 40px;
+        @media only screen and (min-width: 640px) {
+            width: 60px;
+            height: 60px;
+        }
+        &:before {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 4px solid $primary;
+            border-color: $primary transparent $primary transparent;
+            animation: loader 1.2s linear infinite;
+            @media only screen and (min-width: 640px) {
+                width: 60px;
+                height: 60px;
+                border: 6px solid $primary;
+                border-color: $primary transparent $primary transparent;
+            }
+        }
+    }
+    .loader-text {
+        color: $primary;
+        font-size: 20px;
+        line-height: 1.5;
+        font-weight: 700;
+        margin-top: 16px;
+        letter-spacing: 0.06em;
+        // text-transform: capitalize;
+        @media only screen and (min-width: 640px) {
+            font-size: 24px;
+            margin-top: 24px;
+        }
+    }
+    @keyframes loader {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    &.logout-loader{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backdrop-filter: brightness(0.5);
+        z-index: 999;
+        .loader-circle{
+            &:before{
+                // border-color: $primary transparent $primary transparent;
+                border-color: #FD9E55 transparent #FD9E55 transparent;
+            }
+        }
+        .loader-text{
+            color: #FD9E55;
+        }
+    }
+}
+// === End Site Spacing
+
+// === Common Button
+.solid-btn,.border-btn{
+    font-size: 14px;
+    line-height: inherit;
+    font-weight: 400;
+    color: $white;
+    background: $tertiary;
+    border: 1px solid $tertiary;
+    padding: 8px 18px;
+    transition: all 0.4s;
+    &:hover{
+        color: $white;
+        background: $primary;
+        border-color: $primary;
+        transition: all 0.4s;
+    }
+    @media only screen and (min-width: 640px) {
+        font-size: 16px;
+        line-height: 22px;
+        padding: 8px 16px;
+    }
+    @media only screen and (min-width: 1441px) {
+        font-size: 18px;
+        padding: 14px 30px;
+    }
+}
+.border-btn{
+    background: transparent;
+    color: $btnText;
+    border-color: $btnBorder;
+    &:hover{
+        color: $white;
+        background: $tertiary;
+        border-color: $tertiary;
+    }
+    @media only screen and (min-width: 1441px) {
+        padding: 14px 40px;
+    }
+    @media only screen and (min-width: 1600px) {
+        padding: 14px 60px;
+    }
+}
+.btn-loader {
+    width: 14px;
+    height: 14px;
+    border: 2px solid $white;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    vertical-align: middle;
+    @media only screen and (min-width: 768px) {
+        width: 16px;
+        height: 16px;
+        border-bottom-color: transparent;
+    }
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+.site-checkbox-group{
+    input[type=checkbox]{
+        display: none;
+    }
+    input[type=checkbox]:checked{
+        ~ label{
+            &::before{
+                background: $primary;
+            }
+            &::after{
+                opacity: 1;
+            }
+        }
+    }
+    label{
+        position: relative;
+        margin: 0;
+        padding-left: 26px;
+        @media only screen and (min-width: 768px) {
+            padding-left: 34px;
+        }
+        cursor: pointer;
+        &::before,&::after{
+            content: '';
+            position: absolute;
+        }
+        &::before{
+            top: 2px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border: 1px solid $primary;
+            background: $white;
+            border-radius: 4px;
+            @media only screen and (min-width: 768px) {
+                top: 0;
+                width: 24px;
+                height: 24px;
+            }
+        }
+        &::after{
+            top: 6px;
+            left: 3px;
+            width: 14px;
+            height: 7px;
+            border-left: 2px solid $white;
+            border-bottom: 2px solid $white;
+            transform: rotate(-45deg);
+            opacity: 0;
+            @media only screen and (min-width: 768px) {
+                left: 5px;
+            }
+        }
+    }
+}
+// === End Common Button
+
+// === Swiper Slider CSS
+.swiper{
+    .swiper-pagination{
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+        height: 16px;
+        @media only screen and (min-width: 640px) {
+            margin-top: 20px;
+            gap: 16px;
+            height: 20px;
+        }
+        .swiper-pagination-bullet{
+            width: 10px;
+            height: 10px;
+            background: $dust;
+            margin: 0 !important;
+            opacity: 1;
+            transition: all 0.6s;
+            @media only screen and (min-width: 640px) {
+                width: 12px;
+                height: 12px;
+            }
+            &:hover{
+               background: $primary;
+               transition: all 0.6s;
+            }
+            &.swiper-pagination-bullet-active{
+                width: 16px;
+                height: 16px;
+                background: $white;
+                border: 5px solid $primary;
+                transition: all 0.6s;
+                @media only screen and (min-width: 640px) {
+                    width: 20px;
+                    height: 20px;
+                    border: 7px solid $primary;
+                }
+            }
+        }
+    }
+    .swiper-button-prev,
+    .swiper-button-next{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $LightCream;
+        border: 1px solid $btnText;
+        cursor: pointer;
+        z-index: 1;
+        transition: all 0.4s;
+        &::before{
+            content: "\e933";
+            position: absolute;
+            font-family: "Namescape" !important;
+            padding-right: 2px;
+            color: $btnText;
+            transition: all 0.4s;
+        }
+        &:hover{
+            background-color: $primary;
+            border-color: $primary;
+            transition: all 0.4s;
+            &::before{
+                color: $white;
+            }
+        }
+        &.swiper-button-disabled{
+            display: none;
+        }
+    }
+    .swiper-button-prev{
+        left: 0;
+    }
+    .swiper-button-next{
+        transform: rotate(180deg);
+        right: 0;
+    }
+}
+// === End Swiper Slider CSS
+
+// === Form CSS
+.input-group{
+    margin-bottom: 22px;
+    position: relative;
+    label{
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 400;
+        margin-bottom: 6px;
+        display: block;
+        color: $primary;
+        @media only screen and (min-width: 640px) {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        @media only screen and (min-width: 1441px) {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 10px;
+        }
+    }
+    p.note{
+        font-size: 14px;
+        text-transform: inherit;
+        @media only screen and (min-width: 640px){
+            font-size: 16px;
+        }
+        .red{
+            color: $red;
+            font-weight: 500;
+        }
+    }
+}
+input,textarea, select{
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px 10px;
+    border: 1px solid $mainBorder;
+    color: $darkGrey;
+    width: 100%;
+    @media only screen and (min-width: 640px) {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    @media only screen and (min-width: 1600px) {
+        font-size: 22px;
+        padding: 10px 20px;
+    }
+    &:focus{
+        border-color: $primary;
+    }
+    &:focus + .custom-radio{
+        border: 1px solid $primary !important;
+    }
+    // &:-webkit-autofill {
+    //     -webkit-box-shadow: 0 0 0px 1000px transperent inset;
+    //     transition: background-color 5000s ease-in-out 0s;
+    //     &:hover , &:focus{
+    //         -webkit-box-shadow: 0 0 0px 1000px transperent inset;
+    //         transition: background-color 5000s ease-in-out 0s;
+    //     }
+    // }
+}
+input,select{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+input, select{
+    height: 40px;
+    @media only screen and (min-width: 1441px) {
+        height: 52px;
+    }
+}
+input,textarea{
+    &::placeholder{
+        color: $lightGrey;
+    }
+}
+textarea{
+    resize: none;
+    scrollbar-color: rgba(253, 158, 85, 0.5) $dust;
+    scrollbar-width: thin;
+    display: block;
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(253, 158, 85, 0.5);
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $dust;
+    }
+}
+input[type=number]{
+    -moz-appearance: textfield;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+input[type=search]{
+    background: url('/assets/images/icon-search.svg') no-repeat;
+    background-position: left 12px center;
+    background-size: 22px 22px;
+    background-color: $white;
+    padding-left: 46px;
+    @media only screen and (min-width: 1440px) {
+        background-size: 28px 28px;
+        padding-left: 50px;
+    }
+    &::placeholder{
+        color: $darkGrey;
+    }
+    &::-webkit-search-cancel-button{
+        -webkit-appearance: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50em;
+        background: url('/assets/images/icon-close.svg') no-repeat 50% 50%;
+        background-size: contain;
+        cursor: pointer;
+    }
+}
+.search-input{
+    position: relative;
+    i{
+        position: absolute;
+        left: 10px;
+        z-index: 1;
+        font-size: 18px;
+        color: $darkGrey;
+        @media only screen and (min-width: 1441px){
+            font-size: 24px;
+            left: 15px;
+        }
+    }
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator ,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    opacity: 1;
+    display: block;
+    background: url("/assets/images/calendar-icon.svg") no-repeat;
+    background-size: cover;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    @media only screen and (min-width: 1441px){
+        width: 20px;
+        height: 20px;
+    }
+}
+input[type="date"]{
+    text-align: start;
+    -webkit-min-logical-width: calc(100% - 16px);
+    -webkit-border-radius:0px;
+    -webkit-box-align: start;
+}
+input::-webkit-date-and-time-value{
+    text-align: start;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background: url("/assets/images/time-icon.svg") no-repeat;
+    background-size: cover;
+}
+
+input[type=password]{
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    color: $darkGrey;
+    @media only screen and (min-width: 640px){
+        font-size: 24px;
+    }
+    @media only screen and (min-width: 1440px) {
+        line-height: 1.2;
+        font-size: 32px;
+    }
+}
+.pwd-input {
+    position: relative;
+    input {
+        padding: 10px 45px 10px 10px;
+        @media only screen and (min-width: 640px) {
+            padding: 10px 45px 10px 16px;
+        }
+        @media only screen and (min-width: 1600px) {
+            padding: 10px 45px 10px 20px;
+        }
+    }
+    .eye-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        @media only screen and (min-width: 640px) {
+            right: 20px;
+        }
+        i {
+            font-size: 20px;
+            color: $primary;
+        }
+    }
+}
+.password-tooltip-body{
+    background: rgb(255 255 255 / 70%);
+    list-style-type: none;
+    padding: 10px;
+    margin-top: 25px;
+    display: none;
+    @media only screen and (min-width: 768px){
+        background: rgba(255,0,0,.1);
+        padding: 10px 15px;
+    }
+    p{
+        margin-bottom: 0;
+        font-size: 14px;
+        line-height: 18px;
+        // color: #be322a;
+        color: red;
+        @media only screen and (min-width: 640px){
+            font-size: 15px;
+        }
+        @media only screen and (min-width: 768px){
+            color: red;
+        }
+        @media only screen and (min-width: 1441px){
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    i{
+        font-size: 10px;
+        line-height: 14px;
+        @media only screen and (min-width: 1200px){
+            font-size: 11px;
+        }
+        @media only screen and (min-width: 1441px){
+            font-size: 12px;
+            line-height: 16px;
+        }
+        &.icon-reject{
+            // color: #be322a;
+            color: red;
+            @media only screen and (min-width: 768px){
+                color: red;
+            }
+        }
+        &.icon-check{
+            color: green;
+        }
+    }
+    ul{
+        &.inner-list{
+            margin-left: 20px;
+            @media only screen and (min-width: 768px){
+                margin-left: 25px;
+            }
+        }
+        li{
+            margin: 0 0 4px;
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+            @media only screen and (min-width: 768px){
+                column-gap: 8px;
+            }
+            &.green{
+                p{
+                    color: green;
+                }
+                .icon-reject{
+                   display: none;
+                }
+            }
+            &.red{
+                p{
+                    color: red;
+                }
+                .icon-check{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.verification-wrap {
+    display: flex;
+    column-gap: 20px;
+    input {
+        text-align: center;
+    }
+}
+.error-msg{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+    color: $red;
+    white-space: nowrap;
+    overflow: scroll;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media only screen and (min-width: 640px) {
+        font-size: 15px;
+    }
+}
+.custom-checkbox {
+    height: 40px;
+    background-color: $LightCream;
+    border: 1px solid $mainBorder;
+    margin-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+    @media only screen and (min-width: 640px) {
+        margin-bottom: 0px;
+    }
+    @media only screen and (min-width: 1441px) {
+        height: 50px;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        outline: 1px solid $primary;
+        opacity: 0;
+    }
+    label {
+        font-size: 14px;
+        position: relative;
+        margin-bottom: 0;
+        color: $darkGrey;
+        width: 100%;
+        height: 100%;
+        padding: 8px 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        @media only screen and (min-width: 640px) {
+            font-size: 16px;
+            padding: 8px 16px;
+        }
+        @media only screen and (min-width: 1441px) {
+            font-size: 22px;
+            padding: 10px 20px;
+        }
+        &::before {
+            content: "";
+            -webkit-appearance: none;
+            background-color: transparent;
+            border: 1px solid $darkGrey;
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    }
+    input {
+        padding: 0;
+        width:100%;
+        height:100%;
+        position:absolute;
+        opacity:0;
+        cursor: pointer;
+        &:checked + label {
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                width: 4px;
+                height: 8px;
+                border: solid $white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+                @media only screen and (min-width: 640px) {
+                    left: 22px;
+                    top: 14px;
+                }
+                @media only screen and (min-width: 1024px) {
+                    font-size: 18px;
+                    left: 21px;
+                    top: 15px;
+                }
+                @media only screen and (min-width: 1441px) {
+                    top: 19px;
+                    left: 26px;
+                }
+            }
+            &::before {
+                background-color: $primary;
+                border: $primary;
+            }
+        }
+    }
+    &:focus-within::before{
+        opacity: 1;
+    }
+
+}
+.custom-radio {
+    height: 40px;
+    background-color: $LightCream;
+    border: 1px solid $mainBorder;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    @media only screen and (min-width: 640px) {
+        margin-bottom: 0px;
+    }
+    @media only screen and (min-width: 1441px) {
+        height: 50px;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        outline: 1px solid $primary;
+        opacity: 0;
+    }
+    &:focus-within::before{
+        opacity: 1;
+    }
+    label {
+        font-size: 14px;
+        position: relative;
+        margin-bottom: 0;
+        color: $darkGrey;
+        width: 100%;
+        height: 100%;
+        padding: 8px 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        @media only screen and (min-width: 640px) {
+            font-size: 16px;
+            padding: 8px 16px;
+        }
+        @media only screen and (min-width: 1200px) {
+            padding: 10px 20px;
+        }
+        @media only screen and (min-width: 1441px) {
+            font-size: 22px;
+            padding: 12px 20px;
+        }
+        &::before {
+            content: "";
+            -webkit-appearance: none;
+            background-color: transparent;
+            border: 1px solid $darkGrey;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    }
+    input {
+        padding: 0;
+        height:0;
+        width:0;
+        position:absolute;
+        cursor: pointer;
+        opacity:0;
+        &:checked + label {
+            &::before {
+                background-color: $primary;
+                border-color: $primary;
+            }
+        }
+
+    }
+
+}
+
+.custom-select {
+    position: relative;
+    .remove-city{
+        position: absolute;
+        top: 50%;
+        right: 34px;
+        transform: translateY(-50%);
+        color: $primary;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        @media only screen and (min-width: 1200px) {
+            right: 46px;
+        }
+    }
+    .select-btn {
+        width: 100%;
+        border: 1px solid $mainBorder;
+        background-color: $LightCream;
+        padding: 8px 10px;
+        height: 40px;
+        color: $darkGrey;
+        font-size: 14px;
+        cursor: pointer;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        white-space: nowrap;
+        line-break: anywhere;
+        text-align: start;
+        padding-right: 54px;
+        @media only screen and (min-width: 640px){
+            font-size: 16px;
+            padding-right: 54px;
+        }
+        @media only screen and (min-width: 1200px) {
+            height: 50px;
+            padding: 10px 20px;
+            padding-right: 68px;
+        }
+        @media only screen and (min-width: 1441px) {
+            font-size: 22px;
+        }
+        &::before {
+            font-family: "Namescape";
+            content: "\e929";
+            color: $primary;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 7px;
+            font-weight: 800;
+            transition: 0.3s ease-in-out;
+        }
+    }
+    .select-menu-list {
+        position: absolute;
+        right: 0;
+        transform: translateY(25px);
+        background: $white;
+        box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.08);
+        width: 100%;
+        overflow: hidden;
+        opacity: 0;
+        z-index: 3;
+        pointer-events: none;
+        transition: 0.3s ease-in-out;
+        ul {
+            margin: 10px 0;
+            max-height: 360px;
+            overflow-y: auto;
+            scrollbar-color: rgba(253, 158, 85, 0.5) $dust;
+            scrollbar-width: thin;
+            &::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(253, 158, 85, 0.5);
+            }
+            &::-webkit-scrollbar-track {
+                background-color: $dust;
+            }
+            li {
+                font-size: 16px;
+                padding: 7px 15px;
+                color: #585858;
+                cursor: pointer;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                transition: 0.3s ease-in-out;
+                @media only screen and (min-width: 1200px) {
+                    font-size: 18px;
+                }
+                @media only screen and (min-width: 1440px) {
+                    padding: 10px 20px;
+                }
+                @media only screen and (min-width: 1600px) {
+                    font-size: 22px;
+                }
+                &:hover , &.active {
+                    background-color: $primary;
+                    color: $white;
+                }
+            }
+            input{
+                position: sticky;
+                top: 0;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &.active {
+        .select-menu-list {
+            transform: translateY(10px);
+            opacity: 1;
+            pointer-events: visible;
+
+        }
+        .select-btn {
+            &::before {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+    }
+}
+.icon-input{
+    position: relative;
+    input{
+        padding-left: 45px !important;
+        position: relative;
+        &::before{
+            content: "\e906";
+            left: 15px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: $primary;
+            padding-top: 5px;
+            @media only screen and (min-width: 640px) {
+                font-size: 18px;
+                padding-top: 7px;
+            }
+        }
+    }
+    label,.error-msg{
+        font-family: '__Forum_26cbd8';
+    }
+}
+.react-datepicker{
+    width: 260px;
+}
+.react-datepicker__month-container{
+    float: none;
+}
+.react-datepicker-popper{
+    z-index: 2;  
+}
+.react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header{
+    padding: 8px 0 16px;
+}
+.react-datepicker-popper[data-placement^=top] .react-datepicker__triangle, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle{
+    left: 50% !important;
+    transform: translate(0, -50%) !important;
+}
+.react-datepicker__navigation{
+    span{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        font-size: 0;
+        &::before{
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+}
+.react-datepicker-wrapper{
+    width: 100%;
+    .react-datepicker__input-container{
+        .date-btn{
+            font-size: 14px;
+            font-weight: 400;
+            padding: 8px 10px;
+            background: $LightCream;
+            border: 1px solid $mainBorder;
+            color: $darkGrey;
+            text-align: start;
+            width: 100%;
+            height: 40px;
+            padding-right: 44px !important;
+            position: relative;
+            &:focus{
+                border-color: $primary;
+            }
+            &::before{
+                content: "\e905";
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                font-family: "Namescape" !important;
+                font-size: 20px;
+                line-height: 1;
+                color: $primary;
+                @media only screen and (min-width: 640px) {
+                    right: 18px;
+                }
+                @media only screen and (min-width: 1441px) {
+                    font-size: 24px;
+                }
+            }
+            @media only screen and (min-width: 640px) {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+            @media only screen and (min-width: 1441px) {
+                height: 52px;
+            }
+            @media only screen and (min-width: 1600px) {
+                font-size: 22px;
+                padding: 10px 20px;
+            }
+        }
+    }
+}
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__quarter-text--in-range,
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--in-selecting-range,
+.react-datepicker__year-text--in-range,
+.react-datepicker__day,
+.react-datepicker__month-text,
+.react-datepicker__quarter-text,
+.react-datepicker__year-text{
+    &:hover{
+        background-color: $primary;
+        color: $white;
+    }
+    &:focus-visible,&:focus{
+        outline: none;
+    }
+}
+.react-datepicker__day--selected{
+    background-color: $primary;
+    color: $white;
+}
+.react-datepicker__header{
+    background-color: $LightCream;
+    border-color: $mainBorder;
+}
+.react-datepicker{
+    border-color: $mainBorder;
+    font-family: '__Forum_26cbd8', '__Forum_Fallback_26cbd8';
+}
+.react-datepicker__navigation{
+    top: 8px;
+}
+.react-datepicker__day--today,
+.react-datepicker__month-text--today,
+.react-datepicker__quarter-text--today,
+.react-datepicker__year-text--today{
+    color: $primary;
+}
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected{
+    background-color: $primary;
+    color: $white;
+}
+.react-datepicker__month-select,
+.react-datepicker__year-select{
+    font-size: 14px;
+    padding: 4px 10px;
+    padding-right: 18px;
+    height: 34px;
+    cursor: pointer;
+}
+.react-datepicker__year-dropdown-container--select, .react-datepicker__month-dropdown-container--select, .react-datepicker__month-year-dropdown-container--select, .react-datepicker__year-dropdown-container--scroll, .react-datepicker__month-dropdown-container--scroll, .react-datepicker__month-year-dropdown-container--scroll{
+    margin: 0 7px;
+}
+.plz-body{
+    .plz{
+        width: 60px;
+        flex-shrink: 0;
+        @media only screen and (min-width: 640px) {
+            width: 88px;
+        }
+    }
+    .custom-select{
+        width: 100%;
+    }
+}
+// === End Form CSS
+// === Policy CSS
+.policy-content{
+    @font-face {
+        font-family: 'Cinzel';
+        src: url('/assets/fonts/Cinzel-Bold.eot');
+        src: local('Cinzel Bold'), local('Cinzel-Bold'),
+            url('/assets/fonts/Cinzel-Bold.eot?#iefix') format('embedded-opentype'),
+            url('/assets/fonts/Cinzel-Bold.woff2') format('woff2'),
+            url('/assets/fonts/Cinzel-Bold.woff') format('woff'),
+            url('/assets/fonts/Cinzel-Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Cinzel';
+        src: url('/assets/fonts/Cinzel-Regular.eot');
+        src: local('Cinzel Regular'), local('Cinzel-Regular'),
+            url('/assets/fonts/Cinzel-Regular.eot?#iefix') format('embedded-opentype'),
+            url('/assets/fonts/Cinzel-Regular.woff2') format('woff2'),
+            url('/assets/fonts/Cinzel-Regular.woff') format('woff'),
+            url('/assets/fonts/Cinzel-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+    h1,h2,h3,h4,h5{
+        font-family: 'Cinzel';
+        text-transform: lowercase;
+    }
+    ul,ol{
+        padding-left: 20px;
+        @media only screen and (min-width: 640px) {
+            padding-left: 24px;
+        }
+        li{
+            position: relative;
+            margin-bottom: 10px;
+            // @media only screen and (min-width: 640px) {
+            //     margin-bottom: 14px;
+            // }
+            &:last-child{
+                margin:0;
+            }
+        }
+    }
+    ul {
+        list-style-type: disc;
+    }
+    ol {
+        list-style-type: decimal;
+    }
+    &.title-wrapper{
+        h4{
+            font-weight: 700;
+        }
+    }
+}
+// === End Policy CSS
+// === User Setting & Payment Wrapper CSS
+.web-setting{
+    @media only screen and (max-width: 767px){
+        padding: 30px 0;
+    }
+    .web-setting-wrapper{
+        gap: 32px;
+        .setting-back-btn{
+            display: none;
+            @media only screen and (max-width: 767px) {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                width: 26px;
+                height: 26px;
+                display: block;
+                border: 2px solid $btnText;
+                border-radius: 100%;
+                &::before,&::after{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 65%;
+                    height: 2px;
+                    background: $btnText;
+                    transform: rotate(45deg);
+                }
+                &::before{
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        .web-setting-sidebar {
+            @media only screen and (max-width: 767px){
+                border: none;
+                h3{
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    margin: 0;
+                }
+                .sticky-inner{
+                    padding: 0;
+                    border: none;
+                }
+               .web-setting-menu {
+                    display: block;
+                    border-bottom: 1px solid $mainBorder;
+                    margin-bottom: 14px;
+                    li {
+                        width: 100%;
+                        border-bottom: 1px solid $mainBorder;
+                        &:last-child{
+                            padding: 0;
+                            margin: 0;
+                            border: none;
+                        }
+                        .link{
+                            font-size: 16px;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            position: relative;
+                            padding: 14px 0;
+                            padding-right: 20px;
+                            background: transparent;
+                            color: $btnText;
+                            &::before{
+                                content: "\e920";
+                                position: absolute;
+                                font-size: 14px;
+                                top: 50%;
+                                right: 5px;
+                                margin: auto;
+                                font-family: "Namescape" !important;
+                                transform: translateY(-50%) rotate(180deg);
+                                color: $btnText;
+                            }
+                            i{
+                                font-size: 16px;
+                                width: 30px;
+                                height: 30px;
+                                border: 1px solid $primary;
+                                display: inline-flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 100%;
+                                &::before{
+                                    color: $primary;
+                                }
+                            }
+                        }
+                    }
+               }
+            }
+        }
+        .web-setting-content{
+            width: 100%;
+            @media only screen and (max-width: 767px) {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: $white;
+                z-index: 999;
+                padding: 46px 15px 20px;
+                overflow-y: auto;
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(0.3);
+                transition: all 0.4s;
+                div {
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 1s;
+                }
+                &.show-mobile{
+                    opacity: 1;
+                    visibility: visible;
+                    transform: scale(1);
+                    transition: all 1s;
+                    div {
+                        opacity: 1;
+                        visibility: visible;
+                        transition: all 2s;
+                    }
+                }
+            }
+            &.payment-setting-content{
+                @media only screen and (max-width: 767px){
+                    position: static;
+                    opacity: 1;
+                    visibility: visible;
+                    transform: scale(1);
+                    height: auto;
+                    padding: 0;
+                    transition: all 0s;
+                    z-index: 1;
+                    div {
+                        opacity: 1;
+                        visibility: visible;
+                        transition: all 0s;
+                    }
+                }
+            }
+            h1{
+                color: $tertiary;
+            }
+            h2,h1{
+                margin-bottom: 14px;
+                @media only screen and (min-width: 640px) {
+                    margin-bottom: 20px;
+                }
+                @media only screen and (min-width: 768px) {
+                    margin-bottom: 32px;
+                }
+            }
+            .input-group-row{
+                grid-column-gap: 32px;
+            }
+            .input-group{
+                width: 100%;
+                @media only screen and (min-width: 1024px) {
+                    margin-bottom: 32px;
+                }
+                label{
+                    color: $btnText;
+                }
+                input,textarea{
+                    background-color: $LightCream;
+                }
+                &.card-number{
+                    input{
+                        background-image: url('/assets/images/icons-payment.svg');
+                        background-position: right 10px center;
+                        background-size: 47px 33px;
+                        background-repeat: no-repeat;
+                        background-color: $LightCream;
+                        padding-right: 76px;
+                        @media only screen and (min-width: 640px){
+                            background-position: right 16px center;
+                        }
+                        @media only screen and (min-width: 1200px){
+                            background-position: right 20px center;
+                            padding-right: 76px;
+                        }
+                    }
+                }
+            }
+            .form-btn{
+                background: $tertiary;
+                border-color: $tertiary;
+                &:hover{
+                    background: $primary;
+                    border-color: $primary;
+                }
+                @media only screen and (min-width: 1200px){
+                    padding-left: 63px;
+                    padding-right: 63px;
+                }
+            }
+        }
+    }
+}
+.user-content-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    margin-bottom: 0;
+    @media only screen and (min-width: 640px) {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 15px;
+    }
+    @media only screen and (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    @media only screen and (min-width: 1200px) {
+        max-width: 90%;
+        padding-top: 0px;
+    }
+    @media only screen and (min-width: 1440px) {
+        max-width: 80%;
+    }
+    li {
+        .label-name {
+            font-size: 14px;
+            line-height: 16px;
+            color: $lightGrey;
+            margin-bottom: 4px;
+        }
+        h4 {
+            font-size: 14px;
+            line-height: 18px;
+            color: $btnText;
+            margin-bottom: 0;
+            font-weight: 400;
+            white-space: pre-line;
+            word-break: break-word;
+            @media only screen and (min-width: 1200px) {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            @media only screen and (min-width: 1600px) {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+        a{
+            white-space: pre-line;
+            word-break: break-word;
+        }
+    }
+}
+// === End User Setting & Payment Wrapper CSS
+// === 404 CSS
+.page-not-found{
+    position: relative;
+    height: 100vh;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $mainText;
+        z-index: 1;
+        opacity: 0.7;
+    }
+    img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+    .content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        padding: 30px;
+        z-index: 2;
+        h1,h2,p{
+            color: $white;
+        }
+        h1{
+            font-size: 40px;
+            line-height: 1;
+            text-transform: capitalize;
+            @media only screen and (min-width: 640px) {
+                font-size: 60px;
+            }
+            @media only screen and (min-width: 1200px) {
+                font-size: 110px;
+            }
+        }
+        p{
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+    }
+}
+// === End 404 CSS
+// === Event Common CSS
+.event-search-bar {
+    background: $primary;
+    padding: 10px 0;
+    &.sticky-bar{
+        position: sticky;
+        top: 57px;
+        z-index: 3;
+        @media only screen and (max-width: 990px){
+            padding-top: 20px;
+        }
+        @media only screen and (min-width: 768px) {
+            top: 67px;
+        }
+        @media only screen and (min-width: 991px) {
+            top: 91px;
+        }
+    }
+    .search-event {
+        height: 36px;
+        @media only screen and (min-width: 640px) {
+            height: 40px;
+        }
+        @media only screen and (min-width: 768px) {
+            height: 42px;
+            max-width: 375px;
+        }
+        @media only screen and (min-width: 1440px) {
+            height: 50px;
+        }
+    }
+}
+.events-wraps{
+    padding-top: 30px;
+    @media only screen and (min-width: 640px) {
+        padding-top: 50px;
+    }
+    // @media only screen and (min-width: 1440px){
+    //     padding-top: 100px;
+    // }
+    .web-events-wrapper{
+        padding-bottom: 30px;
+        @media only screen and (min-width: 640px) {
+            padding-bottom: 50px;
+        }
+        &:last-child{
+            padding-bottom: 0;
+        }
+    }
+}
+.event-title-wrapper {
+    margin-bottom: 20px;
+    @media only screen and (min-width: 1440px) {
+        margin-bottom: 32px;
+    }
+    h1,.title{
+        color: $tertiary;
+    }
+    h2{
+        color: $primary;
+    }
+    h2,
+    h1 {
+        margin-bottom: 0;
+    }
+    a,.link{
+        font-size: 18px;
+        line-height: 30px;
+        color: $tertiary;
+        @media only screen and (min-width: 1024px) {
+            font-size: 22px;
+        }
+        @media only screen and (min-width: 1200px) {
+            font-size: 24px;
+        }
+        @media only screen and (min-width: 1600px) {
+            font-size: 26px;
+        }
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+.events-tab-wrap {
+    gap: 15px;
+    @media only screen and (min-width: 1440px) {
+        gap: 32px;
+    }
+    .events-tab {
+        gap: 12px;
+        @media only screen and (min-width: 640px) {
+            gap: 14px;
+        }
+        @media only screen and (min-width: 1024px) {
+            gap: 24px;
+        }
+        @media only screen and (min-width: 1440px) {
+            gap: 32px;
+        }
+        .events-tab-link{
+            font-size: 14px;
+            line-height: 1.3;
+            color: $white;
+            @media only screen and (min-width: 640px) {
+                font-size: 16px;
+            }
+            @media only screen and (min-width: 1440px) {
+                font-size: 18px;
+            }
+            span{
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                background: $white;
+                margin-bottom: 4px;
+                border: 2px solid transparent;
+                transition: all 0.4s;
+                @media only screen and (min-width: 481px) {
+                    width: 40px;
+                    height: 40px;
+                }
+                @media only screen and (min-width: 640px) {
+                    width: 50px;
+                    height: 50px;
+                    margin-bottom: 6px;
+                    border: 4px solid transparent;
+                }
+                @media only screen and (min-width: 1440px) {
+                    width: 70px;
+                    height: 70px;
+                }
+                i{
+                    mask-size: contain;
+                    mask-repeat: no-repeat;
+                    mask-position: center;
+                    background-color: $dust;
+                    width: 18px;
+                    height: 18px;
+                    transition: all 0.4s;
+                    @media only screen and (min-width: 481px) {
+                        width: 24px;
+                        height: 24px;
+                    }
+                    @media only screen and (min-width: 640px) {
+                        width: 34px;
+                        height: 34px;
+                    }
+                    @media only screen and (min-width: 1440px) {
+                        width: 48px;
+                        height: 48px;
+                    }
+                    &.icon-tab-all{
+                        mask-image: url('/assets/images/icon-tab-All.svg');
+                    }
+                    &.icon-tab-experiences{
+                        mask-image: url('/assets/images/icon-tab-Experiences.svg');
+                    }
+                    &.icon-tab-retreats{
+                        mask-image: url('/assets/images/icon-tab-retreats.svg');
+                    }
+                    &.icon-tab-treats{
+                        mask-image: url('/assets/images/icon-tab-treats.svg');
+                    }
+                    &.icon-tab-classes{
+                        mask-image: url('/assets/images/icon-tab-classes.svg');
+                    }
+                    &.icon-tab-coaching{
+                        mask-image: url('/assets/images/icon-tab-coaching.svg');
+                    }
+                    &.icon-tab-training{
+                        mask-image: url('/assets/images/icon-tab-training.svg');
+                    }
+                    &.icon-tab-sponsored{
+                        mask-image: url('/assets/images/icon-tab-sponsored.svg');
+                    }
+                }
+            }
+            &:hover,&.active{
+                span{
+                    border-color: $tertiary;
+                    transition: all 0.4s;
+                    i{
+                        background-color: $tertiary;
+                        transition: all 0.4s;
+                    }
+                }
+            }
+        }
+    }
+    .search-event {
+        max-width: 100%;
+        @media only screen and (min-width: 1024px) {
+            width: 300px;
+        }
+        @media only screen and (min-width: 1200px) {
+            width: 375px;
+        }
+    }
+}
+.search-filter-group{
+    input[type=search]{
+        height: 26px;
+        background-size: 14px 14px;
+        background-position: left 10px center;
+        padding-left: 36px;
+        @media only screen and (min-width: 768px){
+            height: 32px;
+            background-size: 18px 18px;
+        }
+        @media only screen and (min-width: 1440px){
+            height: 50px;
+            background-size: 22px 22px;
+            background-position: left 12px center;
+            padding-left: 46px;
+        }
+    }
+}
+.btn-wrap {
+    margin-bottom: 12px;
+    .event-badge {
+        font-size: 14px;
+        line-height: 16px;
+        color: #b09684;
+        border: 1px solid #e6d8c5;
+        padding: 5px 10px;
+        @media only screen and (min-width: 768px) {
+            font-size: 16px;
+            line-height: 18px;
+            padding: 8px 10px;
+        }
+        @media only screen and (min-width: 1440px) {
+            font-size: 18px;
+            line-height: 22px;
+            padding: 10px;
+        }
+    }
+}
+.wrap-users-details {
+    @media only screen and (max-width: 400px) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.sorting-events-form{
+    .input-group{
+        width: 100%;
+        margin-bottom: 0;
+
+        @media only screen and (min-width: 640px){
+            width: calc(50% - 16px);
+        }
+        @media only screen and (min-width: 1024px){
+            width: auto;
+        }
+        label{
+            @media only screen and (min-width: 1024px){
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
+        }
+        input{
+            width: 100%;
+            background-color: $LightCream;
+            font-size: 14px;
+            @media only screen and (min-width: 640px) {
+                font-size: 16px;
+            }
+            @media only screen and (min-width: 1024px) {
+                width: 190px;
+                max-width: 190px;
+            }
+            @media only screen and (min-width: 1200px) {
+                width: 250px;
+                max-width: 250px;
+                font-size: 20px;
+            }
+        }
+        .location-select{
+            width: 100%;
+            @media only screen and (min-width: 1024px) {
+                width: 190px;
+                max-width: 190px;
+            }
+            @media only screen and (min-width: 1200px) {
+                width: 250px;
+                max-width: 250px;
+            }
+        }
+        .event-type-select{
+            width: 250px;
+            max-width: 250px;
+        }
+        .location-input{
+            position: relative;
+            background: url(/assets/images/icon-location.svg) no-repeat;
+            background-position: left 10px center;
+            background-size: 22px 22px;
+            background-color: $LightCream;
+            padding-right: 45px;
+            padding-left: 45px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            @media only screen and (min-width: 640px){
+                background-position: left 15px center;
+            }
+            @media only screen and (min-width: 1200px){
+                padding-left: 45px;
+            }
+        }
+    }
+    .location-input{
+        width: 100%;
+        @media only screen and (min-width: 1024px){
+            width: 220px;
+        }
+        @media only screen and (min-width: 1600px){
+            width: 288px;
+        }
+    }
+    .solid-btn{
+        background-color: $tertiary;
+        border-color: $tertiary;
+        display: block;
+        margin-top: 20px;
+        @media only screen and (min-width: 1024px) {
+            width: auto;
+            margin-top: 0px;
+        }
+        &:hover{
+            background-color: $primary;
+            border-color: $primary;
+        }
+    }
+
+    .custom-select{
+        .select-menu-list{
+            input{
+                width: 100%;
+                max-width: 100%;
+            }
+            ul{
+                li{
+                    font-size: 16px;
+                    @media only screen and (min-width: 1024px) {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+    .list-btn{
+        width: 26px;
+        height: 26px;
+        color: $lightGrey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $mainBorder;
+        flex-shrink: 0;
+        @media only screen and (min-width: 768px){
+            width: 32px;
+            height: 32px;
+        }
+        @media only screen and (min-width: 1440px){
+            width: 50px;
+            height: 50px;
+        }
+        i{
+            font-size: 14px;
+            color: $primary;
+            transition: all 0.4s;
+            @media only screen and (min-width: 768px){
+                font-size: 16px;
+            }
+            @media only screen and (min-width: 1440px){
+                font-size: 24px;
+            }
+        }
+        &:hover , &.active{
+            background-color: $primary;
+            border-color: $primary;
+            color: $white;
+            i{
+                color: $white;
+            }
+        }
+    }
+
+// === End Event Common CSS
+
+// === Calender Common CSS
+.fc {
+    table{
+        font-size: 12px;
+        @media only screen and (min-width: 768px){
+            font-size: 14px;
+        }
+        @media only screen and (min-width: 1440px){
+            font-size: 16px;
+        }
+        @media only screen and (max-width: 480px){
+            font-size: 10px;
+        }
+    }
+    .fc-daygrid-month-start{
+        font-size: 12px;
+        @media only screen and (min-width: 768px){
+            font-size: 14px;
+        }
+        @media only screen and (min-width: 1440px){
+            font-size: 16px;
+        }
+    }
+    .fc-button{
+        background-color: $LightCream;
+        color: $darkGrey;
+        border-color: $mainBorder;
+        padding: 4px 8px;
+        box-shadow: none !important;
+        font-size: 14px;
+        text-transform: capitalize;
+        @media only screen and (min-width: 1200px){
+            padding: 6px 10px;
+            font-size: 16px;
+        }
+        &:hover , &.fc-button-active{
+        background-color: $primary !important;
+        border-color: $primary !important;
+        }
+        .fc-icon{
+            font-size: 14px;
+            line-height: 14px;
+            @media only screen and (min-width: 1200px){
+                font-size: 20px;
+                line-height: 18px;
+            }
+            @media only screen and (max-width: 480px){
+                font-size: 10px;
+                line-height: 10px;
+            }
+        }
+        @media only screen and (max-width: 480px){
+            padding: 2px 4px;
+            font-size: 6px;
+        }
+    }
+    .fc-today-button{
+        background-color: $primary !important;
+        border-color: $primary !important;
+        color: $white !important;
+        &:disabled{
+            opacity: 0.5;
+            &:hover{
+                background-color: $primary !important;
+                border-color: $primary !important;
+                color: $white !important;
+            }
+        }
+        &:hover{
+            background-color: transparent !important;
+            color: $primary !important;
+        }
+    }
+    .fc-toolbar{
+        flex-wrap: wrap;
+        gap: 10px;
+
+    }
+    .fc-toolbar-title{
+        font-family: '__Cinzel_b25516', '__Cinzel_Fallback_b25516';
+        font-weight: 700;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: $darkGrey;
+        @media only screen and (min-width: 768px){
+            font-size: 18px;
+            line-height: 24px;
+        }
+        @media only screen and (min-width: 1200px){
+            font-size: 20px;
+            line-height: 26px;
+        }
+        @media only screen and (min-width: 1600px){
+            font-size: 26px;
+        }
+        @media only screen and (max-width: 480px){
+            font-size: 8px;
+            line-height: 1;
+        }
+    }
+    .fc-daygrid-dot-event{
+        padding: 5px 8px;
+
+        background-color: $LightCream;
+        @media only screen and (min-width: 1600px){
+            padding: 8px 12px;
+        }
+        @media only screen and (max-width: 480px){
+            padding: 2px;
+        }
+        b{
+            font-size: 12px;
+            line-height: 12px;
+            color: $primary;
+            font-family: '__Cinzel_b25516', '__Cinzel_Fallback_b25516';
+            font-weight: 700;
+            font-style: normal;
+            @media only screen and (min-width: 640px){
+                font-size: 14px;
+                line-height: 14px;
+            }
+            @media only screen and (min-width: 1440px){
+                font-size: 16px;
+                line-height: 16px;
+            }
+            @media only screen and (max-width: 480px){
+                font-size: 6px;
+                line-height: 6px;
+            }
+        }
+        p{
+            font-size: 12px;
+            line-height: 12px;
+            margin-bottom: 0;
+            margin-top: 5px;
+            @media only screen and (min-width: 640px){
+                font-size: 14px;
+                line-height: 14px;
+            }
+            @media only screen and (min-width: 768px){
+                font-size: 16px;
+                line-height: 16px;
+            }
+            @media only screen and (min-width: 1440px){
+                font-size: 18px;
+                line-height: 18px;
+            }
+            @media only screen and (max-width: 480px){
+                font-size: 6px;
+                line-height: 6px;
+            }
+        }
+    }
+    .fc-daygrid-event{
+        white-space: initial;
+    }
+    .fc-daygrid-day{
+        &.fc-day-today{
+            background-color: $LightCream;
+        }
+    }
+    .fc-day-other {
+        .fc-daygrid-day-top {
+            opacity: 0.6;
+        }
+    }
+    .fc-col-header-cell-cushion , .fc-daygrid-day-number{
+        font-family: '__Cinzel_b25516', '__Cinzel_Fallback_b25516';
+        font-weight: 700;
+        font-style: normal;
+    }
+    .fc-col-header-cell-cushion {
+        @media only screen and (max-width: 480px){
+            font-size: 6px;
+        }
+    }
+    .fc-daygrid-day-number{
+        @media only screen and (max-width: 480px){
+            font-size: 6px;
+        }
+    }
+    .fc-h-event{
+        background-color: $LightCream;
+        border-color: $mainBorder;
+        padding: 5px;
+        @media only screen and (min-width: 768px){
+            padding: 10px 8px;
+        }
+        @media only screen and (max-width: 480px){
+            padding: 2px;
+        }
+    }
+    .fc-event-main{
+        b{
+            font-size: 12px;
+            line-height: 12px;
+            color: $primary;
+            font-family: '__Cinzel_b25516', '__Cinzel_Fallback_b25516';
+            font-weight: 700;
+            font-style: normal;
+            @media only screen and (min-width: 640px){
+                font-size: 14px;
+                line-height: 14px;
+            }
+            @media only screen and (min-width: 1440px){
+                font-size: 16px;
+                line-height: 16px;
+            }
+            @media only screen and (max-width: 480px){
+                font-size: 8px;
+                line-height: 1;
+            }
+        }
+        p{
+            font-size: 12px;
+            line-height: 12px;
+            margin-bottom: 0;
+            margin-top: 5px;
+            @media only screen and (min-width: 640px){
+                font-size: 14px;
+                line-height: 14px;
+            }
+            @media only screen and (min-width: 768px){
+                font-size: 16px;
+                line-height: 16px;
+            }
+            @media only screen and (min-width: 1440px){
+                font-size: 18px;
+                line-height: 18px;
+            }
+            @media only screen and (max-width: 480px){
+                font-size: 10px;
+                line-height: 10px;
+            }
+        }
+    }
+    .fc-scroller-liquid-absolute , .fc-scroller{
+        &::-webkit-scrollbar {
+            width: 2px;
+            height: 2px;
+        @media only screen and (min-width: 768px){
+            width: 5px;
+            height: 5px;
+        }
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(253, 158, 85, 0.5);
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $dust;
+        }
+    }
+}
+.fc {
+    .fc-timegrid-slots {
+        td,th{
+            border-color: var(--fc-border-color);
+            border-style: solid;
+        }
+    }
+    .fc-scrollgrid table,
+    .fc-timegrid-body,
+    .fc-scrollgrid-sync-table,
+    .fc-daygrid-body{
+        width: 100% !important;
+    }
+    .fc-timegrid-divider{
+        background-color: $mainBorder;
+    }
+    .fc-timegrid-slot{
+        height: 26px;
+        @media only screen and (min-width: 640px){
+            height: 30px;
+        }
+        @media only screen and (min-width: 768px){
+            height: 44px;
+        }
+    }
+    .fc-timegrid-col.fc-day-today{
+        background-color: $LightCream;
+    }
+    .fc-timegrid-axis-cushion,
+    .fc-timegrid-slot-label-frame{
+        font-size: 10px;
+        text-align: center;
+        font-family: "__Cinzel_b25516", "__Cinzel_Fallback_b25516";
+        font-weight: 700;
+        font-style: normal;
+        color: $primary;
+        @media only screen and (min-width: 640px){
+            font-size: 12px;
+        }
+        @media only screen and (max-width: 480px){
+            font-size: 6px;
+        }
+    }
+    .fc-timegrid-event, .fc-timegrid-more-link{
+        padding: 2px;
+        background-color: #F8F6F4;
+        white-space: initial;
+        box-shadow: none;
+        border: none;
+        @media only screen and (min-width: 640px){
+            padding: 5px 8px;
+        }
+    }
+}
+// === END Calender Common CSS
+// events filter css
+.filter-events-wrapper{
+    gap: 10px;
+    background-color: $LightCream;
+    padding: 10px;
+    margin-bottom: 20px;
+    @media only screen and (min-width: 1440px){
+        margin-bottom: 50px;
+    }
+}
+.filter-events-form{
+    .input-group{
+        label{
+            text-align: start;
+        }
+        input{
+            background-color: $LightCream;
+            font-size: 14px;
+            line-height: 14px;
+            padding: 0px 10px;
+            height: 40px;
+            text-align: start;
+            @media only screen and (min-width: 768px){
+                font-size: 16px;
+                line-height: 16px;
+            }
+            @media only screen and (min-width: 1440px){
+                font-size: 18px;
+                line-height: 18px;
+                height: 52px;
+            }
+            @media only screen and (min-width: 1600px){
+                font-size: 20px;
+                line-height: 20px;
+                padding: 0px 20px;
+
+            }
+        }
+        .react-select-menu{
+            height: 40px;
+            text-align: start;
+            @media only screen and (min-width: 1440px){
+                height: 52px;
+            }
+            .css-qbdosj-Input , .css-1jqq78o-placeholder , .css-t3ipsp-control , .css-166bipr-Input{
+                font-size: 14px;
+                line-height: 14px;
+                @media only screen and (min-width: 768px){
+                    font-size: 16px;
+                    line-height: 16px;
+                }
+                @media only screen and (min-width: 1440px){
+                    font-size: 18px;
+                    line-height: 18px;
+                }
+                @media only screen and (min-width: 1600px){
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+            }
+            .css-1fdsijx-ValueContainer{
+                padding: 0px 0px 0 10px;
+                @media only screen and (min-width: 1600px){
+                    padding: 0px 10px 0 20px;
+                }
+            }
+            .css-1dimb5e-singleValue , .css-r7ikz2-option , .css-rs8ahr-option , .css-5zq1nl-option{
+                font-size: 14px;
+                line-height: 14px;
+                @media only screen and (min-width: 768px){
+                    font-size: 16px;
+                    line-height: 16px;
+                }
+                @media only screen and (min-width: 1440px){
+                    font-size: 18px;
+                    line-height: 18px;
+                }
+                @media only screen and (min-width: 1600px){
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+            }
+            &.location-select{
+                .css-1xc3v61-indicatorContainer , .css-15lsz6c-indicatorContainer{
+                    &:first-child{
+                        padding-right: 0;
+                    }
+                    &:last-child{
+                        padding-right: 4px;
+                    }
+                }
+            }
+            .css-166bipr-Input{
+               padding: 0;
+               margin: 0;
+            }
+        }
+        input[type="date"]::-webkit-calendar-picker-indicator{
+            width: 16px;
+            height: 16px;
+            background-size: contain;
+        }
+    }
+    .action-btn{
+        @media only screen and (min-width: 1200px){
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        @media only screen and (min-width: 1441px){
+            padding-left: 64px;
+            padding-right: 64px;
+        }
+    }
+}
+.filter-modal{
+    .modal-boday{
+        position: relative;
+        @media only screen and (min-width: 1200px){
+            max-width: 580px !important;
+        }
+        @media only screen and (min-width: 1441px){
+            max-width: 790px !important;
+        }
+        h2{
+            margin-top: 0 !important;
+            margin-bottom: 10px !important;
+            @media only screen and (min-width: 640px){
+                margin-bottom: 20px !important;
+            }
+            @media only screen and (min-width: 1440px){
+                margin-bottom: 40px !important;
+            }
+        }
+        .icon-cross{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            color: $primary;
+            transition: 0.4s ease;
+            @media only screen and (min-width: 640px){
+                top: 20px;
+                right: 20px;
+            }
+            @media only screen and (min-width: 1440px){
+                font-size: 22px;
+            }
+            &:hover{
+                color: $tertiary;
+            }
+        }
+    }
+
+}
+.filter-content-list{
+    margin-bottom: 30px;
+    @media only screen and (min-width: 1440px){
+        margin-bottom: 50px;
+    }
+    ul{
+        li{
+            gap: 8px;
+            background-color: $LightCream;
+            padding: 4px 8px;
+            // @media only screen and (min-width: 1024px){
+            //     font-size: 18px;
+            // }
+            @media only screen and (min-width: 1440px){
+                padding: 5px 10px;
+                gap: 12px;
+            }
+            p{
+                margin-bottom: 0;
+            }
+            i{
+                font-size: 9px;
+                color: $primary;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+                @media only screen and (min-width: 1024px){
+                    font-size: 10px;
+                }
+                @media only screen and (min-width: 1440px){
+                    font-size: 12px;
+                }
+                &:hover{
+                    color: $tertiary;
+                }
+            }
+        }
+    }
+}
+// end events filter css
+
+// === Sweetalert CSS
+.swal2-container{
+    .swal2-actions,
+    div:where(.swal2-container) div:where(.swal2-actions){
+        margin: 16px auto 0;
+        @media only screen and (min-width: 640px){
+            margin: 20px auto 0;
+        }
+        button{
+            background: $primary;
+            margin: 0 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+            @media only screen and (min-width: 640px) {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+            box-shadow: none !important;
+            transition: all 0.4s;
+            &:hover{
+                background: $tertiary;
+                transition: all 0.4s;
+            }
+        }
+    }
+    .swal2-html-container{
+        margin: 0;
+    }
+    .swal2-show{
+        padding: 20px;
+        max-width: 440px;
+        width: 100%;
+        @media only screen and (min-width: 640px) {
+            padding: 40px 30px;
+        }
+    }
+    .custom-swal-modal{
+        .modal-body{
+            text-align: center;
+            svg{
+                width: 80px;
+                height: 60px;
+                margin: 0 auto 16px;
+                @media only screen and (min-width: 640px) {
+                    width: 100px;
+                    height: 100px;
+                    margin: 0 auto 24px;
+                }
+            }
+            h2{
+                font-size: 18px;
+                line-height: 1.3;
+                text-transform: inherit;
+                color: $btnText;
+                letter-spacing: 0.04em;
+                @media only screen and (min-width: 640px) {
+                    font-size: 22px;
+                }
+                @media only screen and (min-width: 1024px) {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
+// === End Sweetalert CSS
+//=== CK Editor5 CSS
+.ck{
+    font-family: 'Forum';
+    &.ck-toolbar{
+        border-color: $mainBorder !important;
+        button{
+            box-shadow: none !important;
+            &:focus{
+                border-color: $mainBorder !important;
+            }
+            &:hover,&:active{
+                background: $primary !important;
+                color: $white !important;
+            }
+        }
+    }
+    &.ck-input{
+        box-shadow: none !important;
+        &:focus{
+            border-color: $mainBorder !important;
+        }
+    }
+    &.ck-list__item{
+        .ck-button{
+            box-shadow: none;
+            &.ck-on{
+                background: $primary;
+            }
+        }
+    }
+    &.ck-button{
+        &.ck-on{
+            color: $white;
+            background:$primary;
+        }
+    }
+   .ck-insert-table-dropdown-grid-box{
+        &.ck-on{
+            border-color:$primary;
+        }
+    }
+    .ck.ck-list__item .ck-button.ck-on{
+        background: $primary;
+    }
+    .ck .ck-insert-table-dropdown-grid-box.ck-on{
+        border-color: $primary;
+    }
+    .ck.ck-button.ck-on, a.ck.ck-button.ck-on{
+        color: $primary;
+    }
+    .ck-powered-by{
+        display: none;
+    }
+    .ck-editor__main{
+        >.ck-editor__editable{
+            padding: 16px;
+            height: 400px;
+            border-color: $mainBorder !important;
+            scrollbar-color: rgba(253, 158, 85, 0.5) $dust;
+            scrollbar-width: thin;
+            box-shadow: none !important ;
+            &.ck-focused{
+                border-color: $primary !important;
+            }
+            &::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(253, 158, 85, 0.5);
+            }
+            &::-webkit-scrollbar-track {
+                background-color: $dust;
+            }
+            strong,b{
+                font-weight: 700;
+            }
+            h1, h2, h3, h4, h5, h6, p, ul, ol{
+                margin-top: 0;
+            }
+            h1, h2, h3, h4, h5, h6{
+                text-transform: inherit;
+            }
+            ul,ol{
+                text-decoration: inherit;
+                padding-left: 20px;
+                li{
+                    margin-bottom: 14px;
+                    @media only screen and (min-width: 1024px){
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
+    }
+    &.ck-reset_all, &.ck-reset, &.ck-reset_all{
+        &:not(.ck-reset_all-excluded *){
+            z-index: 0;
+        }
+    }
+}
+//=== End CK Editor5 CSS
+
+.moon-list{
+    li{
+        margin-bottom: 10px;
+    }
+    .moon{
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 10px;
+        @media only screen and (min-width: 1600px){
+            padding-left: 40px;
+        }
+        &::before{
+           content: "";
+            width: 15px;
+            height: 15px;
+            background-color: #B09684;
+            position: absolute;
+            left: 0;
+            top: 3px;
+            border-radius: 100%;
+            @media only screen and (min-width: 1600px){
+                width: 20px;
+                height: 20px;
+                top: 6px;
+            }
+        }
+        &::after{
+            content: "";
+            width: 15px;
+            height: 15px;
+            background-color: $LightCream;
+            position: absolute;
+            left: 0px;
+            top: 3px;
+            border-radius: 100%;
+            @media only screen and (min-width: 1600px){
+                width: 20px;
+                height: 20px;
+                top: 6px;
+            }
+        }
+        &:first-child{
+            &::after{
+                left: -3px;
+            }
+        }
+        &:nth-child(2){
+            &::after{
+                left: -5px;
+            }
+        }
+        &:nth-child(3){
+            &::after{
+                left: -10px;
+            }
+        }
+        &:nth-child(4){
+            &::after{
+                left: -20px;
+            }
+        }
+    }
+}
+.moon-list-reverse{
+    @media only screen and (min-width: 640px){
+        padding: 20px 0 0 40px;
+    }
+    @media only screen and (min-width: 1600px){
+        padding: 20px 0 0 100px;
+    }
+    li{
+        margin-bottom: 10px;
+    }
+    .moon{
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 10px;
+        @media only screen and (min-width: 1600px){
+            padding-left: 40px;
+        }
+        &::before{
+           content: "";
+            width: 15px;
+            height: 15px;
+            background-color: #B09684;
+            position: absolute;
+            left: 0;
+            top: 3px;
+            border-radius: 100%;
+            @media only screen and (min-width: 1600px){
+                width: 20px;
+                height: 20px;
+                top: 6px;
+            }
+        }
+        &::after{
+            content: "";
+            width: 15px;
+            height: 15px;
+            background-color: $LightCream;
+            position: absolute;
+            left: 0px;
+            top: 3px;
+            border-radius: 100%;
+            @media only screen and (min-width: 1600px){
+                width: 20px;
+                height: 20px;
+                top: 6px;
+            }
+        }
+        &:first-child{
+            &::after{
+                left: 20px;
+            }
+        }
+        &:nth-child(2){
+            &::after{
+                left: 10px;
+            }
+        }
+        &:nth-child(3){
+            &::after{
+                left: 5px;
+            }
+        }
+        &:nth-child(4){
+            &::after{
+                left: 3px;
+            }
+        }
+    }
+}
+.moon-icon {
+    min-width: 20px;
+    max-width: 20px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 5px;
+    font-size: 12px;
+    color: $tertiary;
+    @media only screen and (min-width: 640px){
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    @media only screen and (min-width: 1024px){
+        font-size: 16px;
+    }
+    @media only screen and (min-width: 1200px){
+        font-size: 18px;
+    }
+    @media only screen and (min-width: 1600px){
+        margin-right: 20px;
+        font-size: 22px;
+    }
+}
+// date filter bar START css
+.filtering-events{
+    .filtering-events-bar{
+        gap: 25px;
+        padding: 10px 0 20px;
+        flex-shrink: 0;
+        @media only screen and (max-width: 767px){
+            width: 100%;
+        }
+        @media only screen and (min-width: 1441px){
+            gap: 20px;
+        }
+        .input-group{
+            margin: 0;
+        }
+        .input-group{
+            @media only screen and (max-width: 480px){
+                width: 100%;
+                flex-wrap: wrap;
+            }
+        }
+        label{
+            font-size: 14px;
+            line-height: 22px;
+            flex-shrink: 0;
+            margin-bottom: 8px;
+            @media only screen and (min-width: 480px) {
+                font-size: 16px;
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
+            @media only screen and (min-width: 640px) {
+                font-size: 16px;
+            }
+            @media only screen and (min-width: 1441px){
+                font-size: 18px;
+            }
+
+        }
+        input[type=search]{
+            background-color: $LightCream;
+            width: 220px;
+            @media only screen and (min-width: 1441px){
+                width: 350px;
+            }
+        }
+        input,.react-datepicker-wrapper{
+            width: 160px;
+            flex-shrink: 0;
+            -webkit-min-logical-width: max-content;
+            @media only screen and (min-width: 640px) {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            @media only screen and (min-width: 1441px){
+                width: 200px;
+            }
+            @media only screen and (max-width: 480px){
+                width: 100%;
+            }
+        }
+        .react-select-menu{
+            width: 160px;
+            @media only screen and (min-width: 1441px){
+                width: 200px;
+            }
+            input{
+                width: 100%;
+            }
+            @media only screen and (max-width: 480px){
+                width: 100%;
+            }
+        }
+        // .custom-select{
+        //     .select-btn{
+        //         font-size: 14px;
+        //         padding-top: 5px;
+        //         padding-bottom: 5px;
+        //         height: 40px;
+        //         @media only screen and (min-width: 640px){
+        //             font-size: 16px;
+        //         }
+        //         @media only screen and (min-width: 1441px){
+        //             height: 52px;
+        //             font-size: 22px;
+        //         }
+        //     }
+        //     .select-menu-list {
+        //         ul {
+        //             li{
+        //                 font-size: 14px;
+        //                 @media only screen and (min-width: 640px) {
+        //                     font-size: 16px;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        .dashboard-form-btn{
+            font-size: 14px;
+            height: 40px;
+            padding: 5px 20px;
+            min-width: 80px;
+            @media only screen and (min-width: 640px) {
+                font-size: 16px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            @media only screen and (min-width: 1441px){
+                height: 52px;
+                min-width: 120px;
+            }
+            @media only screen and (min-width: 1600px){
+                font-size: 22px;
+            }
+            @media only screen and (max-width: 480px){
+                height: 35px;
+            }
+        }
+    }
+}
+// date filter bar END css

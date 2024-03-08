@@ -1,0 +1,80 @@
+@import '../../../../style/variables.scss';
+
+.booking-details{
+    .booking-details-card{
+        padding: 20px;
+        .booking-details-inner{
+            max-width: 600px;
+            border: 1px solid $mainBorder;
+            .booking-user-head{
+                padding: 20px 20px 32px;
+                gap: 10px;
+                @media only screen and (max-width: 480px){
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                h3{
+                    font-size: 16px;
+                    line-height: 1;
+                    margin-bottom: 4px;
+                    @media only screen and (min-width: 640px){
+                        font-size: 18px;
+                    }
+                    @media only screen and (min-width: 768px){
+                        font-size: 20px;
+                    }
+                    @media only screen and (min-width: 1200px){
+                        font-size: 24px;
+                    }
+                }
+                .users-image{
+                    margin-bottom: 8px;
+                    @media only screen and (max-width: 480px){
+                        margin: 0 auto 8px;
+                    }
+                    @media only screen and (min-width: 768px){
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+            .user-content-list{
+                max-width: 100%;
+                padding: 32px 20px;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 20px;
+                border-top: 1px dashed $mainBorder;
+                @media only screen and (min-width: 640px) {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 24px;
+                }
+                @media only screen and (min-width: 768px){
+                    gap: 32px;
+                }
+                li{
+                    .label-name{
+                        font-size: 16px;
+                        // font-family: '__Cinzel_338bf7', '__Cinzel_Fallback_338bf7';
+                        // text-transform: lowercase;
+                    }
+                    h4{
+                        i{
+                            font-size: 12px;
+                            @media only screen and (min-width: 1200px){
+                                font-size: 14px;
+                            }
+                            @media only screen and (min-width: 1441px){
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    p{
+                        text-transform: capitalize;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

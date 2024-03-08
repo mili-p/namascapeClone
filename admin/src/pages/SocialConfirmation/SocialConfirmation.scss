@@ -1,0 +1,15 @@
+.pyment-fees{
+    .extraclass{
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        .switch-toggle{
+            label{
+                margin: 0;
+            }
+        }
+        &:last-child{
+            margin: 0;
+        }
+    }
+}

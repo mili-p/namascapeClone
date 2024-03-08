@@ -1,0 +1,95 @@
+@import '../../style/variables.scss';
+
+.lightbox-slider-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 99;
+    padding: 30px 40px;
+    opacity: 0;
+    visibility: hidden;
+    @media only screen and (min-width: 640px) {
+        padding: 60px 80px;
+    }
+    .hidden-box{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: $btnText;
+        opacity: 0.6;
+        z-index: -1;
+    }
+    img{
+        width: auto;
+        margin: auto;
+        height: auto;
+        max-height: calc(100vh - 122px);
+        @media only screen and (min-width: 640px) {
+            max-height: calc(100vh - 130px);
+        }
+    }
+    video{
+        width: auto;
+        margin: auto;
+        height: auto;
+        max-height: calc(100vh - 122px);
+        @media only screen and (min-width: 640px) {
+            max-height: calc(100vh - 130px);
+        }
+    }
+    .slider-btn,.close-btn{
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background: $white;
+        color: $primary;
+        transition: all 0.4s;
+        &:hover{
+            background: $primary;
+            color: $white;
+            transition: all 0.4s;
+        }
+        i{
+            font-size: 16px;
+            @media only screen and (min-width: 640px) {
+                font-size: 18px;
+            }
+        }
+        @media only screen and (min-width: 640px) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .close-btn{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .slider-btn{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        &.pre{
+            left: 4px;
+            @media only screen and (min-width: 640px) {
+                left: 20px;
+            }
+        }
+        &.next{
+            right: 4px;
+            transform: translateY(-50%) rotate(180deg);
+            @media only screen and (min-width: 640px) {
+                right: 20px;
+            }
+        }
+    }
+    &.show{
+        opacity: 1;
+        visibility: visible;
+    }
+}

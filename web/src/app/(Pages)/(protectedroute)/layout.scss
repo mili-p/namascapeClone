@@ -1,0 +1,326 @@
+@import '../../style/variables.scss';
+
+@mixin flexBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-action{
+    grid-column-gap: 6px;
+    grid-row-gap: 6px;
+    margin-bottom: 4px;
+    @media only screen and (min-width: 768px) {
+        grid-column-gap: 8px;
+    }
+    @media only screen and (min-width: 1200px) {
+        grid-column-gap: 10px;
+    }
+    @media only screen and (min-width: 1600px) {
+        grid-column-gap: 16px;
+    }
+    .link{
+        font-size: 14px;
+        line-height: 1;
+        color: $primary;
+        padding: 4px 8px;
+        gap: 2px;
+        border: 1px solid $mainBorder;
+        transition: all 0.4s;
+        &:hover{
+            background: $primary;
+            border-color: $primary;
+            color: $white;
+            transition: all 0.4s;
+        }
+        @media only screen and (min-width: 640px) {
+            font-size: 16px;
+            line-height: 20px;
+            padding: 5px 10px;
+            gap: 4px;
+        }
+        cursor: pointer;
+        &.delete{
+            color: $red;
+            &:hover{
+                background: $red;
+                border-color: $red;
+                color: $white;
+                i{
+                    color: $white;
+                    transition: all 0.4s;
+                }
+            }
+            i{
+                color: $red;
+                transition: all 0.4s;
+            }
+        }
+    }
+}
+.status-label{
+    gap: 6px;
+    .text{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        color: $btnText;
+        text-transform: lowercase;
+        position: relative;
+        padding-left: 16px;
+        margin: 0;
+        @media only screen and (min-width: 1441px) {
+            font-size: 20px;
+            line-height: 24px;
+            padding-left: 24px;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            @media only screen and (min-width: 1441px) {
+                width: 16px;
+                height: 16px;
+            }
+        }
+        &.active{
+            &::before{
+                background: $green;
+            }
+        }
+        &.in-review{
+            &::before{
+                background: $tertiary;
+            }
+        }
+        &.rejected{
+            &::before{
+                background: $red;
+            }
+        }
+    }
+    &.active-card{
+        .text{
+            &::before{
+                background: $green;
+            }
+        }
+    }
+    &.in-review-card{
+        .text{
+            &::before{
+                background: $tertiary;
+            }
+        }
+    }
+    &.rejected-card{
+        .text{
+            &::before{
+                background: $red;
+            }
+        }
+    }
+}
+.protected-main{
+    height: 100vh;
+    background: $LightCream;
+    overflow-y: auto;
+    scrollbar-color: rgba(253, 158, 85, 0.5) $dust;
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(253, 158, 85, 0.5);
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $dust;
+    }
+    .protected-content{
+        padding: 125px 16px 16px;
+        padding-top: 0 !important;
+        transition: all 0.6s;
+        &.content-collapse{
+            transition: all 0.6s;
+        }
+        @media only screen and (min-width: 640px) {
+            padding: 140px 20px 20px;
+        }
+        @media only screen and (min-width: 768px) {
+            padding: 146px 20px 20px;
+        }
+        @media only screen and (min-width: 1024px) {
+            padding: 102px 20px 20px 252px;
+            &.content-collapse{
+                padding-left: 92px;
+            }
+        }
+        @media only screen and (min-width: 1200px) {
+            padding: 112px 32px 32px 272px;
+            &.content-collapse{
+                padding-left: 96px;
+            }
+        }
+        @media only screen and (min-width: 1441px) {
+            padding: 112px 32px 32px 312px;
+            &.content-collapse{
+                padding-left: 124px;
+            }
+        }
+        > div{
+            padding-top: 135px;
+            @media only screen and (min-width: 640px) {
+                padding-top: 156px;
+            }
+            @media only screen and (min-width: 1024px) {
+                padding-top: 102px;
+            }
+            @media only screen and (min-width: 1441px) {
+                padding-top: 112px;
+            }
+        }
+    }
+}
+.protected-content {
+    input,
+    textarea,
+    select {
+        background-color: $LightCream;
+        line-height: normal;
+        color: $darkGrey;
+    }
+    .input-group {
+        @media only screen and (min-width: 1024px) {
+            margin-bottom: 32px;
+        }
+    }
+}
+.protected-head {
+    @include flexBox;
+    flex-wrap: wrap;
+    background-color: $white;
+    padding: 16px 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+    h2 {
+        color: $primary;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0;
+    }
+    .dashboard-form-btn{
+        min-width: 90px;
+        position: static;
+        @media only screen and (min-width: 768px){
+            min-width: 120px;
+        }
+        @media only screen and (min-width: 1441px){
+            padding: 14px 35px;
+            font-size: 18px;
+            min-width: 172px;
+        }
+
+    }
+}
+.price-select {
+    height: 43px;
+    border: 1px solid $mainBorder;
+    background-color: $LightCream;
+    position: relative;
+    display: flex;
+    align-items: center;
+    position: relative;
+    @media only screen and (min-width: 640px) {
+        margin-bottom: 0px;
+        height: 48px;
+    }
+    @media only screen and (min-width: 1200px) {
+        height: 50px;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        outline: 1px solid $primary;
+        opacity: 0;
+        z-index: 0;
+    }
+    input{
+        height: auto;
+        padding: 8px 15px;
+        @media only screen and (min-width: 1441px){
+            padding: 8px 20px;
+        }
+
+    }
+    &:focus-within::before{
+        opacity: 1;
+    }
+    .select-btn {
+        height: auto;
+        max-width: 80px;
+        border: none;
+        color: $primary;
+        padding: 5px 40px 5px 5px;
+        z-index: 1;
+        @media only screen and (min-width: 1441px) {
+            max-width: max-content;
+        }
+    }
+    input {
+        border: none;
+        z-index: 1;
+    }
+    .select-menu-list {
+        top: 0;
+        transform: translateY(85px);
+    }
+    &.active {
+        .select-menu-list {
+            transform: translateY(60px);
+        }
+    }
+}
+.dashboard-form-btn {
+    background-color: $tertiary;
+    border-color: $tertiary;
+    &:hover {
+        background-color: $primary;
+        border-color: $primary;
+    }
+}
+.users-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 1px solid $primary;
+    margin-bottom: 10px;
+    @media only screen and (min-width: 768px) {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0px;
+    }
+    @media only screen and (min-width: 1200px) {
+        width: 120px;
+        height: 120px;
+    }
+    @media only screen and (min-width: 1600px) {
+        width: 160px;
+        height: 160px;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+}

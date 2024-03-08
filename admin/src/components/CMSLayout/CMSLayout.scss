@@ -1,0 +1,329 @@
+@import "../../assets/style/variables.scss";
+
+.cms-wrapper{
+    .content-managements{
+        .user-info {
+            padding: 20px;
+            column-gap: 20px;
+            position: relative;
+            @media only screen and (min-width: 1441px) {
+                column-gap: 32px;
+            }
+            .users-content {
+                max-width: 580px;
+                @media only screen and (min-width: 1441px) {
+                    max-width: 660px;
+                }
+                h3 {
+                    font-size: 22px;
+                    margin-bottom: 12px;
+                    @media only screen and (min-width: 768px) {
+                        font-size: 24px;
+                    }
+                    @media only screen and (min-width: 1600px) {
+                        margin-bottom: 16px;
+                    }
+                }
+                .email,
+                p,
+                span {
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: $darkGrey;
+                    margin-bottom: 12px;
+                    @media only screen and (min-width: 768px) {
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+                    @media only screen and (min-width: 1600px) {
+                        font-size: 22px;
+                        line-height: 26px;
+                        margin-bottom: 16px;
+                    }
+                }
+                .birthdate {
+                    margin-bottom: 12px;
+                    @media only screen and (min-width: 1600px) {
+                        margin-bottom: 16px;
+                    }
+                    i {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        color: $primary;
+                        font-size: 24px;
+                    }
+                    span {
+                        margin-bottom: 0;
+                        margin-left: 10px;
+                    }
+                }
+                .social-links {
+                    gap: 16px;
+                    li {
+                        a{
+                            column-gap: 5px;
+                            &:hover{
+                                span{
+                                    color: $tertiary;
+                                }
+                            }
+                        }
+                        span {
+                            margin-bottom: 0;
+                            line-height: initial;
+                            transition: 0.4s all;
+                        }
+                        i {
+                            color: $primary;
+                            font-size: 22px;
+                            @media only screen and (min-width: 1200px) {
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+            .account-edit-btn {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+        }
+    }
+}
+.cms-sidebar{
+    padding: 20px;
+    margin-bottom: 0;
+    @media only screen and (min-width: 1200px){
+        min-width: 230px;
+        width: 230px;
+        display: block;
+    }
+    @media only screen and (min-width: 1600px) {
+        min-width: 288px;
+        width: 288px;
+    }
+    li {
+        @media only screen and (min-width: 1200px){
+            margin-bottom: 10px;
+        }
+        @media only screen and (min-width: 1441px){
+            margin-bottom: 20px;
+        }
+        a {
+            font-size: 16px;
+            color: $btnText;
+            padding: 8px 12px;
+            display: block;
+            border: 1px solid $dust;
+            border-bottom: none;
+            white-space: nowrap;
+            @media only screen and (min-width: 768px){
+                padding: 10px 16px;
+            }
+            @media only screen and (min-width: 1200px){
+                border: 1px solid $dust;
+            }
+            @media only screen and (min-width: 1441px){
+                font-size: 18px;
+                padding: 12px 16px;
+            }
+            &:hover,
+            &.active {
+                background-color: $tertiary;
+                color: $white;
+                border-color: $tertiary;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+            a{
+                border-bottom: 1px solid $dust;
+            }
+        }
+    }
+}
+.content-managements {
+    column-gap: 20px;
+    @media only screen and (min-width: 1600px) {
+        column-gap: 32px;
+    }
+}
+.content-management-details{
+    // padding: 20px;
+    position: relative;
+    @media only screen and (min-width: 1200px){
+        margin-top: 0;
+    }
+    .account-title{
+        h2{
+            font-size: 18px;
+            line-height: 24px;
+            @media only screen and (min-width: 640px){
+                font-size: 20px;
+            }
+        }
+    }
+    .account-common-details{
+        padding: 20px;
+        @media only screen and (min-width: 1440px){
+            max-width: 70%;
+        }
+    }
+    .user-profile{
+        .users-image{
+            margin-bottom: 0;
+        }
+        .edit-profile{
+            border-color: $mainBorder;
+            display: flex;
+            align-items: center;
+            color: $primary;
+            padding: 8px 10px;
+            position: relative;
+            @media only screen and (min-width: 1200px){
+                padding: 12px 10px;
+            }
+            @media only screen and (min-width: 1600px) {
+                margin-top: 32px;
+                font-size: 22px;
+                padding: 14px 10px;
+                i{
+                    margin-right: 10px;
+                    color: $primary;
+                    transition: all 0.4s;
+                }
+            }
+            i{
+                margin-right: 10px;
+            }
+            input{
+                position: absolute;
+                left: 0;
+                top: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                opacity: 0;
+            }
+            input[type=file]::-webkit-file-upload-button {
+                cursor: pointer;
+            }
+            &:hover{
+                border-color: $tertiary;
+                color: $white;
+                i{
+                    color: $white;
+                }
+            }
+        }
+    }
+    .dashboard-form-btn{
+        padding: 6px 20px;
+        min-width: auto;
+        @media only screen and (min-width: 640px){
+            min-width: 120px;
+            padding: 10px 14px;
+        }
+        @media only screen and (min-width: 1441px){
+            min-width: 172px;
+            padding: 14px 20px;
+        }
+    }
+    .add-link-btn{
+        border-color: $mainBorder;
+        color: $primary;
+        padding: 8px 10px;
+        @media only screen and (min-width: 1200px){
+            padding: 15px 10px;
+        }
+        &:hover{
+            color: $white;
+            border-color: $tertiary;
+        }
+    }
+    .privacy-policy-page{
+        max-width: 100%;
+        padding: 0;
+        .account-title{
+            padding: 16px 20px;
+            border-bottom: 1px solid $mainBorder;
+            .dashboard-form-btn{
+                position: static;
+            }
+        }
+        .ck-editor-wrap{
+            padding: 0 20px 20px;
+            .ck-editor-box{
+                margin-bottom: 30px;
+            }
+        }
+        .dashboard-form-btn{
+            position: static;
+        }
+    }
+    .form-content{
+        .mobile-num{
+            .react-select-menu{
+                .css-13cymwt-control , .css-t3ipsp-control{
+                    min-width: 110px;
+                    @media only screen and (min-width: 640px){
+                        min-width: 120px;
+                    }
+                    @media only screen and (min-width: 1441px){
+                        min-width: 150px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+.app-homescreen-page{
+    .uploaded-image-video{
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+        background-color: $LightCream;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border: 1px solid $mainBorder;
+        @media only screen and (max-width: 480px){
+            height: 200px;
+        }
+        @media only screen and (min-width: 1440px){
+            height: 300px;
+        }
+        .profileUploadwrap{
+            position: relative;
+            .upload-btn{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding: 10px;
+                background: $tertiary;
+                i{
+                    font-size: 20px;
+                    color: $white;
+                }
+            }
+        }
+        .profileUploadwrap,
+        .profileUpload,
+        .upload-blog-image,
+        img , video{
+            display: block;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        img , video{
+            object-fit: contain;
+        }
+    }
+}

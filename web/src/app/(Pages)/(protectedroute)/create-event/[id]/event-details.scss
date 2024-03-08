@@ -1,0 +1,335 @@
+@import '../../../../style/variables.scss';
+
+.protected-event-details{
+    .protected-head{
+        .card-action{
+            .link{
+                font-size: 16px;
+                padding: 8px 10px;
+                @media only screen and (min-width: 1441px) {
+                    font-size: 22px;
+                    gap: 10px;
+                    padding: 15px 10px;
+                }
+                i{
+                    font-size: 16px;
+                    @media only screen and (min-width: 1441px) {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+    .event-details-wrapper{
+        padding: 16px;
+        @media only screen and (min-width: 640px) {
+            padding: 20px;
+        }
+        .event-details-body{
+            padding-top: 20px;
+            border-top: 1px solid $mainBorder;
+            @media only screen and (min-width: 768px) {
+                padding-left: 20px;
+                padding-top: 0;
+                border-left: 1px solid $mainBorder;
+                border-top: none;
+            }
+        }
+        .stock-list{
+            margin: 0 -10px 14px;
+            grid-row-gap: 20px;
+            margin-bottom: 14px;
+            align-items: stretch;
+            @media only screen and (min-width: 1024px) {
+                margin: 0 -10px 20px;
+            }
+            li{
+                padding: 0 10px;
+                .inner{
+                    background: $LightCream;
+                    border: 1px solid $mainBorder;
+                    padding: 16px;
+                    width: 100%;
+                    height: 100%;
+                    &.skeleton-inner{
+                        background: $white;
+                    }
+                    @media only screen and (min-width: 1441px) {
+                        padding: 20px;
+                    }
+                    .count{
+                        font-size: 18px;
+                        line-height: 1;
+                        color: $btnText;
+                        margin-bottom: 12px;
+                        @media only screen and (min-width: 640px) {
+                            font-size: 20px;
+                        }
+                        @media only screen and (min-width: 1441px) {
+                            font-size: 36px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    p{
+                        line-height: 1;
+                        text-transform: capitalize;
+                        word-break: break-word;
+                        @media only screen and (min-width: 1441px) {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+        .action-btn-group{
+            gap: 8px;
+            @media only screen and (min-width: 1024px) {
+                gap: 10px;
+            }
+            @media only screen and (min-width: 1441px) {
+                gap: 16px;
+            }
+            .action-btn{
+                font-size: 16px;
+                line-height: 20px;
+                padding: 7px 10px;
+                background: $tertiary;
+                color: $white;
+                border: 1px solid transparent;
+                &:hover{
+                    border-color: $tertiary;
+                    color: $tertiary;
+                    background: transparent;
+                }
+                &.accept{
+                    background: $green;
+                    &:hover{
+                        border-color: $green;
+                        color: $green;
+                        background: transparent;
+                    }
+                }
+                &.reject{
+                    background: $red;
+                    &:hover{
+                        border-color: $red;
+                        color: $red;
+                        background: transparent;
+                    }
+                }
+                &.sponser-remove-btn{
+                    background: $primary;
+                    color: $white;
+                    border-color: $primary;
+                    cursor: initial;
+                    path{
+                        fill: $white;
+                    } 
+                }
+                &.sponser-add-btn{
+                    background: transparent;
+                    color: $primary;
+                    border-color: $primary;
+                    path{
+                        fill: $primary;
+                    }
+                }
+            }
+        }
+        .status-head{
+            margin-bottom: 14px;
+            gap: 10px;
+            @media only screen and (min-width: 1024px) {
+                margin-bottom: 16px;
+            }
+        }
+        .status-label{
+            gap: 0;
+            margin-bottom: 14px;
+            @media only screen and (min-width: 1024px) {
+                margin-bottom: 16px;
+            }
+            .link{
+                margin-right: 12px;
+            }
+        }
+        .title{
+            font-size: 18px;
+            color: $btnText;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 10px;
+            @media only screen and (min-width: 1441px) {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+        }
+        .event-caption{
+            font-size: 16px;
+            line-height: 22px;
+            color: $primary;
+            margin-bottom: 10px;
+            @media only screen and (min-width: 1441px) {
+                font-size: 18px;
+                margin-bottom: 16px;
+            }
+        }
+        .description{
+            font-size: 14px;
+            line-height: 1.5;
+            color: $darkGrey;
+            font-family: "Forum";
+            white-space: break-spaces;
+            margin-bottom: 14px;
+            font-family: '__Forum_26cbd8', '__Forum_Fallback_26cbd8';
+            font-weight: 400;
+            font-style: normal;
+            &:last-child{
+                margin: 0;
+            }
+            @media only screen and (min-width: 1024px) {
+                margin-bottom: 20px;
+            }
+            @media only screen and (min-width: 1441px) {
+                font-size: 22px;
+            }
+        }
+        .slider-wrapper{
+            padding-bottom: 20px;
+            @media only screen and (min-width: 768px) {
+                padding-right: 20px;
+                padding-bottom: 0;
+            }
+            .slider-thumbnail{
+                margin: 0 -7px -14px;
+                @media only screen and (min-width: 640px) {
+                    margin: 0 -10px -20px;
+                }
+                .thumbnail-image{
+                    position: relative;
+                    padding: 0 7px;
+                    margin-bottom: 14px;
+                    @media only screen and (min-width: 640px) {
+                        padding: 0 10px;
+                        margin-bottom: 20px;
+                    }
+                    &:first-child{
+                        img{
+                            height: 300px;
+                            @media only screen and (max-width: 480px){
+                                height: 230px;
+                            }
+                            @media only screen and (min-width: 640px) {
+                                height: 320px;
+                            }
+                            @media only screen and (min-width: 1441px) {
+                                height: 350px;
+                            }
+                        }
+                    }
+                    .badge{
+                        position: absolute;
+                        top: 20px;
+                        right: 0;
+                        font-size: 16px;
+                        line-height: 20px;
+                        padding: 2px 10px;
+                        color: #FD9E55;
+                        background: #fff;
+                    }
+                    &.skeleton-thumbnail{
+                        &:first-child{
+                            .skeleton-box{
+                                height: 300px;
+                                @media only screen and (max-width: 480px){
+                                    height: 230px;
+                                }
+                                @media only screen and (min-width: 640px) {
+                                    height: 320px;
+                                }
+                                @media only screen and (min-width: 1441px) {
+                                    height: 350px;
+                                }
+                            }
+                        }
+                        .skeleton-box{
+                            height: 40px;
+                            @media only screen and (min-width: 640px) {
+                                height: 60px;
+                            }
+                            @media only screen and (min-width: 1441px) {
+                                height: 70px;
+                            }
+                        }
+                    }
+                    &:first-child{
+                        width: 100%;
+                        img,video{
+                            height: 300px;
+                            @media only screen and (max-width: 480px){
+                                height: 230px;
+                            }
+                            @media only screen and (min-width: 640px) {
+                                height: 320px;
+                            }
+                            @media only screen and (min-width: 1441px) {
+                                height: 350px;
+                            }
+                        }
+                    }
+                    .video-btn{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 100%;
+                        background: $tertiary;
+                        color: $white;
+                        padding-left: 2px;
+                        font-size: 8px;
+                        cursor: pointer;
+                        @media only screen and (min-width: 480px){
+                            font-size: 16px;
+                            width: 30px;
+                            height: 30px;
+                            padding-left: 4px;
+                        }
+                    }
+                    img,video{
+                        width: 100%;
+                        object-fit: cover;
+                        border: 1px solid $primary;
+                        cursor: pointer;
+                        height: 40px;
+                        @media only screen and (min-width: 480px){
+                            height: 80px;
+                        }
+                        @media only screen and (min-width: 1441px) {
+                            height: 100px;
+                        }
+                    }
+                    .count{
+                        position: relative;
+                        cursor: pointer;
+                        .count-text{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            margin: 0;
+                            color: $white;
+                            width: 100%;
+                            height: 100%;
+                            background: #00000094;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@import '../../style/variables.scss';
+
+.social-link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    @media only screen and (min-width: 640px) {
+        gap: 16px;
+    }
+    @media only screen and (min-width: 1200px) {
+        gap: 30px;
+    }
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        background: $tertiary;
+        position: relative;
+        z-index: 1;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: $primary;
+            z-index: -1;
+            transition: all 0.4s;
+        }
+        &:hover{
+            &::before{
+                width: 100%;
+                transition: all 0.4s;
+            }
+        }
+        i{
+            font-size: 16px;
+            color: $white;
+            @media only screen and (min-width: 640px) {
+                font-size: 18px;
+            }
+            @media only screen and (min-width: 1200px) {
+                font-size: 22px;
+            }
+        }
+        @media only screen and (min-width: 640px) {
+            width: 30px;
+            height: 30px;
+        }
+        @media only screen and (min-width: 1200px) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

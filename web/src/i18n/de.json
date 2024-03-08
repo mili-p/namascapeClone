@@ -1,0 +1,1454 @@
+{
+  "logout": {
+    "title": "Bist du sicher, dass du dich abmelden möchtest?",
+    "logoutBtn": "Abmelden"
+  },
+  "signin": {
+    "headerSignin": {
+      "title": "Einloggen",
+      "description": "Bitte gib deine E-Mail Adresse und Passwort ein, um dich anzumelden."
+    },
+    "orgHeader": {
+      "title": "Einloggen als Partner:in",
+      "description": "Gib bitte deine E-Mail-Adresse und dein Passwort ein, um dich in deinem Partnerkonto anzumelden."
+    },
+    "form": {
+      "input": {
+        "email": {
+          "label": "E-Mail Adresse",
+          "placeholder": "debra.hogh@example.com"
+        },
+        "password": {
+          "label": "Passwort"
+        }
+      }
+    },
+    "forgotPassword": "Passwort vergessen?",
+    "signin": "Einloggen",
+    "signup": "Anmelden",
+    "Donthaveanaccount": "Du hast noch kein Konto?",
+    "areyoueventorganizer": "Bist du ein/-e Partner:in?",
+    "clickheretosignin": "Klick hier, um dich anzumelden.",
+    "areyouuser": "Bist du ein/-e Benutzer:in?",
+    "validation": {
+      "email": {
+        "email": "Bitte gültige E-Mail eingeben",
+        "required": "Bitte E-Mail eingeben",
+        "matches": "Bitte gültige E-Mail eingeben"
+      },
+      "password": {
+        "required": "Bitte Passwort eingeben",
+        "min": "Passwort muss zwischen 6 und 15 Zeichen lang sein.",
+        "max": "Passwort muss zwischen 6 und 15 Zeichen lang sein."
+      }
+    }
+  },
+  "forgotpassword": {
+    "header": {
+      "title": "Passwort vergessen?",
+      "description": "Gib deine registrierte E-Mail Adresse ein, um dein Passwort zurückzusetzen."
+    },
+    "form": {
+      "input": {
+        "email": {
+          "label": "E-Mail Adresse",
+          "placeholder": "debra.hogh@example.com"
+        }
+      },
+      "resetPassword": "Passwort zurücksetzen"
+    },
+    "validation": {
+      "email": {
+        "email": "Bitte gültige E-Mail eingeben",
+        "required": "Bitte E-Mail eingeben.",
+        "matches": "Bitte gültige E-Mail eingeben"
+      }
+    }
+  },
+  "otpVerification": {
+    "headerTitle": "Verifizierungscode",
+    "description": "Gib den Verifizierungscode ein, den wir dir per E-Mail gesendet haben.",
+    "form": {
+      "input": {
+        "otp": {
+          "label": "Verifizierungscode"
+        }
+      },
+      "confirmOTP": "Verifizierungscode bestätigen",
+      "resendVerification": "Verifizierungscode erneut senden",
+      "resendVerificationcode": "Verifizierungscode erneut senden"
+    },
+    "validation": {
+      "otp": {
+        "required": "Bitte gib den Verifizierungscode ein, den wir dir per E-Mail gesendet haben."
+      }
+    }
+  },
+  "resetPassword": {
+    "header": {
+      "title": "Passwort zurücksetzen",
+      "description": "Gib den Verifizierungscode ein, den wir dir per E-Mail gesendet haben."
+    },
+    "form": {
+      "input": {
+        "otp": {
+          "label": "Verifizierungscode"
+        },
+        "newPassword": {
+          "label": "Neues Passwort"
+        },
+        "confirmPassword": {
+          "label": "Passwort bestätigen"
+        }
+      },
+      "confirmPassword": "Passwort bestätigen"
+    },
+    "validation": {
+      "otp": {
+        "invalidOtp": "Ungültiger Verifizierungscode. Bitte gib genau 4 Ziffern ein.",
+        "required": "Bitte gib die vier Ziffern des Verifizierungscodes ein."
+      },
+      "newpassword": {
+        "required": "Bitte neues Passwort eingeben.",
+        "max": "Passwort muss zwischen 6 und 15 Zeichen lang sein."
+      },
+      "confirmpassword": {
+        "match": "Passwort stimmt nicht überein.",
+        "required": "Bitte Passwort bestätigen."
+      }
+    }
+  },
+  "signup": {
+    "Userheader": {
+      "title": "Anmelden",
+      "description": "Bitte gib deine Grundinformationen ein, um dein Konto zu erstellen."
+    },
+    "orgHeader": {
+      "title": "Anmelden als Partner:in",
+      "description": "Bitte trage die folgenden Informationen ein, damit unser Team dich kontaktieren und dir beim Onboarding helfen kann."
+    },
+    "form": {
+      "input": {
+        "firstname": {
+          "label": "Vorname",
+          "placeholder": "Debra"
+        },
+        "lastname": {
+          "label": "Nachname",
+          "placeholder": "Hogh"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "debra.hogh@example.com"
+        },
+        "mobileNumber": {
+          "label": "Kontakt Nummer"
+        },
+        "instaLink": {
+          "label": "Instagramlink (Optional)"
+        },
+        "webSiteLink": {
+          "label": "Websitelink (Optional)"
+        },
+        "password": {
+          "label": "Passwort"
+        },
+        "confirmPassword": {
+          "label": "Passwort bestätigen"
+        },
+        "policy": {
+          "1": "Wenn du fortfährst, stimmst du den Allgemeinen",
+          "2": "Geschäftsbedingungen",
+          "3": "und der",
+          "4": "Datenschutzrichtlinie zu."
+        }
+      },
+      "signUp": "Anmelden",
+      "AlreadyHaveAnAccount": "Du hast bereits ein Konto?",
+      "signIn": "Einloggen",
+      "eventOrganizer": "Bist du ein/-e Partner:in?",
+      "clickHereToSignUp": "Klick hier, um dich anzumelden.",
+      "AlreadyAnEventOrganizer": "Bist du ein/-e Partner:in?",
+      "AreYouUser": "Bist du ein/-e Benutzer:in?"
+    },
+    "validation": {
+      "firstname": {
+        "required": "Bitte Vornamen eingeben.",
+        "max": "Maximale Eingabe darf 25 Zeichen nicht überschreiten.",
+        "matches": "Bitte gültigen Vornamen eingeben"
+      },
+      "lastname": {
+        "required": "Bitte Nachname eingeben",
+        "max": "Maximale Eingabe darf 25 Zeichen nicht überschreiten.",
+        "matches": "Bitte gültigen Nachnamen eingeben"
+      },
+      "email": {
+        "email": "Bitte gültige E-Mail eingeben",
+        "required": "Bitte Email eingeben.",
+        "matches": "Bitte gültige E-Mail eingeben"
+      },
+      "mobileNumber": {
+        "required": "Bitte gib deine Mobilenummer ein.",
+        "min": "Die Eingabe muss mindestens 9 bis 13 Ziffern lang sein.",
+        "max": "Die Eingabe darf maximal 15 Ziffern lang sein."
+      },
+      "instaLink": {
+        "test": "Bitte gib eine gültige URL ein."
+      },
+      "webSiteLink": {
+        "test": "Bitte gib eine gültige URL ein."
+      },
+      "password": {
+        "required": "Bitte Passwort eingeben.",
+        "min": "Passwort muss zwischen 6 und 15 Zeichen lang sein",
+        "max": "Passwort muss zwischen 6 und 15 Zeichen lang sein"
+      },
+      "confirmPassword": {
+        "match": "Passwort stimmt nicht überein.",
+        "required": "Bitte Passwort bestätigen."
+      }
+    }
+  },
+  "Header": {
+    "menu": {
+      "Home": "HOME",
+      "Events": "ANGEBOTE",
+      "AboutUs": "Über uns",
+      "ContactUs": "Kontakt",
+      "SignUp": "Anmelden",
+      "SignIn": "Einloggen"
+    }
+  },
+  "home": {
+    "Banner": {
+      "title": "Die Plattform für Körper, Geist und Seele",
+      "description": "Tauche ein in die spirituelle Welt mit Namascape – erlebe vielfältige  Events, Klassen, Treats, Retreats,  Coachings und Trainings, die alle sorgfältig für Dich ausgewählt wurden. Wir heissen alle, die auf der Suche nach Selbstfindung und Achtsamkeit sind, herzlich willkommen.",
+      "link": "Angebote ansehen"
+    },
+    "AboutUs": {
+      "title": "Warum Namascape?",
+      "description1": {
+        "1": "Verifizierte Events und authentische Experiences",
+        "2": "Steigere dein mentales und allgemeines Wohlbefinden",
+        "3": "Kultiviere Beständigkeit: Wir nähren deine Routine",
+        "4": "Finde deine like-minded Community"
+      },
+      "description2": {
+        "1": "Verstehe dich und andere besser",
+        "2": "Verlasse deine Komfortzone",
+        "3": "Wir priorisieren dein Wachstum und investieren in dich",
+        "4": "Transformative Reise garantiert"
+      },
+      "link": "Veranstaltungsorganisator werden"
+    },
+    "MainFeatures": {
+      "title": "Features",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+      "map": {
+        "title1": "Angebote",
+        "description1": "Finde dein nächsten magischen Event online oder in deiner Stadt und tauche ein in eine wundervolle neue Erfahrung. Alles steht für dich bereit, um deinem Körper, Geist und Seele etwas Gutes zu tun. Buche mit nur einem Klick dein Ticket und lass alles andere auf dich zukommen.",
+        "title2": "Community",
+        "description2": "Vernetze dich mit einer like-minded Community. Diese Plattform steht ganz im Zeichen des Gemeinschaftsgeistes! Vor der Buchung einer Angebots hast du die Möglichkeit, die Liste der Teilnehmer einzusehen und zu entscheiden, ob du dich bereits im Voraus mit ihnen austauschen möchtest. Natürlich kannst du auch anonym bleiben, wenn du das bevorzugst.",
+        "title3": "E-Ticket",
+        "description3": "Mit der Buchung erhältst du einen QR-Code in der App, der einen reibungslosen Check-in ermöglicht. Alles, was du benötigst, ist direkt zur Hand. Unser Ziel ist es, alles für dich so unkompliziert wie möglich zu gestalten, damit du dich voll und ganz auf dein Angebot konzentrieren kannst."
+      }
+    },
+    "testimonial": {
+      "header": "Testimonials",
+      "card1": {
+        "description": "Namascape ist meine Go-to Plattform geworden, immer wenn ich mich im monotonen Kreislauf meiner täglichen Routine wiederfinde. Diese Plattform hilft mir, aus meinem Kopf in meinen Körper zu kommen. Der Besuch von drei verschiedenen Veranstaltungen hat sich als eine Reihe von transformierenden Erfahrungen erwiesen, von denen jede eine einzigartige und bereichernde Reise für sich darstellt.",
+        "userName": "Anna.W",
+        "userPost": "Veranstaltungsorganisator"
+      },
+      "card2": {
+        "description": "Namascape hat meine Reise in die Achtsamkeit vereinfacht. Die benutzerfreundliche Plattform und vielfältigen Veranstaltungen inspirieren mich kontinuierlich, neue Kurse zu erkunden. Es ist eine grossartige Plattform, um neue Angebote zu entdecken und sich mit gleichgesinnten Personen zu verbinden. Ich kann es nur jedem empfehlen, der nach einem Ort sucht, um Körper, Geist und Seele in Einklang zu bringen",
+        "userName": "John M.",
+        "userPost": "Veranstaltungsorganisator"
+      }
+    },
+    "GetInTough": {
+      "title": "Kontakt",
+      "description": "Hast du Fragen?  Kontaktiere uns jederzeit. Wenn du Fragen hast oder Unterstützung benötigst, steht unser engagiertes Team rund um die Uhr zur Verfügung und hilft dir gerne weiter. Egal, ob du Informationen suchst oder Unterstützung benötigst, wir sind für dich da.",
+      "ContactList": {
+        "MobileNumber": {
+          "cardTitle": "Mobile Nummer",
+          "Title": "+41768348224",
+          "URL": "tel:+41768348224"
+        },
+        "EmailAddress": {
+          "cardTitle": "E-Mail Adresse",
+          "Title": "info@namascape.com",
+          "URL": "info@namascape.com"
+        },
+        "Address": {
+          "cardTitle": "Adresse",
+          "Title": {
+            "title1": "Kantonsstrasse 6, ",
+            "title2": "8807 Freienbach"
+          }
+        }
+      }
+    }
+  },
+  "aboutUs": {
+    "AboutUsSection": {
+      "title": "Über uns",
+      "description1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "description2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.",
+      "link": "Als Veranstalter registrieren"
+    },
+    "WhatWeDo": {
+      "title": "DIES IST FÜR DICH,",
+      "subtitle": "WENN DU ...",
+      "description1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "description2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum"
+    },
+    "WhoWeAre": {
+      "heading": "Mission von Namascape",
+      "description": "Sie ist eine spirituelle Führerin, eine Hüterin der Seele, die mit der Absicht kommt, die Menschheit zu ihrer wahren Essenz zurückzuführen. Sie bewegt sich langsam, aber sicher, um die Seelen derer zu berühren, die nach ihr suchen. Um Menschen aufzuwecken und sie gleichzeitig zu sich selbst und zueinander zurückzubringen. Sie hat für alle, die den Weg der Selbsterkenntnis und der spirituellen Arbeit suchen, eine offene Hand auf ihrer spirituellen Reise. Sie bringt Hoffnung und die Freiheit in dir zurück. Sie ist deine beste Freundin und deine größte Kritikerin. Sie ist keine einsame Entität in ihrer Mission. Sie ist die Verbindung, die Seelen zusammenführt, die auch im Dienst stehen. Diejenigen, die auch tief wissen, dass jetzt die Zeit ist.",
+      "Mission": {
+        "title": "Unsere Mission",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+      },
+      "Vision": {
+        "title": "Unsere Vision",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+      },
+      "Values": {
+        "title": "Unsere Werte",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+      }
+    }
+  },
+  "ContactUs": {
+    "ContactFormSection": {
+      "title": "Kontakt"
+    }
+  },
+  "Footer": {
+    "description": "Entdecke exklusive und kostenfreie Angebote, die nur in unserer App verfügbar sind. Freue dich jede Woche auf ein neues kostenloses Angebot. Verpasse das Angebot dieser Woche nicht – lade die App noch heute herunter!",
+    "NavData": {
+      "home": {
+        "text": "Home"
+      },
+      "events": {
+        "text": "ANGEBOTE"
+      },
+      "aboutUs": {
+        "text": "Über uns"
+      },
+      "contactUs": {
+        "text": "Kontakt"
+      }
+    },
+    "Download": {
+      "User": "Download für Benutzer:innen",
+      "Organizer": "Download für Partner:innen"
+    },
+    "copyRights": "@namascape Alle Rechte vorbehalten",
+    "privacyLinks": {
+      "PrivacyPolicy": {
+        "title": "Datenschutz-Bestimmungen"
+      },
+      "TermsNConditions": {
+        "title": "Geschäftsbedingungen"
+      }
+    }
+  },
+  "EventOrganizer": {
+    "title": "MÖCHTEST DU EIN:E PARTNER:IN WERDEN?",
+    "description": "Überlasse uns die Details, damit du dich voll und ganz darauf konzentrieren kannst, unvergessliche Erlebnisse zu schaffen. Melde dich bei Namascape an und profitiere von:",
+    "link": "Heute loslegen",
+    "listDesc1": "Gezielter Ansprache des richtigen Publikums",
+    "listDesc2": "Optimiertem Ticketverkauf für deine Veranstaltungen / Angebote",
+    "listDesc3": "Gratis Social Media & Google Ads Marketing",
+    "listDesc4": "Nahtlosem Self-Check-In über QR-Code in unserer App"
+  },
+  "contactus": {
+    "title": "Kontakt",
+    "form": {
+      "input": {
+        "name": {
+          "label": "Vorname",
+          "placeholder": "Vorname eingeben"
+        },
+        "lname": {
+          "label": "Nachname",
+          "placeholder": "Nachname eingeben"
+        },
+        "email": {
+          "label": "E-Mail Adresse",
+          "placeholder": "E-Mail Adresse eingeben"
+        },
+        "mobilenumber": {
+          "label": "Telefonnummer",
+          "placeholder": "Handynummer eingeben"
+        },
+        "message": {
+          "label": "Nachricht",
+          "placeholder": "Geben Sie hier Ihre Nachricht ein..."
+        }
+      },
+      "submitbtn": {
+        "text": "Absenden"
+      },
+      "validation": {
+        "fname": {
+          "required": "Bitte Vornamen eingeben",
+          "max": "Die maximale Länge sollte 20 Zeichen betragen.",
+          "matches": "Bitte gültigen Vornamen eingeben"
+        },
+        "lname": {
+          "required": "Bitte Nachnamen eingeben",
+          "max": "Die maximale Länge sollte 20 Zeichen betragen.",
+          "matches": "Bitte gültigen Nachnamen eingeben"
+        },
+        "email": {
+          "required": "Bitte E-Mail eingeben",
+          "email": "Bitte gültigen E-Mail eingeben",
+          "matches": "Bitte gültigen E-Mail eingeben"
+        },
+        "mobilenumber": {
+          "required": "Bitte Telefonnummer eingeben",
+          "min": "Telefonnummer sollte zwischen 8 und 15 Zeichen lang sein",
+          "max": "Telefonnummer sollte zwischen 8 und 15 Zeichen lang sein",
+          "matches": "Bitte gib eine gültige Mobilnummer ein."
+        },
+        "usermessage": {
+          "required": "Bitte Textfeld ausfüllen"
+        }
+      }
+    }
+  },
+  "headerDropDown": {
+    "dropDown": {
+      "myaccount": "Mein Konto",
+      "settings": "Einstellungen",
+      "logout": "Abmelden"
+    }
+  },
+  "myAccount": {
+    "attendedEvent": {
+      "age": "Alter",
+      "header": "Gekaufte Angebote",
+      "eventTitles": "Gekaufte Angebote",
+      "socialMediaLink": "Link",
+      "noBoughtExp": "Es gibt noch keine gekauften Angeobte.",
+      "noboughtExpmyAccount": "Du hast noch nichts gekauft"
+    }
+  },
+  "settings": {
+    "settingsSideBar": {
+      "generalTitle": "Allgemein",
+      "general": {
+        "editProfile": "Profil bearbeiten",
+        "changepassword": "Passwort ändern",
+        "changelanguage": "Sprache ändern"
+      },
+      "legaltitle": "Rechtliches",
+      "legal": {
+        "termsofservices": "Allgemeine Geschäftsbedingungen",
+        "privacypolicy": "Datenschutzrichtlinien",
+        "deleteaccount": "Konto löschen"
+      }
+    },
+    "editProfile": {
+      "title": "Profil bearbeiten",
+      "form": {
+        "inputs": {
+          "firstName": {
+            "label": "Vorname",
+            "validation": {
+              "required": "Bitte Vornamen eingeben.",
+              "min": "Eingabe muss mindestens 3 bis 15 Zeichen lang sein.",
+              "max": "Eingabe muss mindestens 3 bis 15 Zeichen lang sein.",
+              "matches": "Bitte gültigen Vornamen eingeben."
+            }
+          },
+          "lastName": {
+            "label": "Nachname",
+            "validation": {
+              "required": "Bitte Nachnamen eingeben.",
+              "min": "Eingabe muss mindestens 3 bis 15 Zeichen lang sein.",
+              "max": "Eingabe muss mindestens 3 bis 15 Zeichen lang sein.",
+              "matches": "Bitte gültigen Nachnamen eingeben."
+            }
+          },
+          "email": {
+            "label": "E-Mail",
+            "validation": {
+              "email": "Bitte gültige E-Mail eingeben",
+              "required": "Bitte geben Sie die E-Mail ein.",
+              "matches": "Bitte gültige E-Mail eingeben"
+            }
+          },
+          "DOB": {
+            "label": "Geburtsdatum (Optional)"
+          },
+          "city": {
+            "label": "Stadt (Optional)",
+            "validation": {
+              "required": "Bitte gib die Stadt ein."
+            }
+          },
+          "socialMediaLink": {
+            "label": "Soziale Medien Link (Optional)",
+            "validation": {
+              "test": "Bitte gib eine gültige URL ein.",
+              "createError": "Bitte korrekte URL eingeben."
+            }
+          },
+          "bio": {
+            "label": "Biografie (Optional)",
+            "validation": {
+              "test": "Die Eingabe sollte 5 bis 150 Zeichen lang sein."
+            }
+          }
+        },
+        "button": "Speichern"
+      }
+    },
+    "changePassword": {
+      "title": "Passwort ändern",
+      "form": {
+        "inputs": {
+          "currentPass": {
+            "label": "Aktuelles Passwort",
+            "validation": {
+              "required": "Bitte aktuelles Passwort eingeben.",
+              "matches": "Bitte gib ein gültiges Passwort ein."
+            }
+          },
+          "newpassword": {
+            "label": "Neues Passwort",
+            "validation": {
+              "required": "Bitte neues Passwort eingeben.",
+              "matches": "Bitte gib ein gültiges Passwort ein.",
+              "min": "Das Passwort muss 6 bis 15 Zeichen lang sein.",
+              "max": "Das Passwort muss 6 bis 15 Zeichen lang sein."
+            }
+          },
+          "confirmpassword": {
+            "label": "Passwort bestätigen",
+            "validation": {
+              "required": "Bitte Passwort bestätigen.",
+              "matches": "Bitte gib ein gültiges Passwort ein.",
+              "oneof": "Bestätigungspasswort stimmt nicht überein."
+            }
+          }
+        },
+        "button": "Passwort aktualisieren"
+      }
+    },
+    "changeLanguage": {
+      "title": "Sprache ändern",
+      "form": {
+        "label": "Sprache",
+        "inputs": {
+          "english": "English",
+          "german": "German"
+        }
+      }
+    },
+    "termsOfServices": {
+      "title": "Allgemeine Geschäftsbedingungen"
+    },
+    "privacypolicy": {
+      "title": "Datenschutzrichtlinien"
+    },
+    "deleteModal": {
+      "title": "Bist du sicher, dass du dein Konto löschen möchtest?",
+      "cancleBtn": "Abbrechen",
+      "deleteBtn": "Löschen"
+    }
+  },
+  "useEvent": {
+    "headerTitle": {
+      "homeTitle": "Home",
+      "eventsTitle": "Angebote",
+      "aboutusTitle": "Über uns",
+      "contactUsTitle": "Kontakt",
+      "tearmsAndCondiTitle": "Bedingungen & Konditionen",
+      "privacyPolicyTitle": "Datenschutzrichtlinien",
+      "EventHeading": "Angebote",
+      "AboutUsHeading": "Über uns",
+      "ContactUsHeading": "Kontakt",
+      "PrivacyPolicyHeading": "Datenschutzrichtlinien",
+      "TearmsAndCondiHeading": "Bedingungen & Konditionen",
+      "noEvent": "Keine Angebote gefunden",
+      "detailsPage": {
+        "tabData": {
+          "All": "Sponsored",
+          "Events": "Events",
+          "Retreats": "Retreats",
+          "Treats": "Treats",
+          "Classes": "Klassen",
+          "Coaching": "Coachings",
+          "Training": "Trainings"
+        },
+        "search": {
+          "placeholder": "Suchen"
+        },
+        "EventCategoryTitle": {
+          "sponsoredEevent": "Sponsored",
+          "classesEvent": "Klassen",
+          "retreatsEvent": "Retreats",
+          "event": "Events",
+          "treatsEvent": "Treats",
+          "allEvent": "Alle",
+          "coachingEvent": "Coachings",
+          "trainingEvent": "Trainings"
+        },
+        "eventHeading": {
+          "sponsoredevents": "Sponsored",
+          "events": "Events",
+          "retreatsEvents": "Retreats Experiences",
+          "treatsEvents": "Treats Experiences",
+          "classesEvents": "Klassen Experiences",
+          "coachingEvents": "Coaching Experiences",
+          "trainingEvents": "Training Experiences"
+        },
+        "events": "Experiences",
+        "noSponseredData": "Es gibt keine gesponserten Erlebnisse."
+      }
+    },
+    "SponsoredEvents": {
+      "h2Header": "Sponsored",
+      "seeAllBTN": "Alle anzeigen"
+    },
+    "filterEvents": {
+      "heading": "Filter Angebote",
+      "startDate": "Startdatum",
+      "endDate": "Enddatum",
+      "Location": "Ort",
+      "price": "Preis",
+      "date": "Datum",
+      "placeHolderCity": "Stadt suchen",
+      "EventType": "Offline / Online",
+      "EventPrice": "Erlebnispreis",
+      "SortingBy": "Sortieren nach",
+      "sortfilterLabel": "Sortieren nach Datum",
+      "sortfilterlabelPrice": "Sortieren nach Preis",
+      "SortingByPrice": "Sortieren nach Preis",
+      "placeHolder": "Auswählen",
+      "SortingByDate": "Sortieren nach Datum",
+      "placeholderDate": "Auswählen",
+      "cancleBtn": "Abbrechen",
+      "ApplyBtn": "Anwenden",
+      "validation": {
+        "start_date": {
+          "required": "Startdatum ist erforderlich",
+          "test": "Startdatum sollte vor dem Enddatum liegen"
+        },
+        "end_date": {
+          "required": "Enddatum ist erforderlich"
+        }
+      },
+      "SortingByDropDown": {
+        "title1": "Aufsteigend",
+        "title2": "Absteigend"
+      },
+      "SortingByDateDropDown": {
+        "title1": "Frühestes bis spätestes Datum",
+        "title2": "Spätestes bis frühestes Datum"
+      }
+    },
+    "paymentDetails": {
+      "title": "Zahlungsdetails",
+      "eventType": "KOSTENLOS",
+      "subTotal": "Zwischensumme",
+      "quantity": "Menge",
+      "transactionFees": "Transaktionsgebühren",
+      "totalPrice": "Gesamtpreis"
+    },
+    "EventPaid": {
+      "all": "Alle",
+      "Paid": "Bezahlt",
+      "Free": "Kostenlos"
+    },
+    "FilterEventType": {
+      "all": "Alle",
+      "onLine": "Online",
+      "offline": "Offline"
+    },
+    "calanderFilter": {
+      "noData": "Keine Angebote gefunden"
+    },
+    "eventDetailsCategoryList": {
+      "1": "Events",
+      "2": "Retreats",
+      "3": "Treats",
+      "4": "Klassen",
+      "7": "Coachings",
+      "8": "Trainings"
+    },
+    "recurrence": {
+      "title": "Termine"
+    },
+    "meetLinkTitle": "Am Meeting teilnehmen ",
+    "aboutEvents": "Details",
+    "partner": "Partner:in",
+    "eventAttendees": "Gekauft von",
+    "eventAttendees2" : "Gekauft Via Namascape Von",
+    "relateEevents": "ÄHNLICHE ANGEBOTE",
+    "booked": "via Namascape",
+    "bookBTN": "Buchen",
+    "SoldOut": "Ausverkauft",
+    "asAGift": "Als Geschenk kaufen",
+    "NumberofTikits": "Anzahl",
+    "Sponsored": "Gesponsert",
+    "eventType": {
+      "1": "Online",
+      "2": "Offline",
+      "3": "Als Geschenk",
+      "4": "Für mich selbst"
+    },
+    "organizerProfile": {
+      "organizerprofile": "Partner:in Profil",
+      "hostedEvent": "Vergangene Angebote",
+      "upComingEvent": "Anstehende Angebote"
+    },
+    "ViewTicket": "Kauf ansehen",
+    "noEvents": "Keine Angebote gefunden"
+  },
+  "eTicket": {
+    "viewHeader": {
+      "name": "Name",
+      "email": "E-Mail",
+      "BookingID": "Buchungs-ID",
+      "PaymentMethod": "Bezahlt via",
+      "BookingDateAndTime": "Gebucht am",
+      "EventPrice": "Preis per Ticket",
+      "free": "Kostenlos",
+      "Event": "Angebot",
+      "EventLocation": "Ort",
+      "EventDateandTime": "Veranstaltungsdatum und -zeit",
+      "EventCategory": "Kategorie",
+      "downloadBTN": "Ticket herunterladen",
+      "onlineLink": "Online Link",
+      "quantity": "Menge"
+    }
+  },
+  "payment": {
+    "title": "Zahlungsmethode",
+    "paymentrefundline": "With submiting your payment you agree on our",
+    "paymentrefundline1": "Partners AGB",
+    "paymentrefundline2": "and agree that you will get in touch in case of sickness, refund etc. with this Partner itself",
+    "EventCardBox": {
+      "title": "Zahlungsdetails",
+      "transactionfees": "Transaktionsgebühren",
+      "Subtotal": "Zwischensumme",
+      "totalprice": "Gesamtpreis",
+      "type": "KOSTENLOS"
+    },
+    "Loading": "Laden",
+    "paymentProgressMesaage": "Die Zahlung wird abgewickelt. Bitte aktualisiere diese Seite nicht.",
+    "backBtn": "Zurück",
+    "cnfBtn": "Weiter zur Zahlung",
+    "model": {
+      "AttendeesModal": {
+        "title": "Möchtest du anderen Benutzern:innen angezeigt werden, dass du an dieses Angebot gekauft hast?",
+        "onClickCancleText": "Nein",
+        "SolidBTNText": "Ja"
+      },
+      "SuccessModal": {
+        "title": "Zahlung erfolgreich",
+        "description": "Du hast dieses Angebot erfolgreich gekauft.",
+        "SolidBTNText": "Zurück zur Startseite"
+      },
+      "PaymentErrorModal": {
+        "title": "Etwas ist schief gelaufen",
+        "description": "Ihre Bestellung wurde erfolgreich aufgegeben.",
+        "SolidBTNText": "Zurück zur Startseite"
+      }
+    },
+    "status": {
+      "success": "Dein Kauf war erfolgreich..",
+      "error": "Die Zahlung wurde abgelehnt. Bitte versuche eine andere Zahlungsmethode oder Karte.",
+      "title": "Danke.",
+      "btn": "Zurück zur Startseite"
+    }
+  },
+
+  "sponsoredEperience": {
+    "sponsoredExperiences": "Sponsored ",
+    "experiences": "Events",
+    "classes": "Klassen",
+    "treats": "Treats",
+    "retreats": "Retreats",
+    "coaching": "Coachings",
+    "Training": "Trainings",
+    "seeAll": "Alle anzeigen",
+    "noData": "Keine Angebote gefunden"
+  },
+
+  "userBreadcrumb": {
+    "home": "Home",
+    "experiencesDetails": "Details",
+    "boughtby": "Gekauft via Namascape von",
+    "payment": "Zahlung",
+    "eTicket": "E-Ticket"
+  },
+
+  "paramsCategory": {
+    "sponsored": "Sponsored",
+    "event": "Events",
+    "classes": "Klassen",
+    "treats": "Treats",
+    "retreats": "Retreats",
+    "trainings": "Trainings",
+    "coachings": "Coachings"
+  },
+
+  "organizer": {
+    "dashboardheader": {
+      "createBtn": "Angebot erstellen",
+      "search": "Suchen",
+      "noExperience": "Keine Angebot gefunden"
+    },
+    "sidebar": {
+      "dashboard": "Dashboard",
+      "eventmanagement": "Angebote managen",
+      "eventbooking": "Buchungen",
+      "termsandconditions": "Bedingungen & Konditionen"
+    },
+    "signin": {
+      "title": "Einloggen"
+    },
+    "dashboard": {
+      "eventCount": {
+        "totalevent": "Total Angebote",
+        "totalcompletedevents": "Total abgeschlossene Angebote",
+        "totalupcomingevents": "Total anstehende Angebote",
+        "totalongoingevents": "Laufende Angebote",
+        "totalbookingcount": "Gesamtbuchungen"
+      },
+      "grossRevenue": {
+        "heading": "Bruttoumsatz nach Währung"
+      },
+      "upcomingevent": {
+        "title": "Anstehende Angebote",
+        "seeall": "Alle anzeigen",
+        "nodata": "Es gibt noch keine anstehenden Angebote"
+      },
+      "hostedEvent": {
+        "title": "Vergangene Angebote",
+        "seeall": "Alle anzeigen",
+        "nodata": "Es gibt noch keine abgeschlossenen Angebote"
+      },
+      "welcomeMessage": {
+        "heading": "Willkommen bei NamaScape",
+        "description": "Herzlich willkommen auf unserer Plattform! Wir freuen uns, dass du Teil unserer Mission bist. Wir streben eine langfristige und nachhaltige Partnerschaft an. Daher kannst du unsere Plattform kostenfrei nutzen und profitierst von unseren Marketing Ads für deine Angebote. Du kannst auch von unserem Influencer-Portfolio Gebrauch machen. Für weitere Infos sende uns gerne eine E-Mail an info@namascape.me. Das Beste daran? Wir berechnen nur eine Provision von 15%, nachdem eine Buchung erfolgreich abgeschlossen wurde.",
+        "button": "Erstelle dein erstes Angebot"
+      }
+    },
+    "myaccount": {
+      "breadCrumb": {
+        "home": "Startseite",
+        "myaccount": "Mein Konto",
+        "personaldetails": "Persönliche Angaben",
+        "bankdetails": "Bankverbindung",
+        "changepassword": "Passwort ändern"
+      },
+      "header": "Mein Konto",
+      "myccountView": {
+        "userDetails": {
+          "btnText": "Profil bearbeiten"
+        },
+        "bankdetails": {
+          "title": "Bankverbindung",
+          "addBankBtn": "Bankverbindung hinzufügen",
+          "editBankBtn": "Bankdetails bearbeiten",
+          "noDataFound": "Keine Bankverbindung gefunden",
+          "viewCardData": {
+            "bankname": "Name der Bank",
+            "bankholdername": "Name des Bankinhabers",
+            "bankbranchname": "Kontoinhaberadresse",
+            "plz": "PLZ und Stadt",
+            "IBANnumber": "IBAN-Nummer",
+            "Swift/BICnumber": "SWIFT-/BIC-Nummer"
+          }
+        },
+        "contactAdmin": {
+          "title": "Kontaktiere Admin",
+          "emailAdd": "E-Mail Adresse",
+          "contactNo": "Kontakt Nummer"
+        }
+      },
+      "personalDetails": {
+        "title": "Persönliche Angaben",
+        "form": {
+          "inputs": {
+            "image": {
+              "validation": {
+                "notvalid": "UNGÜLTIGES BILD"
+              }
+            },
+            "firstname": {
+              "label": "Vorname",
+              "validation": {
+                "required": "Bitte Vornamen eingeben.",
+                "min": "Eingabe muss mindestens 3 bis 15 Zeichen lang sein.",
+                "max": "Eingabe muss mindestens 3 bis 15 Zeichen lang sein.",
+                "matches": "Bitte gültigen Vornamen eingeben."
+              }
+            },
+            "lastname": {
+              "label": "Nachname",
+              "validation": {
+                "required": "Bitte Nachnamen eingeben.",
+                "min": "Eingabe muss mindestens 3 bis 15 Zeichen lang sein.",
+                "max": "Eingabe muss mindestens 3 bis 15 Zeichen lang sein.",
+                "matches": "Bitte gültigen Nachnamen eingeben."
+              }
+            },
+            "email": {
+              "label": "E-Mail Adresse",
+              "validation": {
+                "required": "Bitte E-Mail Adresse eingeben.",
+                "email": "Bitte gültigen E-Mail eingeben."
+              }
+            },
+            "mobileNumber": {
+              "label": "Kontakt Nummer",
+              "validation": {
+                "required": "Bitte gib eine gültige Mobilenummer ein.",
+                "matches": "Muss mit einem gültigen Ländercode beginnen und von Zahlen gefolgt werden",
+                "min": "Eingabe muss mindestens 9 bis 13 Zeichen lang sein.",
+                "max": "Eingabe muss mindestens 15 Zeichen lang sein."
+              }
+            },
+            "DOB": {
+              "label": "Geburtsdatum (Optional)"
+            },
+            "bio": {
+              "label": "Biografie (Optional)",
+              "validation": {
+                "test": "Die Eingabe sollte 5 bis 150 Zeichen lang sein."
+              }
+            },
+            "instagramLink": {
+              "label": "Instagramlink (Optional)",
+              "validation": {
+                "test": "Bitte gib eine gültige URL ein."
+              }
+            },
+            "websiteLink": {
+              "label": "Websitelink (Optional)",
+              "validation": {
+                "test": "Bitte gib eine gültige URL ein."
+              }
+            }
+          },
+          "button": "Speichern"
+        }
+      },
+      "bankdetails": {
+        "title": "Bankverbindung",
+        "form": {
+          "inputs": {
+            "bankName": {
+              "label": "Name der Bank",
+              "validation": {
+                "required": "Bitte Namen der Bank eingbeben.",
+                "matches": "Bitte gib einen gültigen Banknamen ein."
+              }
+            },
+            "bankHolderName": {
+              "label": "Name des Kontoinhabers",
+              "validation": {
+                "required": "Bitte Namen des Bankinhabers eingeben.",
+                "matches": "Bitte gib einen gültigen Kontoinhabernamen ein."
+              }
+            },
+            "branchName": {
+              "label": "Kontoinhaberadresse",
+              "validation": {
+                "required": "Bitte gib die Bankadresse ein.",
+                "matches": "Bitte gib eine gültige Bankadresse ein."
+              }
+            },
+            "plz": {
+              "label": "PLZ und Stadt (Optional)",
+              "validation": {
+                "test": "Es dürfen maximale 4 Ziffern sein."
+              }
+            },
+            "IBANNumber": {
+              "label": "IBAN-Nummer",
+              "validation": {
+                "required": "Bitte IBAN Nummer eingeben.",
+                "min": "Die minimale Eingabe sollte 3 bis 34 Zeichen lang sein.",
+                "max": "Die minimale Eingabe sollte 3 bis 34 Zeichen lang sein.",
+                "matches": "Bitte geben Sie eine gültige IBAN-Nummer ein."
+              }
+            },
+            "country": {
+              "label": "Land (in EN)",
+              "label2": "Land (in EN)",
+              "validation": {
+                "required": "Bitte wähle ein Land aus."
+              }
+            },
+            "swiftBIC": {
+              "label": "SWIFT-/BIC-Nummer",
+              "validation": {
+                "required": "Bitte geben Sie die SWIFT-/BIC-Nummer ein.",
+                "min": "Die minimale Eingabe sollte 3 oder 17 Ziffern betragen.",
+                "max": "Die maximale Eingabe sollte 3 oder 17 Ziffern betragen.",
+                "matches": "Bitte gib eine gültige Swift-/BIC-Nummer ein."
+              }
+            }
+          },
+          "button": "Speichern",
+          "cancelBtn": "Abbrechen"
+        }
+      },
+      "changepassword": {
+        "title": "Passwort ändern",
+        "form": {
+          "inputs": {
+            "currrentpass": {
+              "label": "Aktuelles Passwort",
+              "validation": {
+                "required": "Bitte aktuelles Passwort eingeben.",
+                "matches": "Bitte gültiges Passwort eingeben."
+              }
+            },
+            "newpass": {
+              "label": "Neues Passwort",
+              "validation": {
+                "required": "Bitte neues Passwort eingeben.",
+                "matches": "Bitte gültiges Passwort eingeben.",
+                "min": "Passwort muss zwischen 6 und 15 Zeichen lang sein.",
+                "max": "Passwort muss zwischen 6 und 15 Zeichen lang sein."
+              }
+            },
+            "confirmpass": {
+              "label": "Passwort bestätigen",
+              "validation": {
+                "required": "Bitte Passwort bestätigen.",
+                "oneof": "Passwort stimmt nicht überein.",
+                "matches": "Bitte gültiges Passwort eingeben."
+              }
+            }
+          },
+          "button": "Passwort aktualisieren"
+        }
+      }
+    },
+    "event": {
+      "breadCrumb": {
+        "title": "Home"
+      },
+      "eventmanagement": {
+        "breadcrumb": {
+          "home": "Startseite",
+          "eventmanagement": "Angebote managen",
+          "upcomingevent": "Anstehende Angebote",
+          "hostedevent": "Vergangene Angebote",
+          "eventdetails": "Details"
+        },
+        "protectedeventCard": {
+          "duplicate": "Duplizieren",
+          "edit": "Bearbeiten",
+          "delete": "Löschen",
+          "inreview": "Wird überprüft",
+          "active": "Aktiv",
+          "rejected": "Abgelehnt",
+          "price": "Preis",
+          "sold": "Verkauft",
+          "available": "Verfügbar"
+        },
+        "pagination": {
+          "shoingcount": {
+            "showing": "Zeigt",
+            "to": "bis",
+            "of": "von",
+            "entries": "Einträgen"
+          }
+        }
+      },
+      "eventDetails": {
+        "nodatafound": "Keine Daten gefunden",
+        "totalcapacity": "Gesamtkapazität",
+        "available": "Verfügbar",
+        "sold": "Verkauft",
+        "scanned": "Gescannt",
+        "descriptionInEnglish": "Beschreibung auf Englisch",
+        "descriptionInGerman": "Beschreibung auf Deutsch",
+        "deleteEvent": "Bist du sicher, dass du dieses Angebot löschen möchtest?",
+        "deleteBTN": "Löschen",
+        "free": "Kostenlos",
+        "eventRecurrence": "Wiederholung",
+        "eventlanguage": "Sprache, in der das Angebot stattfindet",
+        "pricePerTicket": "Preis"
+      },
+      "sweetdeleteMessage": {
+        "title": "Angebot kann nicht gelöscht werden, da es schon gebucht worden ist. (Du kannst jedoch die \"Verfügbare Anzal\" ändern)."
+      },
+      "eventFormHeader": {
+        "title": "Angebot erstellen",
+        "editTitle": "bearbeiten Angebot",
+        "saveButton": "Publizieren",
+        "previewBtn": "Vorschau",
+        "cancelBtn": "Abbrechen"
+      },
+      "recurrenceEditModel": {
+        "title": "Möchtest du die Änderungen für alle Angebote in dieser Serie übernehmen?"
+      },
+      "upcomingEventCard": {
+        "viewDetails": "Details anzeigen",
+        "peoplejoined": "Verkauft"
+      },
+      "eventForm": {
+        "inputs": {
+          "EventTitle": {
+            "title": "Titel",
+            "validation": {
+              "required": "Titel ist erforderlich",
+              "max": "Maximale Eingabe darf 50 Zeichen nicht überschreiten."
+            }
+          },
+          "Checkbox": {
+            "title": "Sprache, in der das Angebot stattfindet",
+            "checkboxTitle1": "Englisch",
+            "checkboxTitle2": "Deutsch",
+            "validation": {
+              "required": "Wählen Sie entweder Englisch oder Deutsch",
+              "min": "Bitte wähle mindestens eine Option",
+              "oneOf": "Wählen Sie entweder Englisch oder Deutsch"
+            }
+          },
+          "DescriptionEnglish": {
+            "title": "Beschreibung auf Englisch",
+            "validation": {
+              "required": "Eine Beschreibung auf Englisch ist erforderlich",
+              "min": "Die Beschreibung auf Englisch muss mindestens 20 Zeichen lang sein"
+            }
+          },
+          "DescriptionGerman": {
+            "title": "Beschreibung auf Deutsch",
+            "validation": {
+              "required": "Eine Beschreibung auf Deutsch ist erforderlich",
+              "min": "Die Beschreibung auf Deutsch muss mindestens 20 Zeichen lang sein"
+            }
+          },
+          "EventType": {
+            "title": "Wo findet es statt?",
+            "title2": "Bietest du einen Geschenkgutschein für diesen Kauf an?",
+            "isSponsored": "Sponsored",
+            "EventTypeTitle1": "Offline",
+            "EventTypeTitle2": "Online",
+            "EventTypeTitle3": "Ja",
+            "EventTypeTitle4": "Nein",
+            "validation": {
+              "required": "Bitte wähle mindestens eine Option aus"
+            }
+          },
+          "Venue": {
+            "title": "Adresse",
+            "validation": {
+              "required": "Adresse ist erforderlich ",
+              "max": "Maximale Eingabe darf 25 Zeichen nicht überschreiten."
+            }
+          },
+          "City": {
+            "title": "Stadt",
+            "placeholder": "Stadt suchen",
+            "validation": {
+              "required": "Stadt ist erforderlich "
+            }
+          },
+          "GoogleMapLink": {
+            "title": "Google Maps Link",
+            "validation": {
+              "required": "Google Maps Link ist erforderlich ",
+              "url": "Ungültiges URL-Format",
+              "min": "Der Google Maps-Link muss mindestens 10 Zeichen lang sein"
+            }
+          },
+          "MeetLink": {
+            "title": "Meeting Link",
+            "optional": "Optional",
+            "validation": {
+              "required": "Meeting Link is erforderlich",
+              "url": "Ungültiges URL-Format",
+              "min": "Der Meeting-Link muss mindestens 10 Zeichen lang sein"
+            }
+          },
+          "Price": {
+            "title": "Preis pro Einheit",
+            "placeholder": "Preis eingeben",
+            "validation": {
+              "required": "Bitte gib den Preis ein",
+              "max": "Maximale Eingabe darf 10 Zeichen nicht überschreiten."
+            }
+          },
+          "Event_date": {
+            "title": "Datum",
+            "validation": {
+              "required": "Datum ist erforderlich",
+              "test": "Bitte gib eine gültiges Datum ein."
+            }
+          },
+          "Event_time": {
+            "title": "Uhrzeit",
+            "validation": {
+              "required": "Uhrzeit ist erforderlich",
+              "test": "Bitte gib eine gültige Zeit ein."
+            }
+          },
+          "Event_end_time": {
+            "title": "Endzeit",
+            "validation": {
+              "required": "Endzeit ist erforderlich",
+              "test": "Bitte gib eine gültige Zeit ein."
+            }
+          },
+          "Event_start_date": {
+            "title": "Startdatum",
+            "validation": {
+              "required": "Startdatum ist erforderlich",
+              "test": "Bitte gib ein gültiges Startdatum ein"
+            }
+          },
+          "Event_start_time": {
+            "title": "Startzeit",
+            "validation": {
+              "required": "Startzeit ist erforderlich"
+            }
+          },
+          "Event_end_date": {
+            "title": "Enddatum",
+            "validation": {
+              "required": "Enddatum ist erforderlich",
+              "test": "Bitte gib ein gültiges Enddatum ein."
+            }
+          },
+          "Recurrence_end_date": {
+            "title": "Enddatum der Wiederholung",
+            "validation": {
+              "required": "Bitte wähle das Enddatum der Wiederholung aus"
+            }
+          },
+          "CreateEventType": {
+            "title": "Preisoption",
+            "note": "Bitte vervollständige deine Bankdaten, um die Option 'Bezahlt' auswählen zu können.",
+            "addBtn": "Bankverbindung hinzufügen",
+            "noteTitle": "Hinweis"
+          },
+          "Email": {
+            "title": "Soll nach der Zahlung eine E-Mail gesendet werden?",
+            "emailTitle1": "Ja",
+            "emailTitle2": "Nein",
+            "validation": {
+              "required": "Bitte wählen Sie eine Option aus"
+            }
+          },
+          "EventRecrrence": {
+            "title": "Wiederholung",
+            "placeholder": "Suchen",
+            "validation": {
+              "required": "Bitte wähle die Veranstaltungswiederholung aus"
+            }
+          },
+          "Ticket": {
+            "title": "Verfügbare Anzahl",
+            "validation": {
+              "required": "Menge eingeben"
+            }
+          },
+          "Confirmation": {
+            "title": "Möchtest du eine individuelle Nachricht oder Information an den Kunden senden?",
+            "confirmationTitle1": "Ja",
+            "confirmationTitle2": "Nein",
+            "validation": {
+              "required": "Bitte wählen Sie eine Option aus"
+            }
+          },
+          "EmailSubject": {
+            "title": "E-Mail Betreff",
+            "validation": {
+              "required": "Bitte E-Mail Betreff eingeben"
+            }
+          },
+          "EmailBodyEditor": {
+            "title": "E-Mail Inhalt",
+            "validation": {
+              "required": "E-Mail-Textdetails eingeben"
+            }
+          },
+          "Upload": {
+            "titleImage": "Bild hinzufügen",
+            "titleVideo": "Video hinzufügen",
+            "placeholderImage": "Bild hochladen",
+            "placeholderVideo": "Video hochladen",
+            "note": "Hinweis",
+            "imgNote": "Du kannst nur jpg, png oder jpeg hochladen. Dateien sollten nicht mehr als 5 MB gross sein, maximal 5 Dateien erlaubt.",
+            "videoNote": "Du kannst nur mp4-, mkv-Datei hochladen. Dateien sollten nicht mehr als 100 MB gross sein, maximal 1 Video erlaubt.",
+            "validationSweetAlert": {
+              "filetype": "Du kannst nur JPG-, PNG-, JPEG-Erweiterungsdateien hochladen",
+              "maxImg": "Maximal 5 Bilder sind erlaubt",
+              "imgSize": "Dateien sollten bis zu 5 MB gross sein",
+              "allowImg": "Maximal 5 Bilder sind erlaubt",
+              "videotype": "Du kannst nur MP4-, MKV-Erweiterungsdateien hochladen",
+              "maxVideo": "Maximal 1 Video ist erlaubt",
+              "videoSize": "Video Datei sollten nicht mehr als 100 MB gross sein"
+            },
+            "validation": {
+              "test": "Bitte wählen Sie entweder ein Bild oder ein Video aus."
+            }
+          },
+          "EventCategory": {
+            "title": "Kategorie"
+          }
+        },
+        "successfullyModal": {
+          "createTitle": "Angebot erfolgreich erstellt",
+          "updateTitle": "ANGEBOT ERFOLGREICH AKTUALISIERT",
+          "description": "Dein Angebot wird jetzt von unseren Administratoren überprüft, um sicherzustellen, dass es unseren Richtlinien entspricht. Dies kann 24-48 Stunden dauern.",
+          "backBTN": "Zurück zu den Angeboten"
+        }
+      },
+      "commonArray": {
+        "EventCategory": {
+          "option": {
+            "1": "Events",
+            "2": "Retreats",
+            "3": "Treats",
+            "4": "Klassen",
+            "5": "Coachings",
+            "6": "Trainings"
+          }
+        },
+        "EventRecurrence": {
+          "option": {
+            "1": "Nicht wiederholt",
+            "2": "Täglich",
+            "3": "Jede Woche",
+            "4": "Jeden Monat",
+            "5": "Alle zwei Wochen"
+          }
+        },
+        "LanguageList": {
+          "option": {
+            "1": "English",
+            "2": "German"
+          }
+        },
+        "CreateEventType": {
+          "option": {
+            "1": "Kostenlos",
+            "2": "Bezahlt"
+          }
+        },
+        "Currency": {
+          "option": {
+            "1": "USD",
+            "2": "CHF",
+            "3": "EUR"
+          }
+        },
+        "DiscountTypeList": {
+          "option": {
+            "1": "FLACH",
+            "2": "PROZENT"
+          }
+        }
+      }
+    },
+    "eventBooking": {
+      "breadCrumb": {
+        "home": "Startseite",
+        "eventBookings": "Buchungen",
+        "bookingDetails": "Angebotsdetails"
+      },
+      "filterData": {
+        "startDate": "Startdatum",
+        "endDate": "Enddatum",
+        "submitBtn": "Absenden",
+        "DownloadBTN": "Daten herunterladen"
+      },
+      "BookingTable": {
+        "tableHeader": {
+          "BookingID": "Buchungs-ID",
+          "Image": "Bild",
+          "title": "Titel",
+          "Category": "Kategorie",
+          "quantity": "Menge",
+          "asAGift": "Als Geschenk kaufen",
+          "totalPriceWithoutTransaction": "Total Preis",
+          "Amount": "Preis",
+          "Username": "Benutzername",
+          "BookingDateandTime": "Gebucht am",
+          "Actions": "Aktion",
+          "ViewBTN": "Ansehen"
+        },
+        "noData": "Es liegen keine Angebotsdetails vor"
+      },
+      "bookingDetailCard": {
+        "BookingID": "Buchungs-ID",
+        "PaymentMethod": "Bezahlt via",
+        "BookingDateandTime": "Gebucht am",
+        "EventPrice": "Preis per Ticket",
+        "experienceQty": "Menge",
+        "DiscountAmount": "Rabattbetrag",
+        "AmountPaid": "Bezahlter Betrag",
+        "Event": "Angebot",
+        "EventLocation": "Ort",
+        "onlineLink": "Online Link",
+        "EventDateandTime": "Veranstaltungsdatum und -zeit",
+        "EventCategory": "Kategorie"
+      },
+      "filterBookingDate": {
+        "validation": {
+          "startDate": "Bitte wähle ein Startdatum aus.",
+          "EndDate": "Bitte wähle ein Enddatum aus.",
+          "validDate": "Bitte gib ein gültiges Datum ein."
+        }
+      },
+      "PaymentMethodsFn": {
+        "free": "KOSTENLOS",
+        "free1": "Kostenlos",
+        "creditCard" : "Kreditkarte"
+      }
+    },
+    "termsandconditions": {
+      "breadCrumb": {
+        "home": "Startseite",
+        "tandc": "Bedingungen & Konditionen"
+      },
+      "heading": "Bedingungen & Konditionen",
+      "input": {
+        "title": {
+          "label": "Allgemeine Geschäftsbedingungen in English",
+          "required": "Bitte gib einen Text auf Englisch ein"
+        },
+        "title2": {
+          "label": "Allgemeine Geschäftsbedingungen in Deutsch",
+          "required": "Bitte gib einen Text auf Deutsch ein"
+        }
+      }
+    },
+    "notificationList": {
+      "days": {
+        "justNow": "Gerade eben",
+        "minitAgo": "vor min",
+        "hoursAgo": "vor h",
+        "daysToGo": "vor Tagen",
+        "yesterday": "Gestern"
+      },
+      "noNotification": "Keine Benachrichtigung",
+      "subTitle": "Zurzeit hast du noch keine Benachrichtigung.",
+      "promoCode": "Verwenden Sie diesen Promo-Code in der mobilen App"
+    }
+  },
+  "notfound": "Nicht Gefunden",
+  "cookie": {
+    "title": "Wir verwenden Cookies!",
+    "description": "Diese Website verwendet Cookies, um dein Erlebnis zu verbessern und es nahtloser und angenehmer zu gestalten.",
+    "acceptBtn": "Akzeptieren",
+    "declineBtn": "Ablehnen"
+  }
+}

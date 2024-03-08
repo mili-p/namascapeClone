@@ -1,0 +1,204 @@
+@import "../../assets/style/variables.scss";
+
+.react-select-menu{
+    .css-13cymwt-control,
+    .multiselect__control,
+    .multiselect__control--is-disabled{
+        background-color: $LightCream;
+        border: 1px solid $mainBorder;
+        border-radius: 0;
+        font-size: 14px;
+        line-height: 14px;
+        height: 100%;
+        cursor: pointer;
+        // min-width: 200px;
+        &:hover{
+            border-color: $mainBorder;
+        }
+        @media only screen and (min-width: 640px) {
+            font-size: 16px;
+            line-height: 16px;
+        }
+        @media only screen and (min-width: 1600px) {
+            font-size: 22px;
+            line-height: 22px;
+        }
+    }
+    .css-t3ipsp-control{
+        background-color: $LightCream;
+        border: 1px solid $mainBorder;
+        border-radius: 0;
+        box-shadow: none;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 14px;
+        height: 100%;
+        // min-width: 200px;
+        min-height: 40px;
+        @media only screen and (min-width: 640px) {
+            font-size: 16px;
+            line-height: 16px;
+        }
+        @media only screen and (min-width: 1441px){
+            min-height: 52px;
+        }
+        @media only screen and (min-width: 1600px) {
+            font-size: 22px;
+            line-height: 22px;
+        }
+        &:focus-within{
+            border-color: $primary;
+            &:hover{
+                border-color: $primary;
+            }
+        }
+    }
+    .css-13cymwt-control, 
+    .css-t3ipsp-control,
+    .multiselect__control,
+    .multiselect__control--is-disabled{
+        min-height: 40px;
+        @media only screen and (min-width: 1441px){
+            min-height: 52px;
+        }
+    }
+    .css-1fdsijx-ValueContainer{
+        padding: 0px 10px 0 10px;
+        @media only screen and (min-width: 640px) {
+            padding: 0px 10px 0 16px;
+        }
+        @media only screen and (min-width: 1441px) {
+            padding: 0px 10px 0 20px;
+        }
+    }
+    .css-t3ipsp-control:hover , .css-t3ipsp-control:focus{
+        border-color: $mainBorder;
+        background-color: $LightCream;
+    }
+    .css-t3ipsp-control:focus{
+        border-color: $primary;
+    }
+    .css-1jqq78o-placeholder{
+        font-size: 14px;
+        color: $darkGrey;
+        @media only screen and (min-width: 640px){
+            font-size: 16px;
+        }
+        @media only screen and (min-width: 1600px){
+            font-size: 22px;
+        }
+    }
+    .css-1dimb5e-singleValue{
+        padding: 3px 0;
+    }
+    .css-1dimb5e-singleValue , .css-r7ikz2-option , .css-rs8ahr-option , .css-5zq1nl-option{
+        font-size: 14px;
+        color: $darkGrey;
+        @media only screen and (min-width: 640px){
+            font-size: 16px;
+        }
+        @media only screen and (min-width: 1600px){
+            font-size: 22px;
+        }
+    }
+    .css-rs8ahr-option , .css-r7ikz2-option, .css-5zq1nl-option{
+        padding: 4px 10px;
+        &:hover{
+            color: $white;
+        }
+        @media only screen and (min-width: 640px){
+            padding: 6px 16px;
+        }
+        @media only screen and (min-width: 1441px){
+            padding: 8px 20px;
+        }
+    }
+    .css-rs8ahr-option , .css-5zq1nl-option{
+        color: $white;
+    }
+    .css-1u9des2-indicatorSeparator{
+        display: none;
+    }
+    .css-art2ul-ValueContainer2{
+        padding: 2px 2px 2px 10px;
+        @media only screen and (min-width: 640px){
+            padding: 2px 2px 2px 16px;
+        }
+        @media only screen and (min-width: 1441px){
+            padding: 2px 0px 2px 20px;
+        }
+    }
+
+    .css-1n6sfyn-MenuList{
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(253, 158, 85, 0.5);
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $dust;
+        }
+    }
+    .css-qbdosj-Input{
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 14px;
+        @media only screen and (min-width: 640px) {
+            font-size: 16px;
+        }
+        @media only screen and (min-width: 1600px) {
+            font-size: 22px;
+        }
+    }
+    .css-166bipr-Input{
+        padding: 0;
+        margin: 0;
+    }
+
+    .css-1xc3v61-indicatorContainer , .css-15lsz6c-indicatorContainer{
+        padding-left: 0;
+    }
+    .css-15lsz6c-indicatorContainer{
+        color: $primary;
+    }
+    .css-1nmdiq5-menu{
+        z-index: 2;
+    }
+    .css-1n6sfyn-MenuList , .css-1n4zzjl-MenuList , .css-1nmdiq5-menu , .css-1kiduvf-MenuList{
+        max-height: 240px;
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(253, 158, 85, 0.5);
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $dust;
+        }
+    }
+    svg{
+        width: auto;
+        margin: 0;
+    }
+    .css-19bb58m{
+        margin: 0;
+        padding: 0;
+    }
+    input{
+        height: auto !important;
+    }
+}
+.css-1p3m7a8-multiValue{
+    background-color: $white !important;
+    border: 1px solid $primary !important;
+    .css-1y7rh0y-MultiValueGeneric2{
+        color: $primary;
+    }
+    .css-12a83d4-MultiValueRemove {
+        color: $primary !important;
+    }
+}

@@ -1,0 +1,2752 @@
+@import './variables.scss';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+// === Start Fonts CSS
+@font-face {
+    font-family: 'Forum';
+    src: url('../fonts/Forum.eot');
+    src: local('Forum'),
+        url('../fonts/Forum.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Forum.woff2') format('woff2'),
+        url('../fonts/Forum.woff') format('woff'),
+        url('../fonts/Forum.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../fonts/Cinzel-Bold.eot');
+    src: local('Cinzel Bold'), local('Cinzel-Bold'),
+        url('../fonts/Cinzel-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Cinzel-Bold.woff2') format('woff2'),
+        url('../fonts/Cinzel-Bold.woff') format('woff'),
+        url('../fonts/Cinzel-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../fonts/Cinzel-Regular.eot');
+    src: local('Cinzel Regular'), local('Cinzel-Regular'),
+        url('../fonts/Cinzel-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Cinzel-Regular.woff2') format('woff2'),
+        url('../fonts/Cinzel-Regular.woff') format('woff'),
+        url('../fonts/Cinzel-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+// === End Fonts CSS
+
+// === Common CSS
+:focus-visible{
+    outline: none;
+}
+*, ::before, ::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+::selection{
+    background: $secondary;
+    color: $white;
+}
+html{
+    @media only screen and (min-width: 640px) {
+        scrollbar-color: rgba(253, 158, 85, 0.5) $dust;
+        scrollbar-width: thin;
+    }
+}
+body{
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: 'Forum';
+    margin: 0;
+    padding: 0;
+    color: $mainText;
+    @media only screen and (min-width: 640px) {
+        font-size: 16px;
+        scrollbar-color: rgba(253, 158, 85, 0.5) $dust;
+        scrollbar-width: thin;
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(253, 158, 85, 0.5);
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $dust;
+        }
+    }
+    &.open-menu{
+        overflow: hidden;
+        transition: all 0.4s;
+        @media only screen and (min-width: 768px){
+            overflow: auto;
+        }
+    }
+    &.open-modal{
+        overflow: hidden;
+    }
+}
+article, aside, details, figcaption, figure, footer, header, nav, section, summary {
+    display: block;
+}
+audio, canvas, video {
+    display: inline-block;
+}
+.site-content{
+    padding-top: 65px;
+    @media only screen and (min-width: 640px){
+        padding-top: 71px;
+    }
+    @media only screen and (min-width: 768px){
+        padding-top: 91px;
+    }
+}
+.data-not-found{
+    font-size: 20px;
+    line-height: 1.5;
+    text-transform: inherit;
+    text-align: center;
+    border: 1px dashed $mainBorder;
+    background: $LightCream;
+    width: 100%;
+    padding: 20px 16px;
+    margin: 0;
+    i{
+        font-size: 20px;
+        margin-bottom: 8px;
+        @media only screen and (min-width: 1441px){
+            font-size: 30px;
+        }
+    }
+    @media only screen and (min-width: 1441px){
+        font-size: 24px;
+        padding: 30px 16px;
+    }
+}
+.page-load{
+    .loader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .loader-circle {
+        width: 40px;
+        height: 40px;
+        @media only screen and (min-width: 640px) {
+            width: 60px;
+            height: 60px;
+        }
+        &:before {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 4px solid $primary;
+            border-color: $primary transparent $primary transparent;
+            animation: loader 1.2s linear infinite;
+            @media only screen and (min-width: 640px) {
+                width: 60px;
+                height: 60px;
+                border: 6px solid $primary;
+                border-color: $primary transparent $primary transparent;
+            }
+        }
+    }
+    .loader-text {
+        color: $primary;
+        font-size: 20px;
+        line-height: 1.5;
+        font-weight: 700;
+        margin-top: 16px;
+        letter-spacing: 0.06em;
+        text-transform: capitalize;
+        @media only screen and (min-width: 640px) {
+            font-size: 24px;
+            margin-top: 24px;
+        }
+    }
+    @keyframes loader {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+// === End Common CSS
+
+// === Typography
+h1,.h1{
+    font-size: 28px;
+    line-height: 1.3;
+    text-transform: lowercase;
+    @media only screen and (min-width: 640px) {
+        font-size: 30px;
+    }
+    @media only screen and (min-width: 768px) {
+        font-size: 32px;
+    }
+    @media screen and (min-width: 1200px) and (max-width: 1439px),(min-width: 1440px) {
+        font-size: 36px;
+        line-height: 50px;
+    }
+    @media only screen and (min-width: 1600px) {
+        font-size: 60px;
+        line-height: 70px;
+    }
+}
+h2,.h2{
+    font-size: 22px;
+    line-height: 1.2;
+    text-transform: lowercase;
+    @media only screen and (min-width: 640px) {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    @media only screen and (min-width: 768px) {
+        font-size: 26px;
+    }
+    @media screen and (min-width: 1200px) and (max-width: 1439px),(min-width: 1440px) {
+        font-size: 30px;
+        line-height: 42px;
+    }
+    @media only screen and (min-width: 1600px) {
+        font-size: 44px;
+        line-height: 48px;
+    }
+}
+h3,.h3{
+    font-size: 20px;
+    line-height: 1.2;
+    @media only screen and (min-width: 640px) {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+    @media only screen and (min-width: 768px) {
+        font-size: 24px;
+    }
+    @media screen and (min-width: 1200px) and (max-width: 1439px),(min-width: 1440px) {
+        font-size: 26px;
+    }
+    @media only screen and (min-width: 1600px) {
+        font-size: 34px;
+        line-height: 38px;
+    }
+}
+h4,.h4{
+    font-size: 18px;
+    line-height: 1.2;
+    @media screen and (min-width: 1200px) and (max-width: 1439px),(min-width: 1440px) {
+        font-size: 20px;
+    }
+    @media only screen and (min-width: 1600px) {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+}
+h5,.h5{
+    font-size: 16px;
+    line-height: 1.3;
+    @media only screen and (min-width: 1200px) {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+.h-50{
+    font-size: 22px;
+    line-height: 1.2;
+    text-transform: lowercase;
+    @media only screen and (min-width: 640px) {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    @media only screen and (min-width: 768px) {
+        font-size: 26px;
+    }
+    @media screen and (min-width: 1200px) and (max-width: 1439px),(min-width: 1440px) {
+        font-size: 28px;
+        line-height: 50px;
+    }
+    @media only screen and (min-width: 1600px) {
+        font-size: 50px;
+        line-height: 54px;
+    }
+}
+p,li{
+    font-size: 14px;
+    line-height: 1.3;
+    color: $darkGrey;
+    @media only screen and (min-width: 640px) {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    @media only screen and (min-width: 1600px) {
+        font-size: 22px;
+    }
+}
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5{
+    font-weight: 700;
+    font-family: 'Cinzel';
+}
+h1, h2, h3, h4, h5, h6,p,ul,ol{
+    margin-bottom: 14px;
+    &:last-child{
+        margin: 0;
+    }
+    @media only screen and (min-width: 1024px) {
+        margin-bottom: 20px;
+    }
+}
+a {
+    color: $primary;
+    text-decoration:none;
+    transition: all 0.4s;
+    &:hover,&:active{
+        color: $tertiary;
+    }
+}
+a,button{
+    transition: all 0.4s;
+    &:hover{
+        transition: all 0.4s;
+    }
+}
+a,span{
+    display: inline-block;
+}
+svg:not(:root) {
+    overflow:hidden;
+}
+ol, ul {
+    padding: 0;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0;
+}
+.title-wrapper{
+    margin-bottom: 24px;
+    &:last-child{
+        margin: 0;
+    }
+    @media only screen and (min-width: 1024px) {
+        margin-bottom: 34px;
+    }
+    @media only screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
+}
+// === End Typography
+
+// === Site Spacing
+.pt-120{
+    padding-top: 40px;
+    @media only screen and (min-width: 640px) {
+        padding-top: 60px;
+    }
+    @media only screen and (min-width: 1024px) {
+        padding-top: 80px;
+    }
+    @media only screen and (min-width: 1200px) {
+        padding-top: 100px;
+    }
+    @media only screen and (min-width: 1600px) {
+        padding-top: 120px;
+    }
+}
+.pb-120{
+    padding-bottom: 40px;
+    @media only screen and (min-width: 640px) {
+        padding-bottom: 60px;
+    }
+    @media only screen and (min-width: 1024px) {
+        padding-bottom: 80px;
+    }
+    @media only screen and (min-width: 1200px) {
+        padding-bottom: 100px;
+    }
+    @media only screen and (min-width: 1600px) {
+        padding-bottom: 120px;
+    }
+}
+.mt-120{
+    margin-top: 40px;
+    @media only screen and (min-width: 640px) {
+        margin-top: 60px;
+    }
+    @media only screen and (min-width: 1024px) {
+        margin-top: 80px;
+    }
+    @media only screen and (min-width: 1200px) {
+        margin-top: 100px;
+    }
+    @media only screen and (min-width: 1600px) {
+        margin-top: 120px;
+    }
+}
+.mb-120{
+    margin-bottom: 40px;
+    @media only screen and (min-width: 640px) {
+        margin-bottom: 60px;
+    }
+    @media only screen and (min-width: 1024px) {
+        margin-bottom: 80px;
+    }
+    @media only screen and (min-width: 1200px) {
+        margin-bottom: 100px;
+    }
+    @media only screen and (min-width: 1600px) {
+        margin-bottom: 120px;
+    }
+}
+.pt-100{
+    padding-top: 40px;
+    @media only screen and (min-width: 640px) {
+        padding-top: 60px;
+    }
+    @media only screen and (min-width: 1024px) {
+        padding-top: 80px;
+    }
+    @media only screen and (min-width: 1200px) {
+        padding-top: 100px;
+    }
+}
+.pt-50{
+    padding-top: 24px;
+    @media only screen and (min-width: 768px) {
+        padding-top: 34px;
+    }
+    @media only screen and (min-width: 1200px) {
+        padding-top: 50px;
+    }
+}
+.pb-50{
+    padding-bottom: 24px;
+    @media only screen and (min-width: 768px) {
+        padding-bottom: 34px;
+    }
+    @media only screen and (min-width: 1200px) {
+        padding-bottom: 50px;
+    }
+}
+.mt-50{
+    margin-top: 24px;
+    @media only screen and (min-width: 768px) {
+        margin-top: 34px;
+    }
+    @media only screen and (min-width: 1200px) {
+        margin-top: 50px;
+    }
+}
+.mb-50{
+    margin-bottom: 24px;
+    @media only screen and (min-width: 768px) {
+        margin-bottom: 34px;
+    }
+    @media only screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
+}
+.mb-32{
+    margin-bottom: 24px;
+    @media only screen and (min-width: 1200px){
+        margin-bottom: 32px;
+    }
+}
+.mt-32{
+    margin-top: 24px;
+    @media only screen and (min-width: 1200px){
+        margin-top: 32px;
+    }
+}
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+.m-0 {
+    margin: 0 !important;
+}
+// === End Site Spacing
+
+// === Common Button
+.solid-btn,.border-btn{
+    font-size: 14px;
+    line-height: inherit;
+    font-weight: 400;
+    color: $white;
+    background: $tertiary;
+    border: 1px solid $tertiary;
+    padding: 8px 18px;
+    transition: all 0.4s;
+    &:hover{
+        color: $white;
+        background: $primary;
+        border-color: $primary;
+        transition: all 0.4s;
+    }
+    @media only screen and (min-width: 640px) {
+        font-size: 16px;
+        line-height: 22px;
+        padding: 8px 16px;
+    }
+    @media only screen and (min-width: 1441px) {
+        font-size: 18px;
+        padding: 14px 30px;
+    }
+}
+.border-btn{
+    background: transparent;
+    color: $btnText;
+    border-color: $btnBorder;
+    &:hover{
+        color: $white;
+        background: $tertiary;
+        border-color: $tertiary;
+    }
+    @media only screen and (min-width: 1441px) {
+        padding: 14px 40px;
+    }
+    @media only screen and (min-width: 1600px) {
+        padding: 14px 60px;
+    }
+}
+.btn-loader {
+    width: 14px;
+    height: 14px;
+    border: 2px solid $white;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    vertical-align: middle;
+    @media only screen and (min-width: 768px) {
+        width: 16px;
+        height: 16px;
+        border-bottom-color: transparent;
+    }
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+.download-link{
+    font-size: 14px;
+    color: $primary;
+    border: 1px solid $mainBorder;
+    gap: 6px;
+    height: 40px;
+    transition: all 0.4s;
+    cursor: pointer;
+    padding: 4px 8px;
+    &:hover{
+        background: $tertiary;
+        border-color: $tertiary;
+        color: #fff;
+        transition: all 0.4s;
+    }
+    @media only screen and (min-width: 640px){
+        font-size: 16px;
+        padding: 5px 10px;
+        gap: 10px;
+    }
+    @media only screen and (min-width: 1441px){
+        font-size: 22px;
+        height: 52px;
+    }
+    &.delete{
+        color: $red;
+        &:hover{
+            background: $red;
+            color: $white;
+            border-color: $red;
+        }
+    }
+}
+.dashboard-form-btn{
+    background-color: $tertiary;
+    border-color: $tertiary;
+    &:hover{
+        background-color: $primary;
+        border-color: $primary;
+    }
+}
+// === End Common Button
+
+// === Swiper Slider CSS
+.swiper{
+    .swiper-pagination{
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+        @media only screen and (min-width: 640px) {
+            margin-top: 20px;
+            gap: 16px;
+        }
+        .swiper-pagination-bullet{
+            width: 10px;
+            height: 10px;
+            background: $dust;
+            margin: 0 !important;
+            opacity: 1;
+            transition: all 0.6s;
+            @media only screen and (min-width: 640px) {
+                width: 12px;
+                height: 12px;
+            }
+            &:hover{
+               background: $primary;
+               transition: all 0.6s;
+            }
+            &.swiper-pagination-bullet-active{
+                width: 16px;
+                height: 16px;
+                background: $white;
+                border: 5px solid $primary;
+                transition: all 0.6s;
+                @media only screen and (min-width: 640px) {
+                    width: 20px;
+                    height: 20px;
+                    border: 7px solid $primary;
+                }
+            }
+        }
+    }
+}
+// === End Swiper Slider CSS
+
+// === Form CSS
+.input-group{
+    margin-bottom: 22px;
+    position: relative;
+    label{
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 400;
+        margin-bottom: 6px;
+        display: block;
+        color: $primary;
+        @media only screen and (min-width: 640px) {
+            margin-bottom: 8px;
+        }
+        @media only screen and (min-width: 1441px) {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 10px;
+        }
+    }
+    .country-code{
+        width: 60px;
+        text-align: center;
+        border-right: none;
+        @media only screen and (min-width: 640px){
+            width: 70px;
+        }
+        @media only screen and (min-width: 1200px){
+            width: 100px;
+        }
+    }
+}
+input,textarea, select{
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px 10px;
+    border: 1px solid $mainBorder;
+    color: $darkGrey;
+    width: 100%;
+    @media only screen and (min-width: 640px) {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    @media only screen and (min-width: 1600px) {
+        font-size: 22px;
+        padding: 10px 20px;
+    }
+    &:focus{
+        border-color: $primary;
+    }
+    &:focus + .custom-radio{
+        border: 1px solid $primary !important;
+    }
+    // &:-webkit-autofill {
+    //         -webkit-box-shadow: 0 0 0 1000px #ffffff00 inset;
+    //     transition: background-color 5000s ease-in-out 0s;
+    //     &:hover , &:focus{
+    //             -webkit-box-shadow: 0 0 0 1000px #ffffff00 inset;
+    //         transition: background-color 5000s ease-in-out 0s;
+    //     }
+    // }
+}
+input,select{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+input, select{
+    height: 40px;
+    @media only screen and (min-width: 1441px) {
+        height: 52px;
+    }
+}
+input,textarea{
+    &::placeholder{
+        color: $lightGrey;
+    }
+}
+textarea{
+    resize: none;
+    scrollbar-color: rgba(253, 158, 85, 0.5) $dust;
+    scrollbar-width: thin;
+    display: block;
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(253, 158, 85, 0.5);
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $dust;
+    }
+}
+input[type=number]{
+    -moz-appearance: textfield;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+input[type=search]{
+    // background: url('../images/icon-search.svg') no-repeat;
+    // background-position: left 8px center;
+    // background-size: 18px 18px;
+    background-color: $white;
+    padding-left: 35px;
+    position: relative;
+    padding-right: 5px;
+
+    @media only screen and (min-width: 640px){
+        // background-size: 22px 22px;
+        // background-position: left 12px center;
+        padding-left: 35px;
+    }
+    @media only screen and (min-width: 1441px) {
+        // background-size: 28px 28px;
+        padding-left: 50px;
+        padding-right: 10px;
+    }
+    &::placeholder{
+        color: $darkGrey;
+    }
+    &::-webkit-search-cancel-button{
+        -webkit-appearance: none;
+        height: 12px;
+        width: 12px;
+        border-radius: 50em;
+        background: url('../images/icon-close.svg') no-repeat 50% 50%;
+        background-size: contain;
+        cursor: pointer;
+        @media only screen and (min-width: 1441px){
+            height: 16px;
+            width: 16px;
+        }
+    }
+}
+.search-input{
+    position: relative;
+    i{
+        position: absolute;
+        left: 10px;
+        z-index: 1;
+        font-size: 18px;
+        color: $darkGrey;
+        @media only screen and (min-width: 1441px){
+            font-size: 24px;
+            left: 15px;
+        }
+    }
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator ,
+input[type="time"]::-webkit-calendar-picker-indicator,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator{
+    opacity: 1;
+    display: block;
+    background: url("../images/calendar-icon.svg") no-repeat;
+    background-size: cover;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    @media only screen and (min-width: 1441px){
+        width: 20px;
+        height: 20px;
+    }
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background: url("../images/time-icon.svg") no-repeat;
+    background-size: cover;
+}
+input[type=password]{
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    color: $darkGrey;
+    @media only screen and (min-width: 640px){
+        font-size: 24px;
+    }
+    @media only screen and (min-width: 1440px) {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+}
+.pwd-input {
+    position: relative;
+    input {
+        padding: 10px 45px 10px 10px;
+        @media only screen and (min-width: 640px) {
+            padding: 10px 45px 10px 16px;
+        }
+        @media only screen and (min-width: 1600px) {
+            padding: 10px 45px 10px 20px;
+        }
+    }
+    .eye-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        @media only screen and (min-width: 640px) {
+            right: 20px;
+        }
+        i {
+            font-size: 20px;
+            color: $primary;
+        }
+    }
+}
+.password-tooltip-body{
+    background: rgb(255 255 255 / 70%);
+    list-style-type: none;
+    padding: 10px;
+    margin-top: 25px;
+    display: none;
+    @media only screen and (min-width: 768px){
+        background: rgba(255,0,0,.1);
+        padding: 10px 15px;
+    }
+    p{
+        margin-bottom: 0;
+        font-size: 14px;
+        line-height: 18px;
+        // color: #be322a;
+        color: red;
+        @media only screen and (min-width: 640px){
+            font-size: 15px;
+        }
+        @media only screen and (min-width: 768px){
+            color: red;
+        }
+        @media only screen and (min-width: 1441px){
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    i{
+        font-size: 10px;
+        line-height: 14px;
+        @media only screen and (min-width: 1200px){
+            font-size: 11px;
+        }
+        @media only screen and (min-width: 1441px){
+            font-size: 12px;
+            line-height: 16px;
+        }
+        &.icon-reject{
+            // color: #be322a;
+            color: red;
+            @media only screen and (min-width: 768px){
+                color: red;
+            }
+        }
+        &.icon-check{
+            color: green;
+        }
+    }
+    ul{
+        &.inner-list{
+            margin-left: 20px;
+            @media only screen and (min-width: 768px){
+                margin-left: 25px;
+            }
+        }
+        li{
+            margin: 0 0 4px;
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+            @media only screen and (min-width: 768px){
+                column-gap: 8px;
+            }
+            &.green{
+                p{
+                    color: green;
+                }
+                .icon-reject{
+                   display: none;
+                }
+            }
+            &.red{
+                p{
+                    color: red;
+                }
+                .icon-check{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.verification-wrap {
+    display: flex;
+    column-gap: 20px;
+    input {
+        text-align: center;
+    }
+}
+.error-msg{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+    color: $red;
+    white-space: nowrap;
+    overflow: scroll;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media only screen and (min-width: 640px) {
+        font-size: 15px;
+    }
+}
+.custom-checkbox {
+    height: 43px;
+    background-color: $LightCream;
+    border: 1px solid $mainBorder;
+    margin-bottom: 20px;
+    cursor: pointer;
+    @media only screen and (min-width: 640px) {
+        margin-bottom: 0px;
+        height: 48px;
+    }
+    @media only screen and (min-width: 1200px) {
+        height: 50px;
+    }
+    label {
+        font-size: 14px;
+        position: relative;
+        margin-bottom: 0;
+        color: $darkGrey;
+        width: 100%;
+        height: 100%;
+        padding: 8px 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        @media only screen and (min-width: 640px) {
+            font-size: 16px;
+            padding: 8px 16px;
+        }
+        @media only screen and (min-width: 1441px) {
+            font-size: 22px;
+            padding: 10px 20px;
+        }
+        &::before {
+            content: "";
+            -webkit-appearance: none;
+            background-color: transparent;
+            border: 1px solid $darkGrey;
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    }
+    input {
+        padding: 0;
+        height: initial;
+        width: initial;
+        display: none;
+        cursor: pointer;
+        &:checked + label {
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 16px;
+                left: 16px;
+                width: 4px;
+                height: 8px;
+                border: solid $white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+                @media only screen and (min-width: 640px) {
+                    top: 19px;
+                    left: 22px;
+                }
+                @media only screen and (min-width: 1024px) {
+                    font-size: 18px;
+                }
+                @media only screen and (min-width: 1200px) {
+                    top: 20px;
+                    left: 26px;
+                }
+            }
+            &::before {
+                background-color: $primary;
+                border: $primary;
+            }
+        }
+    }
+}
+.custom-radio {
+    height: 43px;
+    background-color: $LightCream;
+    border: 1px solid $mainBorder;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    @media only screen and (min-width: 640px) {
+        margin-bottom: 0px;
+        height: 48px;
+    }
+    @media only screen and (min-width: 1200px) {
+        height: 50px;
+    }
+    label {
+        font-size: 14px;
+        position: relative;
+        margin-bottom: 0;
+        color: $darkGrey;
+        width: 100%;
+        height: 100%;
+        padding: 8px 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        @media only screen and (min-width: 640px) {
+            font-size: 16px;
+            padding: 8px 16px;
+        }
+        @media only screen and (min-width: 1200px) {
+            padding: 10px 20px;
+        }
+        @media only screen and (min-width: 1441px) {
+            font-size: 22px;
+            padding: 12px 20px;
+        }
+        &::before {
+            content: "";
+            -webkit-appearance: none;
+            background-color: transparent;
+            border: 1px solid $darkGrey;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    }
+    input {
+        padding: 0;
+        height: initial;
+        width: initial;
+        display: none;
+        cursor: pointer;
+        &:checked + label {
+            &::before {
+                background-color: $primary;
+                border-color: $primary;
+            }
+        }
+    }
+}
+.custom-select {
+    position: relative;
+    .remove-city{
+        position: absolute;
+        top: 50%;
+        right: 34px;
+        transform: translateY(-50%);
+        color: $primary;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        @media only screen and (min-width: 1200px) {
+            right: 46px;
+        }
+    }
+    .select-btn {
+        width: 100%;
+        border: 1px solid $mainBorder;
+        background-color: $LightCream;
+        padding: 8px 10px;
+        height: 40px;
+        color: $darkGrey;
+        font-size: 14px;
+        cursor: pointer;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        white-space: nowrap;
+        line-break: anywhere;
+        text-align: start;
+        padding-right: 54px;
+        @media only screen and (min-width: 640px){
+            font-size: 16px;
+            padding-right: 54px;
+        }
+        @media only screen and (min-width: 1200px) {
+            font-size: 22px;
+            height: 50px;
+            padding: 10px 20px;
+            padding-right: 68px;
+        }
+        &::before {
+            font-family: "Namescape";
+            content: "\e929";
+            color: $primary;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 8px;
+            font-weight: 800;
+            transition: 0.3s ease-in-out;
+            @media only screen and (min-width: 1441px) {
+                right: 20px;
+            }
+        }
+    }
+    .select-menu-list {
+        position: absolute;
+        right: 0;
+        transform: translateY(25px);
+        background: $white;
+        box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.08);
+        width: 100%;
+        overflow: hidden;
+        opacity: 0;
+        z-index: 3;
+        pointer-events: none;
+        transition: 0.3s ease-in-out;
+        ul {
+            margin: 10px 0;
+            max-height: 360px;
+            overflow-y: auto;
+            scrollbar-color: rgba(253, 158, 85, 0.5) $dust;
+            scrollbar-width: thin;
+            &::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(253, 158, 85, 0.5);
+            }
+            &::-webkit-scrollbar-track {
+                background-color: $dust;
+            }
+            li {
+                font-size: 16px;
+                padding: 7px 15px;
+                color: #585858;
+                cursor: pointer;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                transition: 0.3s ease-in-out;
+                @media only screen and (min-width: 1200px) {
+                    font-size: 18px;
+                }
+                @media only screen and (min-width: 1441px) {
+                    padding: 10px 20px;
+                }
+                @media only screen and (min-width: 1600px) {
+                    font-size: 22px;
+                }
+                &:hover , &.active {
+                    background-color: $primary;
+                    color: $white;
+                }
+            }
+            input{
+                position: sticky;
+                top: 0;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &.active {
+        .select-menu-list {
+            transform: translateY(10px);
+            opacity: 1;
+            pointer-events: visible;
+
+        }
+        .select-btn {
+            &::before {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+    }
+}
+.icon-input{
+    position: relative;
+    input{
+        padding-left: 45px !important;
+        position: relative;
+        &::before{
+            content: "\e906";
+            left: 15px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: $primary;
+            padding-top: 5px;
+            @media only screen and (min-width: 640px) {
+                font-size: 18px;
+                padding-top: 7px;
+            }
+        }
+    }
+}
+// === End Form CSS
+// === Policy CSS
+.policy-content{
+    ul{
+        padding-left: 20px;
+        @media only screen and (min-width: 640px) {
+            padding-left: 24px;
+        }
+        li{
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 14px;
+            @media only screen and (min-width: 1024px) {
+                margin-bottom: 20px;
+            }
+            @media only screen and (min-width: 1200px) {
+                padding-left: 30px;
+            }
+            &:last-child{
+                margin:0;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                top: 4px;
+                left: 0;
+                width: 8px;
+                height: 8px;
+                border-radius: 100%;
+                background: $primary;
+                @media only screen and (min-width: 640px) {
+                    top: 6px;
+                    width: 9px;
+                    height: 9px;
+                }
+                @media only screen and (min-width: 768px) {
+                    top: 7px;
+                }
+                @media only screen and (min-width: 1024px) {
+                    top: 8px;
+                }
+                @media only screen and (min-width: 1200px) {
+                    top: 9px;
+                    width: 11px;
+                    height: 11px;
+                }
+            }
+        }
+    }
+}
+// === End Policy CSS
+// === User Setting & Payment Wrapper CSS
+.web-setting{
+    .web-setting-wrapper{
+        gap: 32px;
+        .web-setting-content{
+            width: 100%;
+            h2{
+                margin-bottom: 14px;
+                @media only screen and (min-width: 640px) {
+                    margin-bottom: 20px;
+                }
+                @media only screen and (min-width: 768px) {
+                    margin-bottom: 32px;
+                }
+            }
+            .input-group-row{
+                grid-column-gap: 32px;
+            }
+            .input-group{
+                width: 100%;
+                @media only screen and (min-width: 1024px) {
+                    margin-bottom: 32px;
+                }
+                label{
+                    color: $btnText;
+                }
+                input,textarea{
+                    background: $LightCream;
+                }
+                &.card-number{
+                    input{
+                        background-image: url('../images/icons-payment.svg');
+                        background-position: right 10px center;
+                        background-size: 47px 33px;
+                        background-repeat: no-repeat;
+                        background-color: $LightCream;
+                        padding-right: 76px;
+                        @media only screen and (min-width: 640px){
+                            background-position: right 16px center;
+                        }
+                        @media only screen and (min-width: 1200px){
+                            background-position: right 20px center;
+                            padding-right: 76px;
+                        }
+                    }
+                }
+            }
+            .form-btn{
+                background: $tertiary;
+                border-color: $tertiary;
+                &:hover{
+                    background: $primary;
+                    border-color: $primary;
+                }
+                @media only screen and (min-width: 1200px){
+                    padding-left: 63px;
+                    padding-right: 63px;
+                }
+            }
+        }
+    }
+}
+.user-content-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    margin-bottom: 0;
+    @media only screen and (min-width: 640px) {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 15px;
+    }
+    @media only screen and (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    @media only screen and (min-width: 1200px) {
+        max-width: 90%;
+        padding-top: 0px;
+    }
+    @media only screen and (min-width: 1441px) {
+        max-width: 80%;
+    }
+    li {
+        .label-name {
+            font-size: 14px;
+            line-height: 16px;
+            color: $lightGrey;
+            margin-bottom: 4px;
+        }
+        li{
+            p{
+                text-transform: capitalize;
+                margin: 0;
+            }
+        }
+        h4 {
+            font-size: 14px;
+            line-height: 18px;
+            color: $btnText;
+            margin-bottom: 0;
+            font-weight: 400;
+            white-space: pre-line;
+            word-break: break-word;
+            @media only screen and (min-width: 1200px) {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            @media only screen and (min-width: 1600px) {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+// === End User Setting & Payment Wrapper CSS
+// === 404 CSS
+.page-not-found{
+    position: relative;
+    height: 100vh;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $mainText;
+        z-index: 1;
+        opacity: 0.7;
+    }
+    img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+    .content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        padding: 30px;
+        z-index: 2;
+        h1,h2,p{
+            color: $white;
+        }
+        h1{
+            font-size: 40px;
+            line-height: 1;
+            text-transform: capitalize;
+            @media only screen and (min-width: 640px) {
+                font-size: 60px;
+            }
+            @media only screen and (min-width: 1200px) {
+                font-size: 110px;
+            }
+        }
+        p{
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+    }
+
+}
+.error-boundry{
+    background-color: $primary;
+    padding: 80px;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after{
+        content: '';
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: $primary;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+    .content{
+        max-width: 850px;
+        margin: 0 auto;
+        text-align: center;
+        h2{
+            font-size: 20px;
+            line-height: 1;
+            text-transform: capitalize;
+            color: $white;
+            @media only screen and (min-width: 640px) {
+                font-size: 40px;
+            }
+            @media only screen and (min-width: 1200px) {
+                font-size: 60px;
+            }
+        }
+        p{
+            font-size: 22px;
+            color: $white;
+            margin-bottom: 10px;
+
+        }
+        .link-btn{
+            text-decoration: underline;
+            color: $tertiary;
+            &:hover{
+                color: $white;
+            }
+        }
+        .solid-btn{
+            background-color: $tertiary;
+            border-color: $tertiary;
+            margin-top: 20px;
+            &:hover{
+                background-color: $white;
+                color: black;
+                border-color: $white;
+            }
+        }
+    }
+    pre{
+        color: $white;
+        text-align: center;
+    }
+    .error-description {
+        color: rgb(255 255 255 / 60%);
+        border: 1px solid rgb(255, 255, 255, 100%);
+        padding: 20px;
+        font-size: 20px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+// === End 404 CSS
+// === Event Common CSS
+.event-search-bar {
+    background: $LightCream;
+    padding: 10px 0;
+    .search-event {
+        height: 40px;
+        @media only screen and (min-width: 768px) {
+            height: 45px;
+            max-width: 375px;
+        }
+        @media only screen and (min-width: 1200px) {
+            height: 50px;
+        }
+    }
+}
+.event-title-wrapper {
+    margin-bottom: 20px;
+    @media only screen and (min-width: 768px) {
+        margin-bottom: 30px;
+    }
+    @media only screen and (min-width: 1441px) {
+        margin-bottom: 50px;
+    }
+    h2 {
+        margin-bottom: 0;
+    }
+    a {
+        font-size: 18px;
+        line-height: 30px;
+        color: $tertiary;
+        @media only screen and (min-width: 768px) {
+            font-size: 22px;
+        }
+        @media only screen and (min-width: 1200px) {
+            font-size: 26px;
+        }
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+.events-tab-wrap {
+    gap: 15px;
+    @media only screen and (min-width: 1441px) {
+        gap: 32px;
+    }
+    .events-tab {
+        margin: 0 -6px;
+        row-gap: 12px;
+        @media only screen and (min-width: 640px) {
+            margin: 0;
+            gap: 15px;
+        }
+        @media only screen and (min-width: 1441px) {
+            gap: 32px;
+        }
+        li {
+            width: 50%;
+            padding: 0 6px;
+            @media only screen and (min-width: 640px) {
+                width: auto;
+                padding: 0;
+            }
+        }
+        .border-btn {
+            width: 100%;
+            height: 43px;
+            padding: 0px 10px;
+            font-size: 14px;
+            border: 1px solid $mainBorder;
+            color: $lightGrey;
+            height: 40px;
+            @media only screen and (min-width: 768px) {
+                font-size: 18px;
+                height: 45px;
+                padding: 0px 16px;
+            }
+            @media only screen and (min-width: 1200px) {
+                padding: 0px 20px;
+                height: 50px;
+            }
+            &:hover,
+            &.active {
+                background-color: $primary;
+                border-color: $primary;
+                color: $white;
+            }
+        }
+    }
+    .search-event {
+        max-width: 100%;
+        @media only screen and (min-width: 1024px) {
+            width: 300px;
+        }
+        @media only screen and (min-width: 1200px) {
+            width: 375px;
+        }
+    }
+}
+.btn-wrap {
+    margin-bottom: 12px;
+    .event-badge {
+        font-size: 14px;
+        line-height: 16px;
+        color: #b09684;
+        border: 1px solid #e6d8c5;
+        padding: 5px 10px;
+        @media only screen and (min-width: 768px) {
+            font-size: 16px;
+            line-height: 18px;
+            padding: 10px;
+        }
+        @media only screen and (min-width: 1200px) {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}
+.wrap-users-details {
+    @media only screen and (max-width: 400px) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+.sorting-events-form{
+    .input-group{
+        width: 100%;
+        margin-bottom: 0;
+
+        @media only screen and (min-width: 640px){
+            width: calc(50% - 16px);
+        }
+        @media only screen and (min-width: 1024px){
+            width: auto;
+        }
+        label{
+            @media only screen and (min-width: 1024px){
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
+        }
+        input{
+            width: 100%;
+            background-color: $LightCream;
+            @media only screen and (min-width: 1024px) {
+                width: 200px;
+                max-width: 200px;
+            }
+            @media only screen and (min-width: 1200px) {
+                width: 220px;
+                max-width: 220px;
+            }
+        }
+        .location-input{
+            position: relative;
+            background: url(../images/icon-location.svg) no-repeat;
+            background-position: right 10px center;
+            background-size: 22px 22px;
+            background-color: $LightCream;
+            padding-right: 40px;
+            @media only screen and (min-width: 640px){
+                background-position: right 15px center;
+            }
+            @media only screen and (min-width: 1200px){
+                background-position: right 20px center;
+                padding-right: 45px;
+            }
+        }
+    }
+    .solid-btn{
+        background-color: $tertiary;
+        border-color: $tertiary;
+        display: block;
+        margin-top: 20px;
+        @media only screen and (min-width: 1024px) {
+            width: auto;
+            margin-top: 0px;
+        }
+        &:hover{
+            background-color: $primary;
+            border-color: $primary;
+        }
+    }
+}
+.status-label{
+    gap: 6px;
+    .text{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        color: $btnText;
+        text-transform: lowercase;
+        position: relative;
+        padding-left: 16px;
+        margin: 0;
+        @media only screen and (min-width: 1441px) {
+            font-size: 20px;
+            line-height: 24px;
+            padding-left: 24px;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            @media only screen and (min-width: 1441px) {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+    &.active-card{
+        .text{
+            &::before{
+                background: $green;
+            }
+        }
+    }
+    &.in-review-card{
+        .text{
+            &::before{
+                background: $tertiary;
+            }
+        }
+    }
+    &.rejected-card{
+        .text{
+            &::before{
+                background: $red;
+            }
+        }
+    }
+}
+.switch-toggle{
+    position: relative;
+    input{
+        height: 0;
+        width: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+    label {
+        display: inline-block;
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 45px;
+        height: 24px;
+        background: #D2D2D2;
+        border-radius: 100px;
+        position: relative;
+        @media only screen and (min-width: 1441px){
+            width: 50px;
+            height: 27px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 18px;
+            height: 18px;
+            margin: auto;
+            background: $lightOrange;
+            border-radius: 100%;
+            transition: 0.3s;
+            @media only screen and (min-width: 1441px){
+                width: 21px;
+                height: 21px;
+            }
+        }
+    }
+    input:checked + label {
+        background: $tertiary;
+    }
+    input:checked + label:after {
+        left: calc(100% - 20px);
+        @media only screen and (min-width: 1441px){
+            left: calc(100% - 24px);
+        }
+    }
+}
+// === End Event Common CSS
+
+// === User Details Card CSS
+.user-details-card{
+    padding: 20px;
+    .booking-details-inner{
+        max-width: 600px;
+        border: 1px solid $mainBorder;
+        .booking-user-head{
+            padding: 20px 20px 32px;
+            gap: 10px;
+            @media only screen and (max-width: 480px){
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            h3{
+                font-size: 16px;
+                line-height: 1;
+                margin-bottom: 4px;
+                @media only screen and (min-width: 640px){
+                    font-size: 18px;
+                }
+                @media only screen and (min-width: 768px){
+                    font-size: 20px;
+                }
+                @media only screen and (min-width: 1200px){
+                    font-size: 24px;
+                }
+            }
+            .users-image{
+                margin-bottom: 8px;
+                @media only screen and (max-width: 480px){
+                    margin: 0 auto 8px;
+                }
+                @media only screen and (min-width: 768px){
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+        .user-content-list{
+            max-width: 100%;
+            padding: 32px 20px;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+            border-top: 1px dashed $mainBorder;
+            @media only screen and (min-width: 640px) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            @media only screen and (min-width: 768px){
+                gap: 32px;
+            }
+            li{
+                // .label-name{
+                //     font-size: 16px;
+                //     font-family: "Cinzel";
+                //     text-transform: lowercase;
+                // }
+                h4{
+                    i{
+                        font-size: 12px;
+                        @media only screen and (min-width: 1200px){
+                            font-size: 14px;
+                        }
+                        @media only screen and (min-width: 1441px){
+                            font-size: 16px;
+                        }
+                    }
+                }
+                p{
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+.protected-head{
+    .header-action{
+        gap: 10px;
+        @media only screen and (min-width: 640px){
+            gap: 12px;
+        }
+        @media only screen and (min-width: 1200px){
+            gap: 16px;
+            .solid-btn{
+                padding-left: 26px;
+                padding-right: 26px;
+            }
+        }
+    }
+}
+// === End User Details Card CSS
+
+// === Sweetalert CSS
+.swal2-container{
+    .swal2-actions,
+    div:where(.swal2-container) div:where(.swal2-actions){
+        margin: 16px auto 0;
+        @media only screen and (min-width: 640px){
+            margin: 20px auto 0;
+        }
+        button{
+            background: $primary;
+            margin: 0 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+            @media only screen and (min-width: 640px) {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+            box-shadow: none !important;
+            transition: all 0.4s;
+            &:hover{
+                background: $tertiary;
+                transition: all 0.4s;
+            }
+        }
+    }
+    div:where(.swal2-icon){
+        margin-top: 0;
+        margin-bottom: 16px;
+        @media only screen and (min-width: 640px) {
+            margin-bottom: 24px;
+        }
+    }
+    div:where(.swal2-container) .swal2-html-container,
+    .swal2-html-container{
+        font-size: 18px;
+                line-height: 1.3;
+                text-transform: capitalize;
+                color: $btnText;
+                letter-spacing: 0.04em;
+                @media only screen and (min-width: 640px) {
+                    font-size: 22px;
+                }
+                @media only screen and (min-width: 1024px) {
+                    font-size: 28px;
+                }
+    }
+    .swal2-html-container{
+        margin: 0;
+    }
+    .swal2-show{
+        padding: 20px;
+        max-width: 440px;
+        width: 100%;
+        @media only screen and (min-width: 640px) {
+            padding: 40px 30px;
+        }
+    }
+    .custom-swal-modal{
+        .modal-body{
+            text-align: center;
+            svg{
+                width: 80px;
+                height: 60px;
+                margin: 0 auto 16px;
+                @media only screen and (min-width: 640px) {
+                    width: 100px;
+                    height: 100px;
+                    margin: 0 auto 24px;
+                }
+            }
+            h2{
+                font-size: 18px;
+                line-height: 1.3;
+                text-transform: capitalize;
+                color: $btnText;
+                letter-spacing: 0.04em;
+                @media only screen and (min-width: 640px) {
+                    font-size: 22px;
+                }
+                @media only screen and (min-width: 1024px) {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
+// === End Sweetalert CSS
+
+
+//=== CK Editor5 CSS
+.ck{
+    font-family: 'Forum';
+    &.ck-toolbar{
+        border-color: $mainBorder !important;
+        button{
+            box-shadow: none !important;
+            &:focus{
+                border-color: $mainBorder !important;
+            }
+            &:hover,&:active{
+                background: $primary !important;
+                color: $white !important;
+            }
+        }
+    }
+    &.ck-input{
+        box-shadow: none !important;
+        &:focus{
+            border-color: $mainBorder !important;
+        }
+    }
+    &.ck-list__item{
+        .ck-button{
+            box-shadow: none;
+            &.ck-on{
+                background: $primary;
+            }
+        }
+    }
+    &.ck-button{
+        &.ck-on{
+            color: $white;
+            background:$primary;
+        }
+    }
+   .ck-insert-table-dropdown-grid-box{
+        &.ck-on{
+            border-color:$primary;
+        }
+    }
+    .ck.ck-list__item .ck-button.ck-on{
+        background: $primary;
+    }
+    .ck .ck-insert-table-dropdown-grid-box.ck-on{
+        border-color: $primary;
+    }
+    .ck.ck-button.ck-on, a.ck.ck-button.ck-on{
+        color: $primary;
+    }
+    .ck-powered-by{
+        display: none;
+    }
+    .ck-editor__main{
+        >.ck-editor__editable{
+            padding: 16px;
+            height: 400px;
+            border-color: $mainBorder !important;
+            scrollbar-color: rgba(253, 158, 85, 0.5) $dust;
+            scrollbar-width: thin;
+            box-shadow: none !important ;
+            &.ck-focused{
+                border-color: $primary !important;
+            }
+            &::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(253, 158, 85, 0.5);
+            }
+            &::-webkit-scrollbar-track {
+                background-color: $dust;
+            }
+            strong,b{
+                font-weight: 700;
+            }
+            h1, h2, h3, h4, h5, h6, p, ul, ol{
+                margin-top: 0;
+            }
+            h1, h2, h3, h4, h5, h6{
+                text-transform: inherit;
+            }
+            ul,ol{
+                text-decoration: inherit;
+                padding-left: 20px;
+                li{
+                    margin-bottom: 14px;
+                    @media only screen and (min-width: 1024px){
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
+    }
+    &.ck-reset_all, &.ck-reset, &.ck-reset_all{
+        &:not(.ck-reset_all-excluded *){
+            z-index: 0;
+        }
+    }
+}
+//=== End CK Editor5 CSS
+
+
+// react-select-2 multiple select
+.basic-multi-select{
+    min-height: 40px;
+    @media only screen and (min-width: 1441px){
+        min-height: 52px;
+    }
+    .css-13cymwt-control,
+    .multiselect__control,
+    .multiselect__control--is-disabled{
+        background: $LightCream !important;
+        border: 1px solid $mainBorder !important;
+        box-shadow: none !important;
+        border-radius: 0;
+        cursor: pointer !important;
+        height: 100%;
+        &:focus-within{
+            border-color: $primary !important;
+            &:hover{
+                border-color: $primary !important;
+            }
+        }
+
+    }
+    .css-t3ipsp-control{
+        border-color: $mainBorder !important;
+        background: $LightCream !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        cursor: pointer !important;
+        height: 100%;
+        &:hover , &:focus{
+            border-color: $mainBorder !important;
+            background: $LightCream !important;
+        }
+        &:focus-within{
+            border-color: $primary !important;
+            &:hover{
+                border-color: $primary !important;
+            }
+        }
+    }
+    .multiselect__input{
+        // height: 32px;
+        height: auto !important;
+        // @media only screen and (min-width: 640px){
+        //     height: 38px;
+        // }
+        // @media only screen and (min-width: 1200px){
+        //     height: 43px;
+        // }
+    }
+    .css-art2ul-ValueContainer2{
+        padding: 2px 10px;
+        @media only screen and (min-width: 640px){
+            padding: 2px 16px;
+        }
+        @media only screen and (min-width: 1441px){
+            padding: 2px 20px;
+        }
+    }
+    .css-w9q2zk-Input2{
+        margin: 0 !important;
+    }
+    .css-1i837h3-ValueContainer2{
+        padding: 1px 10px !important;
+        gap: 3px !important;
+        @media only screen and (min-width: 1441px){
+            padding: 1px 15px !important;
+        }
+    }
+    .multiselect__multi-value__label {
+        font-size: 12px;
+        line-height: 12px;
+        color: $primary !important;
+        padding: 5px 4px;
+        @media only screen and (min-width: 640px){
+            font-size: 14px;
+            line-height: 14px;
+        }
+        @media only screen and (min-width: 1440px){
+            font-size: 15px;
+            line-height: 15px;
+            padding: 7px 6px;
+
+        }
+    }
+    .multiselect__placeholder{
+        font-size: 14px !important;
+        color: $darkGrey;
+        @media only screen and (min-width: 640px){
+            font-size: 16px !important;
+        }
+        @media only screen and (min-width: 1440px){
+            font-size: 22px !important;
+        }
+    }
+    .css-tlp4ob-option , .css-kp4agl-option{
+        font-size: 14px !important;
+        padding: 4px 10px;
+        @media only screen and (min-width: 640px){
+            padding: 6px 16px;
+            font-size: 16px !important;
+        }
+        @media only screen and (min-width: 1441px){
+            font-size: 22px !important;
+            padding: 8px 20px;
+        }
+    }
+    .css-1p3m7a8-multiValue{
+        background-color: $white !important;
+        border: 1px solid $mainBorder;
+    }
+    .css-12a83d4-MultiValueRemove{
+        color: $primary !important;
+    }
+    .multiselect__menu {
+        background-color: $white !important;
+        box-shadow: 0px 15px 30px 0px #00000014 !important;
+        .multiselect__menu-list{
+            max-height: 200px;
+            scrollbar-color: rgba(253, 158, 85, 0.5) $dust;
+            scrollbar-width: thin;
+            &::-webkit-scrollbar {
+                width: 5px;
+                height: 5px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(253, 158, 85, 0.5);
+            }
+            &::-webkit-scrollbar-track {
+                background-color: $dust;
+            }
+        }
+    }
+    .multiselect__indicator{
+        cursor: pointer;
+
+        &.css-15lsz6c-indicatorContainer{
+            color: $primary !important;
+        }
+    }
+
+}
+// end css react-select-2 multiple select
+
+
+// date filter bar START css
+.filtering-events{
+    .filtering-events-bar{
+        gap: 25px;
+        padding: 10px 0 20px;
+        @media only screen and (min-width: 1441px){
+            gap: 20px;
+        }
+        .input-group,label{
+            margin: 0;
+        }
+        .input-group{
+            gap: 8px;
+            @media only screen and (min-width: 1441px){
+                gap: 10px;
+            }
+            @media only screen and (max-width: 480px){
+                width: 100%;
+            }
+        }
+        label{
+            font-size: 14px;
+            line-height: 22px;
+            flex-shrink: 0;
+            @media only screen and (min-width: 640px) {
+                font-size: 16px;
+            }
+            @media only screen and (min-width: 1441px){
+                font-size: 18px;
+            }
+            @media only screen and (max-width: 480px){
+                min-width: 60px;
+            }
+
+        }
+        input[type=search]{
+            background-color: $LightCream;
+            width: 220px;
+            @media only screen and (min-width: 1441px){
+                width: 350px;
+            }
+        }
+        input{
+            width: 160px;
+            @media only screen and (min-width: 640px) {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            @media only screen and (min-width: 1441px){
+                width: 200px;
+            }
+            @media only screen and (max-width: 480px){
+                width: 100%;
+            }
+        }
+        .error-msg{
+           white-space: inherit;
+           font-size: 13px;
+        }
+        .react-select-menu{
+            width: 160px;
+            @media only screen and (min-width: 1441px){
+                width: 200px;
+            }
+            input{
+                width: 100%;
+            }
+            @media only screen and (max-width: 480px){
+                width: 100%;
+            }
+        }
+        // .custom-select{
+        //     .select-btn{
+        //         font-size: 14px;
+        //         padding-top: 5px;
+        //         padding-bottom: 5px;
+        //         height: 40px;
+        //         @media only screen and (min-width: 640px){
+        //             font-size: 16px;
+        //         }
+        //         @media only screen and (min-width: 1441px){
+        //             height: 52px;
+        //             font-size: 22px;
+        //         }
+        //     }
+        //     .select-menu-list {
+        //         ul {
+        //             li{
+        //                 font-size: 14px;
+        //                 @media only screen and (min-width: 640px) {
+        //                     font-size: 16px;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        .dashboard-form-btn{
+            font-size: 14px;
+            height: 40px;
+            padding: 5px 20px;
+            min-width: 80px;
+            @media only screen and (min-width: 640px) {
+                font-size: 16px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            @media only screen and (min-width: 1441px){
+                height: 52px;
+                min-width: 120px;
+            }
+            @media only screen and (min-width: 1600px){
+                font-size: 22px;
+            }
+            @media only screen and (max-width: 480px){
+                height: 35px;
+            }
+        }
+    }
+}
+// date filter bar END css
+
+.wrap-boxs{
+    @media only screen and (max-width: 480px){
+        width: 100%;
+    }
+    .header-action{
+        @media only screen and (max-width: 480px){
+            width: 100%;
+        }
+    }
+    .searchbar-wrap {
+        @media only screen and (max-width: 480px){
+            width: 100%;
+            .input-group{
+                @media only screen and (max-width: 480px){
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .header-action{
+        .dashboard-form-btn{
+            height: 40px;
+            @media only screen and (min-width: 1441px){
+                height: 52px;
+            }
+        }
+    }
+    .list-btn {
+        width: 40px;
+        height: 40px;
+        color: $lightGrey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $mainBorder;
+        @media only screen and (min-width: 1441px){
+            width: 52px;
+            height: 52px;
+        }
+        i{
+            font-size: 18px;
+            color: $primary;
+            transition: all .4s;
+            @media only screen and (min-width: 1441px){
+                font-size: 24px;
+            }
+        }
+        &:hover , &.active{
+            background-color: $primary;
+            border-color: $primary;
+            color: $white;
+            i{
+                color: $white;
+            }
+        }
+    }
+}
+
+.filter-modal{
+    .modal-boday{
+        position: relative;
+        @media only screen and (min-width: 1200px){
+            max-width: 580px !important;
+        }
+        @media only screen and (min-width: 1441px){
+            max-width: 790px !important;
+        }
+        h2{
+            margin-top: 0 !important;
+            margin-bottom: 10px !important;
+            @media only screen and (min-width: 640px){
+                margin-bottom: 20px !important;
+            }
+            @media only screen and (min-width: 1440px){
+                margin-bottom: 40px !important;
+            }
+        }
+        .icon-cross{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            color: $primary;
+            transition: 0.4s ease;
+            @media only screen and (min-width: 640px){
+                top: 20px;
+                right: 20px;
+            }
+            @media only screen and (min-width: 1440px){
+                font-size: 22px;
+            }
+            &:hover{
+                color: $tertiary;
+            }
+        }
+
+    }
+
+}
+.filter-events-form {
+    .input-group{
+        text-align: start;
+        label {
+            text-align: start;
+        }
+    }
+    .modal-btn-group{
+        margin-top: 0px !important;
+        @media only screen and (min-width: 640px){
+            margin-top: 30px !important;
+        }
+        @media only screen and (min-width: 1441px){
+            margin-top: 20px !important;
+        }
+
+    }
+}
+.filter-content-list{
+
+    ul{
+        li{
+            gap: 8px;
+            background-color: $LightCream;
+            padding: 4px 8px;
+            // @media only screen and (min-width: 1024px){
+            //     font-size: 18px;
+            // }
+            @media only screen and (min-width: 1440px){
+                padding: 5px 10px;
+                gap: 12px;
+            }
+            p{
+                margin-bottom: 0;
+            }
+            i{
+                font-size: 9px;
+                color: $primary;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+                @media only screen and (min-width: 1024px){
+                    font-size: 10px;
+                }
+                @media only screen and (min-width: 1440px){
+                    font-size: 12px;
+                }
+                &:hover{
+                    color: $tertiary;
+                }
+            }
+        }
+    }
+}
+// === React Select CSS
+.react-select-menu{
+    .css-13cymwt-control,
+    .multiselect__control,
+    .multiselect__control--is-disabled{
+        background-color: $LightCream;
+        border: 1px solid $mainBorder;
+        border-radius: 0;
+        font-size: 14px;
+        line-height: 14px;
+        height: 100%;
+        cursor: pointer;
+        // min-width: 200px;
+        &:hover{
+            border-color: $mainBorder;
+        }
+        @media only screen and (min-width: 640px) {
+            font-size: 16px;
+            line-height: 16px;
+        }
+        @media only screen and (min-width: 1600px) {
+            font-size: 22px;
+            line-height: 22px;
+        }
+    }
+    .css-t3ipsp-control{
+        background-color: $LightCream;
+        border: 1px solid $mainBorder;
+        border-radius: 0;
+        box-shadow: none;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 14px;
+        height: 100%;
+        // min-width: 200px;
+        min-height: 40px;
+        @media only screen and (min-width: 640px) {
+            font-size: 16px;
+            line-height: 16px;
+        }
+        @media only screen and (min-width: 1441px){
+            min-height: 52px;
+        }
+        @media only screen and (min-width: 1600px) {
+            font-size: 22px;
+            line-height: 22px;
+        }
+        &:focus-within{
+            border-color: $primary;
+            &:hover{
+                border-color: $primary;
+            }
+        }
+    }
+    .css-13cymwt-control, 
+    .css-t3ipsp-control,
+    .multiselect__control,
+    .multiselect__control--is-disabled{
+        min-height: 40px;
+        @media only screen and (min-width: 1441px){
+            min-height: 52px;
+        }
+    }
+    .css-1fdsijx-ValueContainer{
+        padding: 0px 10px 0 10px;
+        @media only screen and (min-width: 640px) {
+            padding: 0px 10px 0 16px;
+        }
+        @media only screen and (min-width: 1441px) {
+            padding: 0px 10px 0 20px;
+        }
+    }
+    .css-t3ipsp-control:hover , .css-t3ipsp-control:focus{
+        border-color: $mainBorder;
+        background-color: $LightCream;
+    }
+    .css-t3ipsp-control:focus{
+        border-color: $primary;
+    }
+    .css-1jqq78o-placeholder{
+        font-size: 14px;
+        color: $darkGrey;
+        @media only screen and (min-width: 640px){
+            font-size: 16px;
+        }
+        @media only screen and (min-width: 1600px){
+            font-size: 22px;
+        }
+    }
+    .css-1dimb5e-singleValue{
+        padding: 3px 0;
+    }
+    .css-1dimb5e-singleValue , .css-r7ikz2-option , .css-rs8ahr-option , .css-5zq1nl-option{
+        font-size: 14px;
+        color: $darkGrey;
+        @media only screen and (min-width: 640px){
+            font-size: 16px;
+        }
+        @media only screen and (min-width: 1600px){
+            font-size: 22px;
+        }
+    }
+    .css-rs8ahr-option , .css-r7ikz2-option, .css-5zq1nl-option{
+        padding: 4px 10px;
+        &:hover{
+            color: $white;
+        }
+        @media only screen and (min-width: 640px){
+            padding: 6px 16px;
+        }
+        @media only screen and (min-width: 1441px){
+            padding: 8px 20px;
+        }
+    }
+    .css-rs8ahr-option , .css-5zq1nl-option{
+        color: $white;
+    }
+    .css-1u9des2-indicatorSeparator{
+        display: none;
+    }
+    .css-art2ul-ValueContainer2{
+        padding: 2px 2px 2px 10px;
+        @media only screen and (min-width: 640px){
+            padding: 2px 2px 2px 16px;
+        }
+        @media only screen and (min-width: 1441px){
+            padding: 2px 0px 2px 20px;
+        }
+    }
+
+    .css-1n6sfyn-MenuList{
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(253, 158, 85, 0.5);
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $dust;
+        }
+    }
+    .css-qbdosj-Input{
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 14px;
+        @media only screen and (min-width: 640px) {
+            font-size: 16px;
+        }
+        @media only screen and (min-width: 1600px) {
+            font-size: 22px;
+        }
+    }
+    .css-166bipr-Input{
+        padding: 0;
+        margin: 0;
+    }
+
+    .css-1xc3v61-indicatorContainer , .css-15lsz6c-indicatorContainer{
+        padding-left: 0;
+    }
+    .css-15lsz6c-indicatorContainer{
+        color: $primary;
+    }
+    .css-1nmdiq5-menu{
+        z-index: 2;
+    }
+    .css-1n6sfyn-MenuList , .css-1n4zzjl-MenuList , .css-1nmdiq5-menu , .css-1kiduvf-MenuList{
+        max-height: 240px;
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(253, 158, 85, 0.5);
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $dust;
+        }
+    }
+    svg{
+        width: auto;
+        margin: 0;
+    }
+    .css-19bb58m{
+        margin: 0;
+        padding: 0;
+    }
+    input{
+        height: auto !important;
+    }
+}
+.css-1p3m7a8-multiValue{
+    background-color: $white !important;
+    border: 1px solid $primary !important;
+    .css-1y7rh0y-MultiValueGeneric2{
+        color: $primary;
+    }
+    .css-12a83d4-MultiValueRemove {
+        color: $primary !important;
+    }
+}
+// === End React Select CSS

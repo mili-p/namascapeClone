@@ -1,0 +1,80 @@
+@import '../../../style/variables.scss';
+
+.protected-event-management{
+    .upcoming-events{
+        padding: 16px;
+        @media only screen and (min-width: 640px) {
+            padding: 20px;
+        }
+    }
+    .upcoming-events-list{
+        margin: 0 -10px;
+        grid-row-gap: 20px;
+        .item{
+            padding: 0 10px;
+            .protected-event-card{
+                img{
+                    @media only screen and (max-width: 639px){
+                        height: 100%;
+                    }
+                }
+                @media only screen and (min-width: 640px){
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .event-tab-list{
+        padding: 16px;
+        gap: 10px;
+        @media only screen and (min-width: 1441px) {
+            padding: 20px;
+            gap: 20px;
+        }
+        li {
+            @media only screen and (max-width: 480px) {
+                width: 100%;
+                text-align: center;
+            }
+            .item{
+                font-size: 14px;
+                line-height: 1;
+                font-weight: 400;
+                color: $darkGrey;
+                margin: 0;
+                text-transform: lowercase;
+                transition: all 0.4s;
+                @media only screen and (min-width: 640px) {
+                    font-size: 16px;
+                }
+                @media only screen and (min-width: 1441px) {
+                    font-size: 18px;
+                }
+                button{
+                    padding: 10px;
+                    border: 1px solid $mainBorder;
+                    color: $darkGrey;
+                    width: 100%;
+                    @media only screen and (min-width: 640px) {
+                        padding: 10px 16px;
+                    }
+                    @media only screen and (min-width: 1441px) {
+                        padding: 16px 20px;
+                    }
+                }
+                &:hover,&.active{
+                    color: $white;
+                    background: $primary;
+                    transition: all 0.4s;
+                    button{
+                        color: $white;
+                        border-color: $primary;
+                    }
+                }
+                &.active{
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,377 @@
+@import '../../../assets/style/variables.scss';
+
+.event-details{
+    .protected-head{
+        .card-action{
+            .link{
+                font-size: 16px;
+                padding: 8px 10px;
+                @media only screen and (min-width: 640px) {
+                    font-size: 22px;
+                    gap: 10px;
+                    padding: 15px 10px;
+                }
+                i{
+                    font-size: 16px;
+                    @media only screen and (min-width: 640px) {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+    .event-details-wrapper{
+        padding: 16px;
+        @media only screen and (min-width: 640px) {
+            padding: 20px;
+        }
+        .event-details-body{
+            padding-top: 20px;
+            border-top: 1px solid $mainBorder;
+            @media only screen and (min-width: 768px) {
+                padding-left: 20px;
+                padding-top: 0;
+                border-left: 1px solid $mainBorder;
+                border-top: none;
+            }
+        }
+        .stock-list{
+            margin: 0 -10px 14px;
+            grid-row-gap: 20px;
+            margin-bottom: 14px;
+            align-items: stretch;
+            @media only screen and (min-width: 1024px) {
+                margin: 0 -10px 20px;
+            }
+            @media only screen and (min-width: 1441px) {
+                margin: 0 -10px 32px;
+            }
+            li{
+                padding: 0 10px;
+                .inner{
+                    background: $LightCream;
+                    border: 1px solid $mainBorder;
+                    padding: 16px;
+                    width: 100%;
+                    height: 100%;
+                    &.skeleton-inner{
+                        background: $white;
+                    }
+                    @media only screen and (min-width: 1441px) {
+                        padding: 20px;
+                    }
+                    .count{
+                        font-size: 18px;
+                        line-height: 1;
+                        color: $btnText;
+                        margin-bottom: 10px;
+                        @media only screen and (min-width: 640px) {
+                            font-size: 20px;
+                        }
+                        @media only screen and (min-width: 1200px) {
+                            font-size: 26px;
+                        }
+                        @media only screen and (min-width: 1441px) {
+                            font-size: 36px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    p{
+                        line-height: 1;
+                        word-break: break-word;
+                        @media only screen and (min-width: 1441px) {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+        .action-btn-group{
+            gap: 8px;
+            @media only screen and (min-width: 1024px) {
+                gap: 10px;
+            }
+            @media only screen and (min-width: 1441px) {
+                gap: 16px;
+            }
+            .action-btn{
+                font-size: 16px;
+                line-height: 20px;
+                padding: 7px 10px;
+                background: $tertiary;
+                color: $white;
+                border: 1px solid transparent;
+                &:hover{
+                    border-color: $tertiary;
+                    color: $tertiary;
+                    background: transparent;
+                }
+                &.accept{
+                    background: $green;
+                    &:hover{
+                        border-color: $green;
+                        color: $green;
+                        background: transparent;
+                    }
+                }
+                &.reject{
+                    background: $red;
+                    &:hover{
+                        border-color: $red;
+                        color: $red;
+                        background: transparent;
+                    }
+                }
+                &.sponser-remove-btn{
+                    background: $primary;
+                    color: $white;
+                    border-color: $primary;
+                    path{
+                        fill: $white;
+                    }
+                }
+                &.sponser-add-btn{
+                    background: transparent;
+                    color: $primary;
+                    border-color: $primary;
+                    path{
+                        fill: $primary;
+                    }
+                }
+            }
+        }
+        .status-head{
+            margin-bottom: 14px;
+            gap: 10px;
+            @media only screen and (min-width: 1024px) {
+                margin-bottom: 16px;
+            }
+        }
+        .status-label{
+            gap: 0;
+            margin: 0;
+            .link{
+                margin-right: 12px;
+            }
+        }
+        .title{
+            font-size: 20px;
+            color: $btnText;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .event-caption{
+            font-size: 18px;
+            line-height: 22px;
+            color: $primary;
+            margin-bottom: 14px;
+            @media only screen and (min-width: 1024px) {
+                margin-bottom: 16px;
+            }
+        }
+        .description{
+            font-size: 14px;
+            line-height: 1.5;
+            color: $darkGrey;
+            font-family: "Forum";
+            white-space: break-spaces;
+            margin-bottom: 14px;
+            &:last-child{
+                margin: 0;
+            }
+            @media only screen and (min-width: 1024px) {
+                margin-bottom: 20px;
+            }
+            @media only screen and (min-width: 1441px) {
+                font-size: 22px;
+            }
+        }
+        .slider-wrapper{
+            padding-bottom: 20px;
+            @media only screen and (min-width: 768px) {
+                padding-right: 20px;
+                padding-bottom: 0;
+            }
+            .slider-thumbnail{
+                margin: 0 -7px -14px;
+                @media only screen and (min-width: 640px) {
+                    margin: 0 -10px -20px;
+                }
+                .thumbnail-image{
+                    padding: 0 7px;
+                    margin-bottom: 14px;
+                    position: relative;
+                    @media only screen and (min-width: 640px) {
+                        padding: 0 10px;
+                        margin-bottom: 20px;
+                    }
+                    &:first-child{
+                        width: 100%;
+                        img,video{
+                            height: 300px;
+                            @media only screen and (max-width: 480px){
+                                height: 230px;
+                            }
+                            @media only screen and (min-width: 640px) {
+                                height: 320px;
+                            }
+                            @media only screen and (min-width: 1441px) {
+                                height: 350px;
+                            }
+                        }
+                    }
+                    &.skeleton-thumbnail{
+                        &:first-child{
+                            .skeleton-box{
+                                height: 300px;
+                                @media only screen and (max-width: 480px){
+                                    height: 230px;
+                                }
+                                @media only screen and (min-width: 640px) {
+                                    height: 320px;
+                                }
+                                @media only screen and (min-width: 1441px) {
+                                    height: 350px;
+                                }
+                            }
+                        }
+                        .skeleton-box{
+                            height: 40px;
+                            @media only screen and (min-width: 640px) {
+                                height: 60px;
+                            }
+                            @media only screen and (min-width: 1441px) {
+                                height: 70px;
+                            }
+                        }
+                    }
+                    &:first-child{
+                        width: 100%;
+                    }
+                    .count{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        margin: 0;
+                        color: $white;
+                        width: 100%;
+                        height: 100%;
+                        background: #00000094;
+                        cursor: pointer;
+                    }
+                    .video-btn{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 100%;
+                        background: $tertiary;
+                        color: $white;
+                        padding-left: 4px;
+                        cursor: pointer;
+                    }
+                    img,video{
+                        width: 100%;
+                        object-fit: cover;
+                        border: 1px solid $primary;
+                        cursor: pointer;
+                        height: 40px;
+                        @media only screen and (min-width: 480px){
+                            height: 80px;
+                        }
+                        @media only screen and (min-width: 1441px) {
+                            height: 100px;
+                        }
+                    }
+                    .badge{
+                        position: absolute;
+                        font-size: 14px;
+                        line-height: 18px;
+                        padding: 5px 8px;
+                        color: $tertiary;
+                        top: 20px;
+                        right: 10px;
+                        background-color: $white;
+                        @media only screen and (min-width: 1024px) {
+                            padding: 10px;
+                            font-size: 18px;
+                            line-height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .lightbox-slider-wrapper{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 99;
+        padding: 60px 80px;
+        opacity: 0;
+        visibility: hidden;
+        .hidden-box{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background: $btnText;
+            opacity: 0.6;
+            z-index: -1;
+        }
+        img{
+            max-width: 1000px;
+            width: auto;
+            object-fit: contain;
+            margin: auto;
+            height: 100%;
+        }
+        .slider-btn,.close-btn{
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            background: $white;
+            color: $primary;
+            transition: all 0.4s;
+            &:hover{
+                background: $primary;
+                color: $white;
+                transition: all 0.4s;
+            }
+            i{
+                font-size: 18px;
+            }
+        }
+        .close-btn{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .slider-btn{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            &.pre{
+                left: 20px;
+            }
+            &.next{
+                right: 20px;
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+        &.show{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

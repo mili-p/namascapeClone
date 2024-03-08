@@ -1,0 +1,162 @@
+@import "../../style/variables.scss";
+
+.event-card-web{
+    display: flex;
+    flex-direction: column;
+    background: $LightCream;
+    position: relative;
+    overflow: hidden;
+    .link{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .event-image-box{
+        height: 260px;
+        flex-shrink: 0;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .badge{
+            position: absolute;
+            font-size: 14px;
+            line-height: 18px;
+            padding: 5px 8px;
+            color: $tertiary;
+            top: 20px;
+            left: 0;
+            background-color: $white;
+            @media only screen and (min-width: 1024px){
+                padding: 6px 10px;
+                font-size: 16px;
+                line-height: 18px;
+
+            }
+            @media only screen and (min-width: 1600px){
+                padding: 10px;
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+    }
+    .event-card-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 20px 15px;
+        @media only screen and (min-width: 768px) {
+            padding: 20px;
+        }
+        h3{
+            font-size: 20px;
+            line-height: 24px;
+            color: $btnText;
+            margin-bottom: 10px;
+            word-wrap: break-word;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            // @media only screen and (min-width: 640px){
+            //     min-height: 48px;
+            // }
+            @media only screen and (min-width: 1024px) {
+                font-size: 22px;
+                line-height: 26px;
+                // min-height: 52px;
+            }
+            @media only screen and (min-width: 1440px) {
+                font-size: 24px;
+                line-height: 28px;
+                margin-bottom: 20px;
+                // min-height: 60px;
+            }
+            @media only screen and (min-width: 1600px) {
+                font-size: 26px;
+                line-height: 30px;
+            }
+        }
+        p{
+            line-height: 1.2;
+            color: $darkGrey;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 10px;
+            @media only screen and (min-width: 1440px) {
+                font-size: 22px;
+                line-height: 26px;
+                margin-bottom: 20px;
+            }
+        }
+        .description{
+            font-size: 14px;
+            line-height: 1.5;
+            color: $darkGrey;
+            font-family: '__Forum_26cbd8', '__Forum_Fallback_26cbd8';
+            font-weight: 400;
+            font-style: normal;
+            white-space: break-spaces;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 10px;
+            @media only screen and (min-width: 1441px) {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+        }
+        .location{
+            color: $primary;
+            line-height: 14px;
+            display: flex;
+            gap: 5px;
+            margin-bottom: 0;
+            @media only screen and (min-width: 640px){
+                line-height: 16px;
+            }
+            @media only screen and (min-width: 768px){
+                line-height: 18px;
+            }
+            @media only screen and (min-width: 1024px){
+                line-height: 20px;
+            }
+            @media only screen and (min-width: 1440px){
+                line-height: 26px;
+            }
+        }
+        .date{
+            color: $primary;
+        }
+        .solid-btn{
+            padding: 6px 22px;
+            @media only screen and (min-width: 1024px){
+                padding: 8px 24px;
+            }
+            @media only screen and (min-width: 1440px){
+                padding: 14px 34px;
+            }
+        }
+        .price-wrap{
+            margin-top: 15px;
+            position: relative;
+            z-index: 2;
+            h3{
+                min-height: auto;
+            }
+            @media only screen and (min-width: 768px){
+            margin-top: 20px;
+            }
+        }
+    }
+}

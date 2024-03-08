@@ -1,0 +1,148 @@
+@import '../../../../style/variables.scss';
+
+.card-details{
+    gap: 32px;
+    flex-wrap: wrap;
+    @media only screen and (min-width: 1024px) {
+        flex-wrap: nowrap;
+    }
+    // .freecard {
+    //     display: flex;
+    //     justify-content: center;
+    // }
+    .credit-card-box{
+        background: $LightCream;
+        overflow: hidden;
+        .title{
+            font-size: 18px;
+            line-height: 1.3;
+            color: $btnText;
+            @media only screen and (min-width: 1200px) {
+                font-size: 22px;
+                line-height: 26px;
+            }
+            @media only screen and (min-width: 1440px) {
+                font-size: 26px;
+                line-height: 30px;
+            }
+        }
+        .top{
+            border: 1px solid $mainBorder;
+            border-bottom: 2px dashed $mainBorder;
+            position: relative;
+            padding: 20px 20px 38px;
+            @media only screen and (min-width: 640px) {
+                padding: 32px 32px 48px;
+            }
+            &::after,&::before{
+                content: '';
+                position: absolute;
+                bottom: -20px;
+                width: 40px;
+                height: 40px;
+                border-radius: 100%;
+                border: 1px solid $mainBorder;
+                background: $white;
+                @media only screen and (min-width: 640px) {
+                    bottom: -32px;
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+            &::after{
+                left: -20px;
+                @media only screen and (min-width: 640px) {
+                    left: -32px;
+                }
+            }
+            &::before{
+                right: -20px;
+                @media only screen and (min-width: 640px) {
+                    right: -32px;
+                }
+            }
+            .date{
+                color: $primary;
+                margin-bottom: 4px;
+            }
+            .time{
+                color: $darkGrey;
+            }
+            .title{
+                margin-bottom: 4px;
+            }
+            .title,.description{
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .time,.description{
+                margin-bottom: 12px;
+                @media only screen and (min-width: 1200px) {
+                    margin-bottom: 16px;
+                }
+            }
+            .description{
+                line-height: 1.3;
+            }
+            .location{
+                gap: 5px;
+                color: $primary;
+                i{
+                    font-size: 20px;
+                    @media only screen and (min-width: 640px) {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+        .bottom{
+            border: 1px solid $mainBorder;
+            border-top: none;
+            padding: 38px 20px 20px;
+            @media only screen and (min-width: 640px) {
+                padding: 48px 32px 32px;
+            }
+            .payment-list{
+                li{
+                    color: $lightGrey;
+                    gap: 8px;
+                    margin-bottom: 12px;
+                    @media only screen and (min-width: 1200px) {
+                        margin-bottom: 16px;
+                    }
+                    &:last-child{
+                        margin: 0;
+                    }
+                    span{
+                        color: $primary;
+                    }
+                    &.totle{
+                        border-top: 2px dashed $mainBorder;
+                        padding-top: 12px;
+                        @media only screen and (min-width: 1200px) {
+                            padding-top: 16px;
+                        }
+                        .totle-title{
+                            font-size: 18px;
+                            line-height: 1.3;
+                            font-weight: 400;
+                            margin: 0;
+                            color: $primary;
+                            @media only screen and (min-width: 768px) {
+                                font-size: 20px;
+                            }
+                            @media only screen and (min-width: 1200px) {
+                                font-size: 22px;
+                            }
+                            &.totle-amount{
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

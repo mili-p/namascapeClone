@@ -1,0 +1,435 @@
+@import ".../../../../../../../style/variables.scss";
+
+.event-preview{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+    padding: 0 !important;
+    background-color: $white;
+    transition: all 0.4s;
+    &.show{
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.4s;
+    }
+    .preview-close{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        border: 2px solid $primary;
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+        cursor: pointer;
+        transition: all 0.4s;
+        @media only screen and (min-width: 1200px) {
+            width: 30px;
+            height: 30px;
+        }
+        &::before,&::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background: $primary;
+            width: 55%;
+            height: 2px;
+            transform: rotate(45deg);
+            transition: all 0.4s;
+        }
+        &::before{
+            transform: rotate(-45deg);
+        }
+        &:hover{
+            background: $primary;
+            transition: all 0.4s;
+            &::before,&::after{
+                background: $white;
+                transition: all 0.4s;
+            }
+        }
+    }
+    .preview-boday{
+        width: 100%;
+        height: 100vh;
+        background: $white;
+        padding: 80px 0;
+        overflow-y: auto;
+        scrollbar-color: rgba(253, 158, 85, 0.5) $dust;
+        scrollbar-width: thin;
+        @media only screen and (min-width: 1200px) {
+            padding: 100px 0;
+        }
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(253, 158, 85, 0.5);
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $dust;
+        }
+        .description{
+            font-size: 14px;
+            line-height: 1.5;
+            color: $darkGrey;
+            font-family: '__Forum_26cbd8', '__Forum_Fallback_26cbd8';
+            font-weight: 400;
+            font-style: normal;
+            white-space: break-spaces;
+            @media only screen and (min-width: 640px) {
+                font-size: 16px;
+            }
+            @media only screen and (min-width: 768px) {
+                font-size: 18px;
+            }
+            @media only screen and (min-width: 1600px) {
+                font-size: 22px;
+            }
+        }
+        .modal-btn-group{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            justify-content: center;
+            z-index: 9;
+            background: $white;
+            padding: 15px;
+            @media only screen and (min-width: 768px) {
+                justify-content: flex-end;
+            }
+        }
+        .modal-btn{
+            cursor: pointer;
+            min-width: 120px;
+            @media only screen and (min-width: 1200px) {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+            @media only screen and (min-width: 1441px) {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+        }
+        .event-category-detail {
+            @media only screen and (min-width: 1200px) {
+                margin-top: 80px;
+            }
+            @media only screen and (min-width: 1600px) {
+                margin-top: 80px;
+            }
+            .qty-group-wrapper{
+                gap: 12px;
+                margin-bottom: 20px;
+                @media only screen and (min-width: 640px) {
+                    gap: 16px;
+                }
+                @media only screen and (min-width: 768px) {
+                    margin-bottom: 30px;
+                }
+                @media only screen and (min-width: 1440px) {
+                    gap: 20px;
+                }
+                p{
+                    font-size: 18px;
+                    color: $btnText;
+                }
+            }
+            .event-details-wrap {
+                .image-wrapper {
+                    @media only screen and (min-width: 1200px) {
+                        top: -80px;
+                        left: 0;
+                    }
+                    .slide-image-box {
+                        .badge {
+                            position: absolute;
+                            font-size: 14px;
+                            line-height: 18px;
+                            padding: 5px 8px;
+                            color: #fd9e55;
+                            top: 20px;
+                            right: 0;
+                            background-color: #fff;
+                            @media only screen and (min-width: 768px) {
+                                font-size: 16px;
+                                line-height: 18px;
+                                padding: 8px 10px;
+                            }
+                            @media only screen and (min-width: 1440px) {
+                                font-size: 18px;
+                                line-height: 22px;
+                                padding: 10px;
+                            }
+                        }
+                        .play-btn{
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: $tertiary;
+                            color: $white;
+                            width: 50px;
+                            height: 50px;
+                            padding-left: 7px;
+                            border-radius: 100%;
+                            cursor: pointer;
+                            font-size: 24px;
+                        }
+                    }
+                    .swiper-slide {
+                        overflow: hidden;
+                        height: 400px;
+                        @media only screen and (max-width: 480px) {
+                            height: 360px;
+                        }
+                        @media only screen and (min-width: 768px) {
+                            height: 600px;
+                        }
+                        @media only screen and (min-width: 1200px) {
+                            height: 500px;
+                        }
+                        @media only screen and (min-width: 1440px) {
+                            height: 590px;
+                        }
+                        @media only screen and (min-width: 1600px) {
+                            height: 615px;
+                        }
+                        img , video{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            cursor: pointer;
+                        }
+                        .slide-image-box{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .swiper-pagination {
+                        margin-top: 15px;
+                        margin-bottom: 20px;
+                        @media only screen and (min-width: 1200px) {
+                            justify-content: flex-end;
+                        }
+                    }
+                    .lightbox-slider-wrapper{
+                        img, video{
+                            width: auto;
+                            margin: auto;
+                            height: auto;
+                        }
+                        video{
+                            width: auto;
+                            margin: auto;
+                            height: auto;
+                        }
+                    }
+                }
+                .content-wrapper {
+                    padding: 20px;
+                    background: $LightCream;
+                    @media only screen and (min-width: 640px) {
+                        padding: 30px;
+                    }
+                    @media only screen and (min-width: 1200px) {
+                        padding: 30px 20px 70px 370px;
+                        min-height: 470px;
+                    }
+                    @media only screen and (min-width: 1440px) {
+                        padding: 60px 20px 70px 440px;
+                        min-height: 580px;
+                    }
+                    @media only screen and (min-width: 1600px) {
+                        padding: 80px 100px 100px 500px;
+                        min-height: 630px;
+                    }
+                    .title{
+                        color: $tertiary;
+                    }
+                    .btn-wrap{
+                        margin-bottom:  20px;
+                        @media only screen and (min-width: 1600px){
+                            margin-bottom:  30px;
+                        }
+                    }
+                }
+                .event-list-wrapper {
+                    padding-bottom: 20px;
+                    @media only screen and (min-width: 768px){
+                        padding-bottom: 30px;
+                    }
+                    li {
+                        width: 100%;
+                        font-size: 18px;
+                        .icon {
+                            background-color: $white;
+                            flex-shrink: 0;
+                        }
+                        .head{
+                            i{
+                                font-size: 12px;
+                                @media only screen and (min-width: 1441px){
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .solid-btn{
+                    padding: 5px 20px;
+                    height: 35px;
+                    text-align: center;
+                    @media only screen and (min-width: 768px){
+                        padding: 8px 36px;
+                        height: 40px;
+                    }
+                    @media only screen and (min-width: 1600px){
+                        height: 52px;
+                    }
+                }
+            }
+
+        }
+        .event-organizer-box {
+            border: 1px solid $mainBorder;
+            padding: 20px;
+            position: relative;
+            .link{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+            @media only screen and (min-width: 1200px) {
+                padding: 30px;
+            }
+            .organizer-title {
+                margin-bottom: 10px;
+                @media only screen and (min-width: 767px) {
+                    margin-bottom: 20px;
+                }
+                &:last-child{
+                    margin: 0;
+                }
+                h3 {
+                    margin-bottom: 0;
+                    font-size: 18px;
+                    line-height: 20px;
+                    @media only screen and (min-width: 767px) {
+                        font-size: 20px;
+                        line-height: 22px;
+                    }
+                    @media only screen and (min-width: 1440px) {
+                        font-size: 26px;
+                        line-height: 30px;
+                    }
+                }
+                p {
+                    color: $tertiary;
+                    margin-top: 5px;
+                    line-height: normal;
+                }
+                .usersicon {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    @media only screen and (min-width: 767px) {
+                        width: 64px;
+                        height: 64px;
+                    }
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .event-list-wrapper{
+            margin: 0 -6px !important;
+            grid-row-gap: 12px;
+            @media only screen and (min-width: 640px) {
+                margin: 0 -10px !important;
+                grid-row-gap: 20px;
+            }
+            li{
+                font-size: 14px;
+                line-height: 16px;
+                color: $btnText;
+                gap: 12px;
+                padding: 0 6px;
+                @media only screen and (min-width: 640px) {
+                    gap: 16px;
+                }
+                @media only screen and (min-width: 1440px) {
+                    gap: 20px;
+                    padding: 0 10px;
+                }
+                a{
+                    line-break: anywhere;
+                    color: $btnText;
+                    &:hover{
+                        color: $tertiary;
+                    }
+                }
+                .icon{
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 100%;
+                    border: 1px solid $mainBorder;
+                    flex-shrink: 0;
+                    @media only screen and (min-width: 640px) {
+                        width: 40px;
+                        height: 40px;
+                    }
+                    @media only screen and (min-width: 1440px) {
+                        width: 56px;
+                        height: 56px;
+                    }
+                    i{
+                        font-size: 16px;
+                        color: $primary;
+                        @media only screen and (min-width: 640px) {
+                            font-size: 20px;
+                        }
+                        @media only screen and (min-width: 768px) {
+                            font-size: 24px;
+                        }
+                    }
+                }
+                span{
+                    &.head{
+                        font-size: 16px;
+                        line-height: 1;
+                        color: $primary;
+                        margin-bottom: 8px;
+                        @media only screen and (min-width: 640px) {
+                            margin-bottom: 12px;
+                        }
+                        @media only screen and (min-width: 1441px) {
+                            font-size: 24px;
+                            line-height: 28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

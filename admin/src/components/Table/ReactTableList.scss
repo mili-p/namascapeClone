@@ -1,0 +1,288 @@
+@import '../../assets/style/variables.scss';
+
+.custom-table {
+    background: $white;
+    overflow-y: auto;
+    scrollbar-color: rgba(253, 158, 85, 0.5) $dust;
+    scrollbar-width: thin;
+    min-height: 400px;
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(253, 158, 85, 0.5);
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $dust;
+    }
+    table {
+        border: 0;
+        border-collapse: collapse;
+        width: 100%;
+        thead {
+            tr {
+                th {
+                    font-size: 14px;
+                    line-height: 1.3;
+                    font-weight: 400;
+                    padding: 10px 14px;
+                    text-align:left;
+                    white-space:nowrap;
+                    color: $tertiary;
+                    border-bottom: 1px solid $mainBorder;
+                    text-transform: capitalize;
+                    cursor: pointer;
+                    user-select: none;
+                    &:last-child{
+                        text-align: center;
+                    }
+                    @media only screen and (min-width: 1441px) {
+                        font-size: 18px;
+                        padding: 20px 16px;
+                    }
+                    .sort-body{
+                        margin-left: 10px;
+                        vertical-align: middle;
+                        i{
+                            font-size: 16px;
+                            color: $primary;
+                            opacity: 0.5;
+                            &.active{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                &:first-child{
+                    td{
+                        padding-top: 10px;
+                        @media only screen and (min-width: 1441px){
+                            padding-top: 20px;
+                        }
+                    }
+                }
+                &:last-child{
+                    td{
+                        padding-bottom: 10px;
+                        @media only screen and (min-width: 1441px){
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+                &:nth-last-child(1),
+                &:nth-last-child(2),
+                &:nth-last-child(3),
+                &:nth-last-child(4),
+                &:nth-last-child(5),
+                &:nth-last-child(6),
+                &:nth-last-child(7),
+                &:nth-last-child(8){
+                    td {
+                        .custom-table-dropdown {
+                            .dropdown-body{
+                                top: auto;
+                                bottom: 100%;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(1),
+                &:nth-child(2){
+                    td {
+                        .custom-table-dropdown {
+                            .dropdown-body{
+                                top: 100%;
+                                bottom: auto;
+                            }
+                        }
+                    }
+                }
+                td {
+                    font-size: 14px;
+                    line-height: 1.3;
+                    padding: 8px 14px;
+                    color: $btnText;
+                    border: none;
+                    .skeleton-box.circle{
+                        width: 50px;
+                    }
+                    &:last-child{
+                        text-align: center;
+                    }
+                    @media only screen and (min-width: 1441px) {
+                        font-size: 18px;
+                        padding: 10px 16px;
+                    }
+                    .description{
+                        font-size: 14px;
+                        line-height: 1.3;
+                        margin: 0;
+                        width: 250px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        @media only screen and (min-width: 1024px){
+                            max-width: 400px;
+                            width: 100%;
+                        }
+                        @media only screen and (min-width: 1441px) {
+                            font-size: 18px;
+                        }
+                    }
+                    img {
+                        width: 36px;
+                        min-width: 36px;
+                        height: 36px;
+                        object-fit: cover;
+                        display: block;
+                        border-radius:100%;
+                        object-fit: cover;
+                        @media only screen and (min-width: 1441px) {
+                            width: 46px;
+                            min-width: 46px;
+                            height: 46px;
+                        }
+                    }
+                    .dashboard-form-btn{
+                        font-size: 14px;
+                        line-height: 20px;
+                        padding: 4px 18px;
+                        position: static;
+                        min-width: auto;
+                        @media only screen and (min-width: 640px) {
+                            padding: 4px 21px;
+                        }
+                        @media only screen and (min-width: 1441px) {
+                            font-size: 16px;
+                        }
+                    }
+                    .status-label{
+                        .text{
+                            font-size: 14px;
+                            line-height: 1.3;
+                            text-transform: capitalize;
+                            @media only screen and (min-width: 640px) {
+                                font-size: 16px;
+                            }
+                            @media only screen and (min-width: 1441px) {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    .approve-action-group{
+                        gap: 8px;
+                        @media only screen and (min-width: 1024px) {
+                            gap: 10px;
+                        }
+                        @media only screen and (min-width: 1441px) {
+                            gap: 16px;
+                        }
+                        span{
+                            width: 24px;
+                            height: 24px;
+                            border-radius: 100%;
+                            cursor: pointer;
+                            color: $white;
+                            padding-left: 1px;
+                            @media only screen and (min-width: 1441px) {
+                                width: 30px;
+                                height: 30px;
+                            }
+                            &.approve{
+                                background: $green;
+                                i{
+                                    font-size: 12px;
+                                    @media only screen and (min-width: 1441px) {
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                            &.reject{
+                                background: $red;
+                                i{
+                                    font-size: 10px;
+                                    @media only screen and (min-width: 1441px) {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                    .custom-table-dropdown{
+                        position: relative;
+                        text-align: center;
+                        .btn-toggle{
+                            font-size: 24px;
+                            color: $tertiary;
+                            &:hover,&.active{
+                                color: $primary;
+                            }
+                        }
+                        .dropdown-body{
+                            position: absolute;
+                            top: 100%;
+                            right: 0;
+                            border: 1px solid $mainBorder;
+                            box-shadow: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.08));
+                            background: $white;
+                            min-width: 100px;
+                            z-index: 2;
+                            display: none;
+                            @media only screen and (min-width: 1441px){
+                                min-width: 168px;
+                            }
+                            &.show{
+                                display: block;
+                            }
+                            li{
+                                a,.link{
+                                    font-size: 14px;
+                                    line-height: 20px;
+                                    padding: 10px 14px;
+                                    color: $btnText;
+                                    cursor: pointer;
+                                    gap: 6px;
+                                    transition: all 0.4s;
+                                    @media only screen and (min-width: 1441px){
+                                        font-size: 16px;
+                                        padding: 20px;
+                                        gap: 10px;
+                                    }
+                                    &:hover{
+                                        background: $primary;
+                                        color: $white;
+                                        transition: all 0.4s;
+                                        i{
+                                            color: $white;
+                                            transition: all 0.4s;
+                                        }
+                                    }
+                                    i{
+                                        font-size: 20px;
+                                        color: $primary;
+                                        transition: all 0.4s;
+                                        @media only screen and (min-width: 1441px){
+                                            font-size: 24px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+// .custom-table table tbody tr:nth-child(n + 7) .cursor-pointer .dropdown-body {
+//     top: auto;
+//     bottom: 100%;
+// }

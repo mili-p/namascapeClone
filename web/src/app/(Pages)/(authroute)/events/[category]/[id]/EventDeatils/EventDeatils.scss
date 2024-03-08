@@ -1,0 +1,188 @@
+@import "../../../../../../style/variables.scss";
+
+.event-category-detail {
+    @media only screen and (min-width: 1200px) {
+        margin-top: 30px;
+    }
+    @media only screen and (min-width: 1600px) {
+        margin-top: 80px;
+    }
+    .qty-group-wrapper{
+        gap: 12px;
+        margin-bottom: 20px;
+        @media only screen and (min-width: 640px) {
+            gap: 16px;
+        }
+        @media only screen and (min-width: 768px) {
+            margin-bottom: 30px;
+        }
+        @media only screen and (min-width: 1440px) {
+            gap: 20px;
+        }
+        p{
+            font-size: 18px;
+            color: $btnText;
+        }
+    }
+    .event-details-wrap {
+        .image-wrapper {
+            @media only screen and (min-width: 1200px) {
+                top: -80px;
+                left: 0;
+            }
+            .slide-image-box {
+                .badge {
+                    position: absolute;
+                    font-size: 14px;
+                    line-height: 18px;
+                    padding: 5px 8px;
+                    color: #fd9e55;
+                    top: 20px;
+                    right: 0;
+                    background-color: #fff;
+                    @media only screen and (min-width: 768px) {
+                        font-size: 16px;
+                        line-height: 18px;
+                        padding: 8px 10px;
+                    }
+                    @media only screen and (min-width: 1440px) {
+                        font-size: 18px;
+                        line-height: 22px;
+                        padding: 10px;
+                    }
+                }
+                .play-btn{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: $tertiary;
+                    color: $white;
+                    width: 50px;
+                    height: 50px;
+                    padding-left: 7px;
+                    border-radius: 100%;
+                    cursor: pointer;
+                    font-size: 24px;
+                }
+            }
+            .swiper-slide {
+                overflow: hidden;
+                height: 400px;
+                @media only screen and (max-width: 480px) {
+                    height: 360px;
+                }
+                @media only screen and (min-width: 768px) {
+                    height: 600px;
+                }
+                @media only screen and (min-width: 1200px) {
+                    height: 500px;
+                }
+                @media only screen and (min-width: 1440px) {
+                    height: 590px;
+                }
+                @media only screen and (min-width: 1600px) {
+                    height: 615px;
+                }
+                img , video{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    cursor: pointer;
+                }
+                .slide-image-box{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .swiper-pagination {
+                margin-top: 15px;
+                margin-bottom: 20px;
+                @media only screen and (min-width: 1200px) {
+                    justify-content: flex-end;
+                }
+            }
+            .lightbox-slider-wrapper{
+                img, video{
+                    width: auto;
+                    margin: auto;
+                    height: auto;
+                }
+                video{
+                    width: auto;
+                    margin: auto;
+                    height: auto;
+                }
+            }
+        }
+        .content-wrapper {
+            padding: 20px;
+            background: $LightCream;
+            @media only screen and (min-width: 640px) {
+                padding: 30px;
+            }
+            @media only screen and (min-width: 1200px) {
+                padding: 30px 20px 70px 370px;
+                min-height: 470px;
+            }
+            @media only screen and (min-width: 1440px) {
+                padding: 60px 20px 70px 440px;
+                min-height: 580px;
+            }
+            @media only screen and (min-width: 1600px) {
+                padding: 80px 100px 100px 500px;
+                min-height: 630px;
+            }
+            .title{
+                color: $tertiary;
+            }
+            .btn-wrap{
+                margin-bottom:  20px;
+                @media only screen and (min-width: 1600px){
+                    margin-bottom:  30px;
+                }
+            }
+        }
+        .event-list-wrapper {
+            padding-bottom: 20px;
+            @media only screen and (min-width: 768px){
+                padding-bottom: 30px;
+            }
+            li {
+                width: 100%;
+                font-size: 18px;
+                .icon {
+                    background-color: $white;
+                    flex-shrink: 0;
+                }
+                .head{
+                    i{
+                        font-size: 12px;
+                        @media only screen and (min-width: 1441px){
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        .solid-btn{
+            padding: 5px 20px;
+            height: 35px;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            @media only screen and (min-width: 768px){
+                padding: 8px 36px;
+                height: 40px;
+            }
+            @media only screen and (min-width: 1600px){
+                height: 52px;
+            }
+        }
+    }
+
+}

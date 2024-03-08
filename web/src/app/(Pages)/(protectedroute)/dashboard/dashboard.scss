@@ -1,0 +1,190 @@
+@import '../../../style/variables.scss';
+
+.protected-dashboard{
+    .protected-counter{
+        margin: 0 -10px;
+        grid-row-gap: 24px;
+        @media only screen and (min-width: 768px){
+            margin: 0 -12px;
+        }
+        @media only screen and (min-width: 1600px){
+            margin: 0 -16px;
+        }
+        li{
+            padding: 0 10px;
+            @media only screen and (min-width: 768px){
+                padding: 0 12px;
+            }
+            @media only screen and (min-width: 1600px){
+                padding: 0 16px;
+            }
+            @media only screen and (max-width: 639px){
+                width: 50%;
+            }
+            @media only screen and (max-width: 480px){
+                text-align: center;
+            }
+        }
+        .link{
+            background: $white;
+            width: 100%;
+            height: 100%;
+            padding: 16px;
+            border: 1px solid $mainBorder;
+            @media only screen and (min-width: 1441px){
+                padding: 20px;
+            }
+            &:hover{
+                background: $dust;
+            }
+            h3{
+                color: $btnText;
+                margin-bottom: 10px;
+                @media only screen and (min-width: 1441px){
+                    font-size: 36px;
+                    margin-bottom: 20px;
+                }
+            }
+            p{
+                font-size: 16px;
+                @media only screen and (min-width: 1600px){
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    .welcome-message{
+        padding: 20px;
+        text-align: center;
+        @media only screen and (min-width: 640px) {
+            padding: 30px;
+        }
+        @media only screen and (min-width: 1024px) {
+            padding: 40px;
+        }
+        @media only screen and (min-width: 1441px) {
+            padding: 60px;
+        }
+        .title{
+            color: $btnText;
+            text-transform: lowercase;
+            margin: 0 0 16px;
+            @media only screen and (min-width: 640px) {
+                margin: 0 0 20px;
+            }
+            @media only screen and (min-width: 1024px){
+                margin: 0 auto 24px;
+            }
+        }
+        p{
+            max-width: 90%;
+            margin: 0 auto 16px;
+            @media only screen and (min-width: 640px) {
+                margin: 0 auto 20px;
+            }
+            @media only screen and (min-width: 1024px){
+                max-width: 80%;
+                margin: 0 auto 24px;
+            }
+        }
+    }
+    .upcoming-events{
+        padding: 16px;
+        @media only screen and (min-width: 640px) {
+            padding: 20px;
+        }
+        .protected-event-card {
+            .about-list{
+                margin: 0;
+            }
+        }
+        .head{
+            margin-bottom: 16px;
+            gap: 8px;
+            @media only screen and (min-width: 640px) {
+                margin-bottom: 20px;
+            }
+            h2{
+                font-size: 18px;
+                color: $primary;
+                margin: 0;
+                @media only screen and (min-width: 640px) {
+                    font-size: 24px;
+                    line-height: 1.3;
+                }
+            }
+            a{
+                color: $tertiary;
+                @media only screen and (min-width: 640px) {
+                    font-size: 18px;
+                }
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+    }
+    .upcoming-events-list{
+        margin: 0 -10px;
+        grid-row-gap: 20px;
+        .item{
+            padding: 0 10px;
+            .protected-event-card,.protected-hosted-event-card{
+                height: 100%;
+            }
+            .protected-event-card{
+                img{
+                    @media only screen and (max-width: 639px){
+                        height: 250px;
+                    }
+                }
+                @media only screen and (min-width: 640px){
+                    min-height: 280px;
+                }
+            }
+        }
+    }
+    .empty-card{
+        padding: 16px;
+        max-width: 650px;
+        margin: 40px auto 0;
+        @media only screen and (min-width: 640px) {
+            padding: 20px;
+        }
+        @media only screen and (min-width: 1024px) {
+            margin: 100px auto 0;
+        }
+        .add-event-link{
+            padding: 30px;
+            background: $LightCream;
+            border: 2px dashed $mainBorder;
+            @media only screen and (min-width: 640px) {
+                padding: 40px;
+            }
+            @media only screen and (min-width: 1024px) {
+                padding: 100px 40px;
+            }
+            i,p{
+              color: $primary;
+            }
+        }
+    }
+    .gross-revenue{
+        .protected-counter {
+            .link{
+                border: 1px dashed $mainBorder;
+                background: $LightCream;
+                h3{
+                    @media only screen and (max-width: 480px) {
+                        font-size: 16px;
+                    }
+                }
+                p{
+                    @media only screen and (max-width: 480px) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
